@@ -1,0 +1,28 @@
+/* ==========================================================================
+   #SPACER
+   ========================================================================== */
+
+.o-spacer {
+  margin-bottom: $base-spacing-unit;
+}
+
+
+/* Style variants
+  ========================================================================== */
+
+.o-spacer--tiny {
+  margin-bottom: $base-spacing-unit-tiny;
+}
+
+.o-spacer--small {
+  margin-bottom: $base-spacing-unit-small;
+}
+
+.o-spacer--large {
+  margin-bottom: $base-spacing-unit-large;
+}
+
+.o-spacer--huge {
+  margin-bottom: $base-spacing-unit-huge;
+}
+

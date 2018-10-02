@@ -1,0 +1,68 @@
+/* ==========================================================================
+   #SETTINGS: GLOBAL
+   ========================================================================== */
+
+/* Responsive breakpoints
+   ========================================================================== */
+
+/**
+ * Specify breakpoints for use with `sass-mq`
+ * (https://github.com/sass-mq/sass-mq).
+ */
+
+$mq-breakpoints: (
+  phablet: 640px,
+  tablet: 768px,
+  desktop: 1024px
+) !default;
+
+
+/* Colour palette
+   ========================================================================== */
+
+$colour-one: #FFFFFF !default; // White
+$colour-two: #FAF7EB !default; // Off-White
+$colour-three: #F2F2F2 !default; // Light Grey
+$colour-four: #CCCCCC !default; // Mid Grey
+$colour-five: #E0BF76 !default; // Gold
+$colour-six: #0C3E63 !default; // Dark Blue
+$colour-seven: #839DAF !default; // Mid Blue
+$colour-eight: #245172 !default; // Light Blue
+
+
+/* High-level base settings
+   ========================================================================== */
+
+$base-font-size: 16px !default;
+$base-font-size--lrg: 18px !default;
+$base-line-height: 1.5 !default;
+
+
+/* Widths
+   ========================================================================== */
+
+$base-site-max-width: 980px !default;
+
+
+/* Spacing
+   ========================================================================== */
+
+/**
+ * These are framework variables. You can use them throughout the project,
+ * but do not modify or reassign them.
+ */
+
+$base-spacing-unit:       24px !default;
+$base-spacing-unit-tiny:  8px  !default;
+$base-spacing-unit-small: 16px !default;
+$base-spacing-unit-large: 48px !default;
+$base-spacing-unit-huge:  64px !default;
+
+
+/* Z-indexes
+   ========================================================================== */
+
+$z-index-beneath:  -1 !default;
+$z-index-base:      1 !default;
+$z-index-modal:     2 !default;
+$z-index-skip-link: 3 !default;

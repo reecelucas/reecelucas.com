@@ -1,0 +1,33 @@
+/* ==========================================================================
+   #WRAPPER
+   ========================================================================== */
+
+.o-wrapper {
+  display: block;
+  margin: {
+    right: auto;
+    left: auto;
+  }
+  max-width: $base-site-max-width;
+  padding: {
+    right: $base-spacing-unit;
+    left: $base-spacing-unit;
+  }
+  position: relative;
+}
+
+
+/* Style variants
+   ========================================================================== */
+
+.o-wrapper--narrow {
+	max-width: 800px;
+}
+
+.o-wrapper--fw {
+	max-width: none;
+}
+
+.o-wrapper--no-pad {
+	padding: 0;
+}

@@ -1,0 +1,73 @@
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+
+// Use '!important' deliberately here – we always want trump classes to take.
+
+/* Font weights
+   ========================================================================== */
+
+.u-font-bold {
+  font-weight: 700 !important;
+}
+
+.u-font-regular {
+  font-weight: 400 !important;
+}
+
+
+/* Adjustments
+   ========================================================================== */
+
+/**
+ * ‘Can you just make that text a little bigger?’
+ *
+ * Example usage:
+ * <p class="u-text++">A little bit bigger.</p>
+ *
+ */
+
+.u-text\+\+ {
+  font-size: larger  !important;
+}
+
+.u-text-- {
+  font-size: smaller !important;
+}
+
+
+/* Headings
+   ========================================================================== */
+
+/**
+ * Redefine all of our basic heading styles against utility classes so as to
+ * allow for double stranded heading hierarchy, e.g. we semantically need an H2,
+ * but we want it to be sized like an H1:
+ *
+ *   <h2 class="u-h1"></h2>
+ *
+ */
+
+.u-h1 {
+  font-size: $font-size-1;
+}
+
+.u-h2 {
+  font-size: $font-size-2;
+}
+
+.u-h3 {
+  font-size: $font-size-3;
+}
+
+.u-h4 {
+  font-size: $font-size-4;
+}
+
+.u-h5 {
+  font-size: $font-size-5;
+}
+
+.u-h6 {
+  font-size: $font-size-6;
+}

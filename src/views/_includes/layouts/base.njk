@@ -1,0 +1,9 @@
+{% include 'html-start.njk' %}
+
+  {% include 'components/navigation.njk' %}
+
+  <main id="content">
+    {{ content | safe }}
+  </main>
+
+{% include 'html-end.njk' %}
