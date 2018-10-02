@@ -20,14 +20,14 @@ $mq-breakpoints: (
 /* Colour palette
    ========================================================================== */
 
-$colour-one: #FFFFFF !default; // White
-$colour-two: #FAF7EB !default; // Off-White
-$colour-three: #F2F2F2 !default; // Light Grey
-$colour-four: #CCCCCC !default; // Mid Grey
-$colour-five: #E0BF76 !default; // Gold
-$colour-six: #0C3E63 !default; // Dark Blue
-$colour-seven: #839DAF !default; // Mid Blue
-$colour-eight: #245172 !default; // Light Blue
+$colour-1: #FFFFFF !default; // White
+$colour-2: #FAF7EB !default; // Off-White
+$colour-3: #F2F2F2 !default; // Light Grey
+$colour-4: #CCCCCC !default; // Mid Grey
+$colour-5: #E0BF76 !default; // Gold
+$colour-6: #0C3E63 !default; // Dark Blue
+$colour-7: #839DAF !default; // Mid Blue
+$colour-8: #245172 !default; // Light Blue
 
 
 /* High-level base settings
@@ -38,10 +38,11 @@ $base-font-size--lrg: 18px !default;
 $base-line-height: 1.5 !default;
 
 
-/* Widths
+/* Widths & Heights
    ========================================================================== */
 
 $base-site-max-width: 980px !default;
+$header-height: 60px !default;
 
 
 /* Spacing
@@ -52,17 +53,19 @@ $base-site-max-width: 980px !default;
  * but do not modify or reassign them.
  */
 
-$base-spacing-unit:       24px !default;
-$base-spacing-unit-tiny:  8px  !default;
+$base-spacing-unit: 24px !default;
+$base-spacing-unit-tiny: 8px  !default;
 $base-spacing-unit-small: 16px !default;
 $base-spacing-unit-large: 48px !default;
-$base-spacing-unit-huge:  64px !default;
+$base-spacing-unit-huge: 64px !default;
+
+$uppercase-letter-spacing: 0.025em !default;
 
 
 /* Z-indexes
    ========================================================================== */
 
-$z-index-beneath:  -1 !default;
-$z-index-base:      1 !default;
-$z-index-modal:     2 !default;
+$z-index-beneath: -1 !default;
+$z-index-base: 1 !default;
+$z-index-modal: 2 !default;
 $z-index-skip-link: 3 !default;

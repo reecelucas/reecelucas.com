@@ -1,0 +1,21 @@
+/* ==========================================================================
+   #FULL-WIDTH
+   ========================================================================== */
+
+/**
+ *  Mixin to force an element to full viewport width when
+ *  within a limited-width parentNode. Taken from: https://bit.ly/2xX48Zr.
+ *
+ *  .example {
+ *    @include full-width;
+ *  }
+ */
+
+@mixin full-width {
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+    left: 50%;
+    right: 50%;
+  width: 100vw;
+}

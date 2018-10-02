@@ -13,6 +13,7 @@
  *  Breakpoints..........Mixins for global inline media-queries.
  *  Functions............Common SASS functions used by mixins, *include before mixins*.
  *  Cover................Mixin to stretch an element across its parentNode using absolute positioning.
+ *  Full-width...........Mixin to force an element to full viewport width.
  *
  *
  * 	GENERIC:
@@ -38,6 +39,8 @@
  *
  *
  *  COMPONENTS:
+ *  Btn..................Element-agnostic button styles.
+ *  Header...............Global header.
  *  Nav..................Global primary navigation.
  *  Skip-link............Accessible skip-to-content link.
  *
@@ -57,9 +60,10 @@
 @import "settings/settings.typography";
 
 
-@import "tools/tools.breakpoints";
 @import "tools/tools.functions";
+@import "tools/tools.breakpoints";
 @import "tools/tools.cover";
+@import "tools/tools.full-width";
 
 
 @import "generic/generic.normalize";
@@ -80,6 +84,8 @@
 @import "objects/objects.wrapper";
 
 
+@import "components/components.btn";
+@import "components/components.header";
 @import "components/components.nav";
 @import "components/components.skip-link";
 

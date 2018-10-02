@@ -1,0 +1,50 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+.c-header {
+  border-top: 4px solid $colour-5;
+  padding-top: $base-spacing-unit;
+
+  @include phablet {
+    align-items: center;
+    background-color: $colour-1;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.075);
+    display: flex;
+    height: $header-height;
+    position: fixed;
+      top: 0;
+      left: 0;
+    padding-top: 0;
+    width: 100%;
+    z-index: $z-index-base;
+  }
+}
+
+// 1. Fallback to flexbox in browsers that don't support grid.
+
+.c-header__inner {
+  display: flex; /* [1] */
+  flex-direction: column;
+
+  @include phablet {
+    align-content: center;
+    align-items: center;
+    display: grid;
+    flex-direction: row; /* [1] */
+    grid-template-columns: auto 1fr;
+    justify-content: space-between;
+  }
+}
+
+.c-header__logo {
+  font-family: $font-sans;
+  font-size: $font-size-6;
+  letter-spacing: $uppercase-letter-spacing;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
+  .fonts-loaded & {
+    font-family: $font-sans;
+  }
+}

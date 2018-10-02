@@ -1,0 +1,78 @@
+/* ==========================================================================
+   #BTN
+   ========================================================================== */
+
+/**
+ * 1. Reset all properties to browser default.
+ * 2. Force all button-styled elements to appear clickable.
+ * 3. Allow us to style box model properties.
+ * 4. Reset/normalize some styles.
+ * 5. Line different sized buttons up a little nicer.
+ */
+
+.c-btn {
+  all: initial; /* [1] */
+  background-color: $colour-6;
+  border-radius: 50px;
+  color: $colour-5;
+  cursor: pointer; /* [2] */
+  display: inline-block; /* [3] */
+  font-family: $font-sans;
+  font-size: $font-size-7;
+  font-weight: 700;
+  letter-spacing: $uppercase-letter-spacing;
+  margin: 0;
+  padding: $base-spacing-unit-tiny $base-spacing-unit;
+  text-align: center; /* [4] */
+  text-decoration: none; /* [4] */
+  text-transform: uppercase;
+  vertical-align: middle; /* [5] */
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $colour-5;
+    color: $colour-6;
+    text-decoration: none; /* [4] */
+  }
+
+  // 1. Forbid interaction with buttons that are disabled.
+
+  &[disabled],
+  &.is-disabled {
+    opacity: 0.5;
+    pointer-events: none; /* [1] */
+  }
+}
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-btn--ghost {
+  background-color: transparent;
+  border: 2px solid $colour-7;
+  color: $colour-6;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $colour-6;
+    border-color: $colour-6;
+    color: $colour-2;
+  }
+}
+
+
+/**
+ * Create buttons that will fill the entire width of the container they’re
+ * placed inside.
+ *
+ * 1. Remove horizontal padding so widths and paddings do not compound.
+ */
+
+.c-btn--full {
+  padding-right: 0; /* [1] */
+  padding-left:  0; /* [1] */
+  width: 100%;
+}

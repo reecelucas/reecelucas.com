@@ -2,41 +2,41 @@
    #COLOUR
    ========================================================================== */
 
-// Use '!important' deliberately here – we always want trump classes to take.
+// Use '!important' deliberately here – we always want utility classes to take.
 
 /* Font colours
    ========================================================================== */
 
 .u-colour-alpha {
-  color: $colour-one !important;
+  color: $colour-1 !important;
 }
 
 .u-colour-beta {
-  color: $colour-two !important;
+  color: $colour-2 !important;
 }
 
 .u-colour-gamma {
-  color: $colour-three !important;
+  color: $colour-3 !important;
 }
 
 .u-colour-delta {
-  color: $colour-four !important;
+  color: $colour-4 !important;
 }
 
 .u-colour-epsilon {
-  color: $colour-five !important;
+  color: $colour-5 !important;
 }
 
 .u-colour-zeta {
-  color: $colour-six !important;
+  color: $colour-6 !important;
 }
 
 .u-colour-eta {
-  color: $colour-seven !important;
+  color: $colour-7 !important;
 }
 
 .u-colour-theta {
-  color: $colour-eight !important;
+  color: $colour-8 !important;
 }
 
 
@@ -44,33 +44,33 @@
    ========================================================================== */
 
 .u-bg-alpha {
-  background-color: $colour-one !important;
+  background-color: $colour-1 !important;
 }
 
 .u-bg-beta {
-  background-color: $colour-two !important;
+  background-color: $colour-2 !important;
 }
 
 .u-bg-gamma {
-  background-color: $colour-three !important;
+  background-color: $colour-3 !important;
 }
 
 .u-bg-delta {
-  background-color: $colour-four !important;
+  background-color: $colour-4 !important;
 }
 
 .u-bg-epsilon {
-  background-color: $colour-five !important;
+  background-color: $colour-5 !important;
 }
 
 .u-bg-zeta {
-  background-color: $colour-six !important;
+  background-color: $colour-6 !important;
 }
 
 .u-bg-eta {
-  background-color: $colour-seven !important;
+  background-color: $colour-7 !important;
 }
 
 .u-bg-theta {
-  background-color: $colour-eight !important;
+  background-color: $colour-8 !important;
 }

@@ -2,23 +2,31 @@
   "navigation": [
     {
       "label": "About",
-      "href": "#about"
+      "href": "#about",
+      "skipLink": true,
+      "inline": true
     },
     {
       "label": "Work",
-      "href": "#work"
+      "href": "#work",
+      "skipLink": true,
+      "inline": true
     },
     {
       "label": "Contact",
-      "href": "#contact"
+      "href": "#contact",
+      "skipLink": true,
+      "inline": true
     },
     {
-      "label": "Download CV",
-      "href": "/assets/reece-lucas-cv.pdf"
+      "label": "CV",
+      "href": "/assets/reece-lucas-cv.pdf",
+      "inline": true
     },
     {
       "label": "Hire me",
-      "href": "#contact"
+      "href": "#contact",
+      "skipLink": true
     }
   ],
   "fonts": [

@@ -3,17 +3,52 @@
    ========================================================================== */
 
 .c-nav {
-  display: flex;
+  font-size: $font-size-7;
+  font-weight: 700;
+
+  &:before,
+  &:after {
+    background-color: $colour-4;
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: $base-spacing-unit-small;
+    margin-bottom: $base-spacing-unit-small;
+    @include full-width;
+  }
+
+  @include phablet {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
 }
 
 .c-nav__item {
+  letter-spacing: $uppercase-letter-spacing;
+  text-transform: uppercase;
 
   &:not(:last-child) {
     margin-right: $base-spacing-unit;
   }
 
   &.is-active {
-    text-decoration: underline;
-  }
+    position: relative;
 
+    &:after {
+      background-color: $colour-5;
+      content: "";
+      display: inline-block;
+      height: 2px;
+      position: absolute;
+        bottom: 0;
+        left: 0;
+      width: 100%;
+    }
+  }
 }

@@ -6,36 +6,30 @@
    ========================================================================== */
 
 @font-face {
-  font: {
-      display: swap;
-      family: 'EB Garamond';
-      style: normal;
-      weight: 400;
-  }
+  font-display: swap;
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
   src: local('EB Garamond Regular'), local('EBGaramond-Regular'),
        url('/assets/fonts/eb-garamond-regular.woff2') format('woff2'),
        url('/assets/fonts/eb-garamond-regular.woff') format('woff');
 }
 
 @font-face {
-  font: {
-    display: swap;
-    family: 'Nunito';
-    style: normal;
-    weight: 400;
-  }
+  font-display: swap;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
   src: local('Nunito Regular'), local('Nunito-Regular'),
        url('/assets/fonts/nunito-regular.woff2') format('woff2'),
        url('/assets/fonts/nunito-regular.woff') format('woff');
 }
 
 @font-face {
-  font: {
-    display: swap;
-    family: 'Nunito';
-    style: normal;
-    weight: 700;
-  }
+  font-display: swap;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
   src: local('Nunito Bold'), local('Nunito-Bold'),
        url('/assets/fonts/nunito-bold.woff2') format('woff2'),
        url('/assets/fonts/nunito-bold.woff') format('woff');

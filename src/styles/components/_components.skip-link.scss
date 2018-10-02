@@ -8,17 +8,13 @@ $skip-link-width: 200px !default;
 
 .c-skip-link {
   clip: rect(1px, 1px, 1px, 1px);
-  font: {
-    size: $font-size-5;
-    weight: 600;
-  }
+  font-size: $font-size-6;
+  font-weight: 700;
   height: 1px;
   overflow: hidden;
   outline: none !important;
-  padding: {
-    top: $base-spacing-unit-tiny;
-    bottom: $base-spacing-unit-tiny;
-  }
+  padding-top: $base-spacing-unit-tiny;
+  padding-bottom: $base-spacing-unit-tiny;
   position: absolute;
     top: 0;
     left: 50%;
@@ -29,13 +25,11 @@ $skip-link-width: 200px !default;
   width: 1px;
 
   &:focus {
-    background-color: $colour-four;
-    border: {
-      bottom-right-radius: $skip-link-border-radius;
-      bottom-left-radius: $skip-link-border-radius;
-    }
+    background-color: $colour-6;
+    border-bottom-right-radius: $skip-link-border-radius;
+    border-bottom-left-radius: $skip-link-border-radius;
     clip: auto;
-    color: $colour-one;
+    color: $colour-2;
     height: auto;
     overflow: visible;
     position: fixed;
