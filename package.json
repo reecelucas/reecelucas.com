@@ -17,7 +17,7 @@
     "build:server": "yarn clean && gulp build:server --env production",
     "lint": "eslint 'src/js/**/*.js' & stylelint 'src/styles/**/*.scss'",
     "format": "prettier --write 'src/js/**/*.js'",
-    "precommit": "yarn lint && yarn format"
+    "precommit": "npm run lint && npm run format"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
