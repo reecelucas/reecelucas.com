@@ -1,0 +1,35 @@
+/* ==========================================================================
+   #SPLIT
+   ========================================================================== */
+
+.o-split {
+  grid-template-columns: repeat(2, 1fr);
+  @include progressive-grid;
+}
+
+/* Style variants
+  ========================================================================== */
+
+.o-split--\@sml {
+  display: block;
+
+  @include phablet {
+    @include progressive-grid;
+  }
+}
+
+.o-split--\@med {
+  display: block;
+
+  @include tablet {
+    @include progressive-grid;
+  }
+}
+
+.o-split--\@lrg {
+  display: block;
+
+  @include desktop {
+    @include progressive-grid;
+  }
+}

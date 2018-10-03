@@ -14,7 +14,7 @@
 
         scripts.forEach(function(src) {
           var scriptEl = d.createElement('script');
-          scriptEl.src = `${src}?{{ metadata.build }}`; // Cache bust
+          scriptEl.src = src + '?{{ build.version }}'; // Cache bust
           scriptEl.async = false;
           d.head.appendChild(scriptEl);
         });

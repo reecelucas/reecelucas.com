@@ -16,19 +16,20 @@ const portscanner = require('portscanner');
 const { spawn } = require('child_process');
 
 // JS
-const babel = require('rollup-plugin-babel');
 const rollup = require('rollup-stream');
-const rollupPluginNodeResolve = require('rollup-plugin-node-resolve');
-const rollupPluginCommonjs = require('rollup-plugin-commonjs');
+const babel = require('rollup-plugin-babel');
+const nodeResolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
 const uglify = require('gulp-uglify');
 
 // SCSS/CSS
 const autoprefixer = require('autoprefixer');
 const cssmqpacker = require('css-mqpacker');
+const uncss = require('postcss-uncss');
 const postcss = require('gulp-postcss');
 const postcssDiscardDuplicates = require('postcss-discard-duplicates');
 const sass = require('gulp-sass');
-const purgecss = require('gulp-purgecss');
+const cleanCSS = require('gulp-clean-css');
 
 // HTML & IMAGES
 const htmlmin = require('gulp-htmlmin');
@@ -134,19 +135,22 @@ gulp.task('scss', () => {
     postcssDiscardDuplicates() // Remove duplicate style rules
   ];
 
+  if (isProduction) {
+    // Remove unused CSS
+    plugins.push(
+      uncss({
+        htmlroot: paths.html.dest,
+        html: [paths.html.src]
+      })
+    );
+  }
+
   return gulp
     .src(paths.scss.src)
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(plugins))
-    .pipe(
-      gulpif(
-        isProduction,
-        purgecss({
-          content: [paths.html.src, paths.js.src]
-        })
-      )
-    )
+    .pipe(gulpif(isProduction, cleanCSS()))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.scss.dest)); // Write sourcemaps to a separate file
 });
@@ -162,7 +166,7 @@ gulp.task('js', () =>
         format: 'iife',
         name: camelCase(fileName),
         sourcemap: true,
-        plugins: [babel(), rollupPluginNodeResolve(), rollupPluginCommonjs()]
+        plugins: [babel(), nodeResolve(), commonjs()]
       }).pipe(source(path.resolve(entry), path.resolve('./src')));
     })
   )
@@ -219,6 +223,7 @@ gulp.task('generate-service-worker', () =>
         '**/*.{html,json,js,woff,woff2}'
       ],
       globIgnores: [
+        '**/modules/*.js',
         '**/head.js' // Inlined into `html`, so no need to cache it
       ],
       /**
@@ -270,8 +275,8 @@ gulp.task('build', () => {
   runSequence(
     'templates',
     'assets',
-    'scss',
     'js',
+    'scss',
     'copy',
     'inlineCritial',
     'html',
@@ -284,8 +289,8 @@ gulp.task('build:server', () => {
   runSequence(
     'templates',
     'assets',
-    'scss',
     'js',
+    'scss',
     'copy',
     'inlineCritial',
     'html',

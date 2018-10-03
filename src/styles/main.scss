@@ -14,6 +14,7 @@
  *  Functions............Common SASS functions used by mixins, *include before mixins*.
  *  Cover................Mixin to stretch an element across its parentNode using absolute positioning.
  *  Full-width...........Mixin to force an element to full viewport width.
+ *  Progressive-grid.....Mixin to progressively apply grid layout, falls back to flexbox.
  *
  *
  * 	GENERIC:
@@ -34,7 +35,9 @@
  *  List-inline..........A list whose items all site in a line.
  *  List-scrollable......An inline-list scrollable along the x-axis.
  *  Intrinsic-ratio......A container for maintaining aspect ratio of content.
- *  Spacer...............Content wrapper with specified margin-bottom for vertical measure
+ *  Banner...............Padded container with contrasting background & texture.
+ *  Spacer...............Content wrapper with specified margin-bottom for vertical measure.
+ *  Split................Basic progressively enhanced two-column split grid.
  *  Wrapper..............Page constraint object.
  *
  *
@@ -64,6 +67,7 @@
 @import "tools/tools.breakpoints";
 @import "tools/tools.cover";
 @import "tools/tools.full-width";
+@import "tools/tools.progressive-grid";
 
 
 @import "generic/generic.normalize";
@@ -77,10 +81,12 @@
 @import "elements/elements.page";
 
 
+@import "objects/objects.banner";
 @import "objects/objects.list-inline";
 @import "objects/objects.list-scrollable";
 @import "objects/objects.intrinsic-ratio";
 @import "objects/objects.spacer";
+@import "objects/objects.split";
 @import "objects/objects.wrapper";
 
 

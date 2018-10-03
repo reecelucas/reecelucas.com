@@ -28,7 +28,7 @@ if (fetchFromLocalStorage(loadedClass)) {
     .catch(console.warn);
 } else {
   const script = document.createElement('script');
-  script.src = 'js/font-loading-fallback.js';
+  script.src = '/js/font-loading-fallback.js';
   script.async = true;
   document.head.appendChild(script);
 }
