@@ -2,6 +2,10 @@
    #BANNER
    ========================================================================== */
 
+$banner-padding-top: calc(5vmin + 80px);
+$banner-padding-btm: calc(5vmin + 120px);
+
 .o-banner {
-  // Banner styles here...
+  padding-top: $banner-padding-top;
+  padding-bottom: $banner-padding-btm;
 }

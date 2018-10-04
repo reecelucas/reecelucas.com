@@ -47,7 +47,7 @@ $ratios: (
 /**
  * Generate a series of ratio classes to be used like so:
  *
- * <div class="o-ratio  o-ratio--16:9">
+ * <div class="o-ratio o-ratio--16:9">
  */
 
 @each $ratio in $ratios {

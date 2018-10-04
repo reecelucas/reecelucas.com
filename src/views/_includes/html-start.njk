@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ metadata.title }}{% if title %} | {{ title }}{% endif %}</title>
 
-    {% if app.fonts %}
-      {% for font in app.fonts %}
+    {% if global.fonts %}
+      {% for font in global.fonts %}
         <link rel="preload" href="{{ font.path }}" as="font" type="font/woff2" crossorigin>
       {% endfor %}
     {% endif %}

@@ -1,0 +1,28 @@
+<section class="o-banner">
+  <div class="o-wrapper">
+    <h2 class="o-spacer o-spacer--large">
+      {{ services.heading | safe }}
+    </h2>
+
+    <div class="o-layout o-layout--col:3@lrg">
+      {% for item in services.items %}
+        <div class="o-layout__item c-card">
+          <div class="c-card__thumbnail">
+            <div class="o-ratio o-ratio--4:3">
+              <img
+                class="o-ratio__content"
+                src="{{ item.img.url }}"
+                alt="{{ item.img.alt }}"
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="c-card__title">{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
