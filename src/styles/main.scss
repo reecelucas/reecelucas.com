@@ -47,6 +47,7 @@
  *  Header...............Global header.
  *  Nav..................Global primary navigation.
  *  Skip-link............Accessible skip-to-content link.
+ *  Timeline.............Horizontally scrolling timeline.
  *
  *
  *  UTILITIES:
@@ -96,6 +97,7 @@
 @import "components/components.header";
 @import "components/components.nav";
 @import "components/components.skip-link";
+@import "components/components.timeline";
 
 
 @import "utilities/utilities.colour";

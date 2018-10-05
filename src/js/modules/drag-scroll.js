@@ -22,7 +22,7 @@ const onMouseDown = event => {
 const onMouseMove = ({ pageX }) => {
   if (!ticking && mouseDown) {
     ticking = true;
-    window.requestAnimationFrame(updateScrollPosition());
+    window.requestAnimationFrame(updateScrollPosition);
     lastScrollX = pageX;
   }
 };

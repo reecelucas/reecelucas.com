@@ -1,0 +1,58 @@
+/* ==========================================================================
+   #TIMELINE
+   ========================================================================== */
+
+$timeline-border-height: 3px !default;
+$timeline-marker-size: 20px !default;
+
+.c-timeline {
+  cursor: move;
+  display: flex;
+  margin-bottom: $base-spacing-unit-large;
+  padding-top: $timeline-marker-size / 2;
+}
+
+.c-timeline__item {
+  border-top: $timeline-border-height solid $colour-8;
+  position: relative;
+  padding-right: $base-spacing-unit-large;
+  padding-top: $base-spacing-unit;
+  margin-top: -($timeline-border-height);
+  flex-basis: 400px - $base-spacing-unit-large;
+  flex-shrink: 0;
+
+  // Circular timeline marker
+
+  &:before {
+    background-color: $colour-6;
+    border: $timeline-border-height solid $colour-8;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: $timeline-marker-size;
+    position: absolute;
+      top: 0;
+      left: 0;
+    transform: translateY(-50%);
+    width: $timeline-marker-size;
+  }
+
+  &:last-child {
+    border-color: transparent;
+  }
+
+}
+
+.c-timeline__title {
+  font-size: $font-size-5;
+  font-weight: 700;
+  margin-bottom: $base-spacing-unit-tiny;
+
+  .fonts-loaded & {
+    font-family: $font-sans;
+  }
+}
+
+.c-timeline__text {
+  color: rgba($colour-2, 0.8);
+}

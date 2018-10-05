@@ -12,17 +12,17 @@
 
 .c-btn {
   all: initial; /* [1] */
-  background-color: $colour-6;
+  background-color: $colour-5;
   border-radius: 50px;
-  color: $colour-5;
+  color: $colour-6;
   cursor: pointer; /* [2] */
   display: inline-block; /* [3] */
   font-family: $font-sans;
-  font-size: $font-size-7;
+  font-size: $font-size-6;
   font-weight: 700;
   letter-spacing: $uppercase-letter-spacing;
   margin: 0;
-  padding: $base-spacing-unit-tiny $base-spacing-unit;
+  padding: $base-spacing-unit-small $base-spacing-unit-large;
   text-align: center; /* [4] */
   text-decoration: none; /* [4] */
   text-transform: uppercase;
@@ -31,8 +31,8 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: $colour-5;
-    color: $colour-6;
+    background-color: $colour-6;
+    color: $colour-5;
     text-decoration: none; /* [4] */
   }
 
@@ -49,6 +49,11 @@
 /* Style variants
    ========================================================================== */
 
+.c-btn--small {
+  font-size: $font-size-7;
+  padding: $base-spacing-unit-tiny $base-spacing-unit;
+}
+
 .c-btn--ghost {
   background-color: transparent;
   border: 2px solid $colour-8;
@@ -61,6 +66,18 @@
     border-color: $colour-6;
     color: $colour-2;
   }
+}
+
+.c-btn--invert-hover {
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $colour-2;
+    color: $colour-6;
+    text-decoration: none; /* [4] */
+  }
+
 }
 
 /**
