@@ -1,0 +1,33 @@
+/* ==========================================================================
+   #LINK
+   ========================================================================== */
+
+$link-transition-duration: 0.15s !default;
+$link-transition-easing: ease !default;
+
+.c-link {
+  position: relative;
+  transition: color $link-transition-duration $link-transition-easing;
+
+  &:after {
+    background-color: $colour-5;
+    content: "";
+    height: 2px;
+    position: absolute;
+      bottom: 0;
+      left: 0;
+    transition: height $link-transition-duration $link-transition-easing;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $colour-6;
+
+    &:after {
+      height: 100%;
+    }
+  }
+}

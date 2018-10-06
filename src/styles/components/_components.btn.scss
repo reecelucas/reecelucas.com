@@ -26,6 +26,7 @@
   text-align: center; /* [4] */
   text-decoration: none; /* [4] */
   text-transform: uppercase;
+  transition: all 0.2s ease;
   vertical-align: middle; /* [5] */
 
   &:hover,
