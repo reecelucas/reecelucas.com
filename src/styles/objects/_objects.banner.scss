@@ -18,6 +18,11 @@ $banner-padding-btm: calc(5vmin + 120px);
   position: relative;
   z-index: 0; // Create new stacking context for :before
 
+  /**
+   * Note: when using AXE or Pa11y for accessibility testing, this rule
+   * will raise contrast errors, since they do not scan psuedo-elements.
+   */
+
   &:before {
     background: url("../assets/images/asphalt-dark.png") $colour-6;
     content: "";
