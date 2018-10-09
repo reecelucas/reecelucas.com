@@ -50,3 +50,8 @@ $banner-padding-btm: calc(5vmin + 120px);
 
   }
 }
+
+.o-banner--no-pad {
+  padding-top: 0;
+  padding-bottom: 0;
+}

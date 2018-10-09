@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "fontfaceobserver": "^2.0.13"
+    "fontfaceobserver": "^2.0.13",
+    "lazily.js": "^1.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

@@ -18,7 +18,7 @@ $timeline-marker-size: 20px !default;
   padding-right: $base-spacing-unit-large;
   padding-top: $base-spacing-unit;
   margin-top: -($timeline-border-height);
-  flex-basis: 480px - $base-spacing-unit-huge;
+  flex-basis: 400px - $base-spacing-unit-large;
   flex-shrink: 0;
 
   // Circular timeline marker
@@ -39,6 +39,10 @@ $timeline-marker-size: 20px !default;
 
   &:last-child {
     border-color: transparent;
+  }
+
+  @include tablet {
+    flex-basis: 480px - $base-spacing-unit-huge;
   }
 
 }

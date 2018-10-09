@@ -1,0 +1,70 @@
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+.c-footer {
+  color: rgba($colour-2, 0.85);
+  padding-top: $base-spacing-unit-large;
+  padding-bottom: $base-spacing-unit-huge;
+}
+
+.c-footer__boxed {
+  align-items: center;
+  border: 3px solid $colour-1;
+  display: flex;
+  flex-direction: column;
+  margin: $base-spacing-unit-huge 0;
+  padding: $base-spacing-unit-huge 0;
+  text-align: center;
+}
+
+.c-footer__copy {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $base-spacing-unit-large;
+  max-width: 65ch;
+}
+
+.c-footer__band {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-7;
+
+  @include phablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.c-footer__nav {
+  margin-bottom: $base-spacing-unit;
+
+  @include phablet {
+    margin-bottom: 0;
+  }
+}
+
+.c-footer__nav-item {
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-right: $base-spacing-unit-small;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $colour-2;
+  }
+
+  @include phablet {
+
+    &:not(:last-child) {
+      margin-right: $base-spacing-unit;
+    }
+
+  }
+}

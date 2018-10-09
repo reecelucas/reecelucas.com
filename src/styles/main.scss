@@ -45,6 +45,7 @@
  *  Btn..................Element-agnostic button styles.
  *  Card.................Generic card.
  *  Header...............Global header.
+ *  Footer...............Global footer.
  *  Nav..................Global primary navigation.
  *  Skip-link............Accessible skip-to-content link.
  *  Link.................Global anchor styling.
@@ -96,6 +97,7 @@
 @import "components/components.btn";
 @import "components/components.card";
 @import "components/components.header";
+@import "components/components.footer";
 @import "components/components.nav";
 @import "components/components.link";
 @import "components/components.skip-link";

@@ -10,19 +10,23 @@
 /* Style variants
   ========================================================================== */
 
-.o-spacer--tiny {
+.o-spacer-reset {
+  margin-bottom: 0;
+}
+
+.o-spacer-tiny {
   margin-bottom: $base-spacing-unit-tiny;
 }
 
-.o-spacer--small {
+.o-spacer-small {
   margin-bottom: $base-spacing-unit-small;
 }
 
-.o-spacer--large {
+.o-spacer-large {
   margin-bottom: $base-spacing-unit-large;
 }
 
-.o-spacer--huge {
+.o-spacer-huge {
   margin-bottom: $base-spacing-unit-huge;
 }
 

@@ -27,3 +27,14 @@ img[width],
 img[height] {
   max-width: none;
 }
+
+img[data-lazyload] {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+// `data-src` is removed when the image is lazy-loaded.
+
+img[data-src] {
+  opacity: 0;
+}

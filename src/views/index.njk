@@ -2,9 +2,16 @@
 layout: layouts/base.njk
 ---
 
-<section id="about">
+<section class="o-banner">
   {% include 'components/hero.njk' %}
+</section>
+
+<section id="about">
   {% include 'components/profile.njk' %}
   {% include 'components/services.njk' %}
   {% include 'components/experience.njk' %}
+</section>
+
+<section id="work" class="o-banner">
+  {% include 'components/work.njk' %}
 </section>

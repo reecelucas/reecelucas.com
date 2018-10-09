@@ -5,10 +5,11 @@
 .c-card {
   display: flex;
   flex-direction: column;
-  margin-bottom: $base-spacing-unit-large;
+  margin-bottom: $base-spacing-unit-huge;
 
   @include phablet {
     flex-direction: row;
+    margin-bottom: $base-spacing-unit-large;
   }
 
   @include desktop {
@@ -18,7 +19,7 @@
 }
 
 .c-card__title {
-  margin-bottom: $base-spacing-unit-small;
+  margin-bottom: $base-spacing-unit-tiny;
 }
 
 .c-card__thumbnail {
@@ -51,6 +52,18 @@
     &:after {
       content: "";
     }
+  }
+
+}
+
+
+/* Style variants
+  ========================================================================== */
+
+.c-card--spaced\@lrg {
+
+  @include desktop {
+    margin-bottom: $base-spacing-unit-huge;
   }
 
 }

@@ -1,0 +1,40 @@
+<footer id="contact" class="[ o-banner o-banner--contrast o-banner--no-pad ] c-footer">
+  <div class="o-wrapper">
+    <div class="c-footer__boxed">
+      <div class="o-wrapper">
+        <h2 class="u-colour-beta">
+          {{ footer.heading | safe }}
+        </h2>
+
+        <p class="c-footer__copy">
+          {{ footer.copy | safe }}
+        </p>
+
+        <a class="c-btn c-btn--invert-hover" href="{{ footer.cta.href }}">
+          {{ footer.cta.label }}
+        </a>
+      </div>
+    </div>
+
+    <div class="c-footer__band">
+      <nav class="c-footer__nav">
+        {% for item in footer.navItems %}
+          <a
+            class="c-footer__nav-item"
+            href="{{ item.href }}"
+
+            {% if item.newTab == true %}
+              target="_blank"
+              rel="noopener noreferrer"
+            {% endif %}
+          >
+            {{ item.label }}
+          </a>
+        {% endfor %}
+      </nav>
+      <span>
+        &copy; 2018, Reece Lucas
+      </span>
+    </div>
+  </div>
+</footer>

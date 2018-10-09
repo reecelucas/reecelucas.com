@@ -1,0 +1,28 @@
+<div class="o-wrapper">
+  <h2 class="o-spacer-large">
+    {{ work.heading | safe }}
+  </h2>
+
+  <div class="o-layout o-layout--col:2@lrg">
+    {% for item in work.items %}
+      <div class="o-layout__item [ c-card c-card--spaced@lrg ]">
+        <div class="c-card__thumbnail">
+          <div class="o-ratio o-ratio--4:3">
+            <img
+              class="o-ratio__content"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              data-src="{{ item.img.url }}"
+              alt="{{ item.img.alt }}"
+              data-lazyload
+            >
+          </div>
+        </div>
+
+        <div>
+          <h3 class="c-card__title">{{ item.title }}</h3>
+          <p class="o-spacer-reset">{{ item.text }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
