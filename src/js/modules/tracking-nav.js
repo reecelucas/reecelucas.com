@@ -27,7 +27,7 @@ const cacheElements = navigationItems => {
 
     if (!section) return;
 
-    const sectionHeight = section.getBoundingClientRect().height;
+    const sectionHeight = section.offsetHeight;
     const sectionTop = section.offsetTop - navHeight;
     const cacheEntry = {
       navItem: item,
@@ -39,6 +39,15 @@ const cacheElements = navigationItems => {
     cache = [...cache, cacheEntry];
   });
 };
+
+/**
+ * At "phablet" resolution the nav is styled to be sticky. Part of this
+ * style change resets the ":before" pseudo-element to "none". We can therefore
+ * use this change to identify when the nav is fixed without needing to
+ * duplicate the responsive breakpoints in the JS.
+ */
+const navIsSticky = () =>
+  getComputedStyle(nav, ':before').getPropertyValue('content') === 'none';
 
 const updateActiveNavItem = (navigationItems, activeNavItem) => {
   navigationItems.forEach(item => {
@@ -81,6 +90,12 @@ const updateNavItems = () => {
   scrollTicking = false;
 };
 
+const resetNavItems = () => {
+  cache.forEach(({ navItem }) => {
+    navItem.classList.remove(config.activeClass);
+  });
+};
+
 const onScroll = () => {
   if (!scrollTicking) {
     scrollTicking = true;
@@ -118,26 +133,40 @@ const onClick = event => {
         setFocus(section, { y: sectionTop });
         document.addEventListener('scroll', onScroll);
 
-        // Update url with hash to ensure native anchor behaviour is persisted
-        window.history.pushState(null, null, hash);
+        if (window.history && window.history.pushState) {
+          // Update url with hash to ensure native anchor behaviour is persisted
+          window.history.pushState(null, null, hash);
+        }
       }
     });
   }
 };
 
 const onResize = () => {
-  // Update the cached sizes and dimensions
-  cacheElements(navItems);
-  updateNavItems();
+  document.removeEventListener('click', onClick);
+  document.removeEventListener('scroll', onScroll);
+  resetNavItems();
+
+  if (navIsSticky()) {
+    // Rebind event handlers and update cached sizes and dimensions
+    document.addEventListener('click', onClick);
+    document.addEventListener('scroll', onScroll);
+
+    cacheElements(navItems);
+    updateNavItems();
+  }
 };
 
 export default () => {
   if (!nav || !navItems || navItems.length === 0) return;
 
-  setInitialActiveNavItem(window.location.hash, navItems);
-  cacheElements(navItems);
+  if (navIsSticky()) {
+    setInitialActiveNavItem(window.location.hash, navItems);
+    cacheElements(navItems);
 
-  document.addEventListener('click', onClick);
-  document.addEventListener('scroll', onScroll);
-  document.addEventListener('resize', debounce(onResize, 200));
+    document.addEventListener('click', onClick);
+    document.addEventListener('scroll', onScroll);
+  }
+
+  window.addEventListener('resize', debounce(100, onResize));
 };

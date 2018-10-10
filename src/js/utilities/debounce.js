@@ -1,4 +1,4 @@
-export default (fn, delay) => {
+export default (delay, fn) => {
   let timerId;
 
   return (...args) => {
