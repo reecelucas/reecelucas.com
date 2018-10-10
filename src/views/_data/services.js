@@ -1,9 +1,9 @@
 module.exports = {
-  heading: 'Services <span class="u-ampersand">&amp;</span>&nbsp;Specialities',
+  title: 'Services <span class="u-ampersand">&amp;</span>&nbsp;Specialities',
   items: [
     {
       img: {
-        url: 'https://source.unsplash.com/random/400x300',
+        src: 'https://source.unsplash.com/random/400x300',
         alt: 'Random Unsplash Image'
       },
       title: 'Accessibility',
@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       img: {
-        url: 'https://source.unsplash.com/random/400x300',
+        src: 'https://source.unsplash.com/random/400x300',
         alt: 'Random Unsplash Image'
       },
       title: 'Performance',
@@ -21,7 +21,7 @@ module.exports = {
     },
     {
       img: {
-        url: 'https://source.unsplash.com/random/400x300',
+        src: 'https://source.unsplash.com/random/400x300',
         alt: 'Random Unsplash Image'
       },
       title: 'CSS Architecture',

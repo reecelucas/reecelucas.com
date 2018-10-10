@@ -1,6 +1,6 @@
 <div class="o-wrapper">
   <h2 class="o-spacer-large">
-    {{ work.heading | safe }}
+    {{ work.title | safe }}
   </h2>
 
   <div class="o-layout o-layout--col:2@lrg">
@@ -11,7 +11,7 @@
             <img
               class="o-ratio__content"
               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              data-src="{{ item.img.url }}"
+              data-src="{{ item.img.src }}"
               alt="{{ item.img.alt }}"
               data-lazyload
             >

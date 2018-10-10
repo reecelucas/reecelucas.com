@@ -1,7 +1,7 @@
 <div class="o-banner">
   <div class="o-wrapper">
     <h2 class="o-spacer-large">
-      {{ services.heading | safe }}
+      {{ services.title | safe }}
     </h2>
 
     <div class="o-layout o-layout--col:3@lrg">
@@ -12,7 +12,7 @@
               <img
                 class="o-ratio__content"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                data-src="{{ item.img.url }}"
+                data-src="{{ item.img.src }}"
                 alt="{{ item.img.alt }}"
                 data-lazyload
               >

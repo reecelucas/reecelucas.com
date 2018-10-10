@@ -1,9 +1,9 @@
 module.exports = {
-  heading: 'Selected Work',
+  title: 'Selected Work',
   items: [
     {
       img: {
-        url: 'https://source.unsplash.com/random/600x500',
+        src: 'https://source.unsplash.com/random/600x500',
         alt: 'Random Unsplash Image'
       },
       title: 'Collective London',
@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       img: {
-        url: 'https://source.unsplash.com/random/600x500',
+        src: 'https://source.unsplash.com/random/600x500',
         alt: 'Random Unsplash Image'
       },
       title: 'MQA',
@@ -21,7 +21,7 @@ module.exports = {
     },
     {
       img: {
-        url: 'https://source.unsplash.com/random/600x500',
+        src: 'https://source.unsplash.com/random/600x500',
         alt: 'Random Unsplash Image'
       },
       title: 'Meshes',
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       img: {
-        url: 'https://source.unsplash.com/random/600x500',
+        src: 'https://source.unsplash.com/random/600x500',
         alt: 'Random Unsplash Image'
       },
       title: 'Lazily.js',

@@ -1,6 +1,6 @@
 module.exports = {
   img: {
-    url: 'https://source.unsplash.com/random/450x600',
+    src: 'https://source.unsplash.com/random/450x600',
     alt: 'Random Unsplash Image'
   },
   paragraphs: [
