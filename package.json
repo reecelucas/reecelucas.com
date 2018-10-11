@@ -20,7 +20,7 @@
     "precommit": "npm run lint && npm run format"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
+    "core-js": "^2.5.7",
     "fontfaceobserver": "^2.0.13",
     "lazily.js": "^1.1.4"
   },

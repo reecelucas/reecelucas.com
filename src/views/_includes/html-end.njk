@@ -2,10 +2,10 @@
       (function(d) {
         var scripts = ['/js/main.js']; // Script(s) for all users
         var newBrowser = (
-          'fetch' in window &&
           'Promise' in window &&
-          'assign' in Object &&
-          'keys' in Object
+          'keys' in Object &&
+          Array.prototype.filter &&
+          Array.from
         );
 
         if (!newBrowser) {

@@ -6,9 +6,6 @@ export default ({
   onStep,
   onComplete = () => {}
 }) => {
-  const raf =
-    window.requestAnimationFrame || (func => window.setTimeout(func, 16));
-
   const stepCount = durationMs / 16;
   const valueIncrement = (endValue - startValue) / stepCount;
   const sinValueIncrement = Math.PI / stepCount;
@@ -22,12 +19,12 @@ export default ({
 
     if (currentSinValue < Math.PI) {
       onStep(currentValue);
-      raf(step);
+      window.requestAnimationFrame(step);
     } else {
       onStep(endValue);
       onComplete();
     }
   }
 
-  raf(step);
+  window.requestAnimationFrame(step);
 };
