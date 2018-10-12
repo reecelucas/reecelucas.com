@@ -123,7 +123,7 @@ gulp.task('html', () =>
         removeRedundantAttributes: true,
         removeScriptTypeAttributes: true,
         removeStyleLinkTypeAttributes: true
-      })
+      }).on('error', console.log)
     )
     .pipe(gulp.dest(paths.html.dest))
 );
@@ -167,7 +167,9 @@ gulp.task('js', () =>
         name: camelCase(fileName),
         sourcemap: true,
         plugins: [babel(), nodeResolve(), commonjs()]
-      }).pipe(source(path.resolve(entry), path.resolve('./src')));
+      })
+        .on('error', console.log)
+        .pipe(source(path.resolve(entry), path.resolve('./src')));
     })
   )
     .pipe(buffer())
