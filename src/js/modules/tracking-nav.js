@@ -46,12 +46,12 @@ const cacheElements = navigationItems => {
 
 /**
  * At "phablet" resolution the nav is styled to be sticky. Part of this
- * style change resets the ":before" pseudo-element to "none". We can therefore
- * use this change to identify when the nav is fixed without needing to
- * duplicate the responsive breakpoints in the JS.
+ * style change sets the ":before" pseudo-element to "display: block".
+ * We can therefore use this change to identify when the nav is fixed without
+ * needing to duplicate the responsive breakpoints in the JS.
  */
 const navIsSticky = () =>
-  getComputedStyle(nav, ':before').getPropertyValue('content') === 'none';
+  getComputedStyle(nav, ':before').getPropertyValue('display') === 'block';
 
 const updateActiveNavItem = (navigationItems, activeNavItem) => {
   navigationItems.forEach(item => {

@@ -6,10 +6,13 @@ $timeline-border-height: 3px !default;
 $timeline-marker-size: 20px !default;
 
 .c-timeline {
-  cursor: move;
   display: flex;
   margin-bottom: $base-spacing-unit-large;
   padding-top: $timeline-marker-size / 2;
+
+  .js & {
+    cursor: move;
+  }
 }
 
 .c-timeline__item {
@@ -58,5 +61,5 @@ $timeline-marker-size: 20px !default;
 }
 
 .c-timeline__text {
-  color: rgba($colour-2, 0.8);
+  color: rgba($colour-2, 0.9);
 }
