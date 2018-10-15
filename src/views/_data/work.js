@@ -8,7 +8,7 @@ module.exports = {
       },
       title: 'Collective London',
       text:
-        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit.'
+        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. Consequat irure non veniam nulla dolore sit.'
     },
     {
       img: {
@@ -17,7 +17,7 @@ module.exports = {
       },
       title: 'MQA',
       text:
-        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit.'
+        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. Consequat irure non veniam nulla dolore sit.'
     },
     {
       img: {
@@ -26,7 +26,7 @@ module.exports = {
       },
       title: 'Meshes',
       text:
-        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit.'
+        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. Consequat irure non veniam nulla dolore sit.'
     },
     {
       img: {
@@ -35,7 +35,7 @@ module.exports = {
       },
       title: 'Lazily.js',
       text:
-        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit.'
+        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. Consequat irure non veniam nulla dolore sit.'
     }
   ]
 };

@@ -2,12 +2,36 @@
    #BANNER
    ========================================================================== */
 
-$banner-padding-top: calc(5vmin + 80px);
-$banner-padding-btm: calc(5vmin + 120px);
+$banner-padding: calc(10vh + #{$base-spacing-unit-large});
+$banner-padding--sml: calc(5vh + #{$base-spacing-unit-large});
+$banner-padding--lrg: calc(15vh + #{$base-spacing-unit-large});
 
 .o-banner {
-  padding-top: $banner-padding-top;
-  padding-bottom: $banner-padding-btm;
+  padding: $banner-padding--sml 0;
+
+  @include tablet {
+    padding: $banner-padding 0;
+  }
+}
+
+
+/* Size variants
+  ========================================================================== */
+
+.o-banner--spaced-lrg {
+  padding: $banner-padding 0;
+
+  @include tablet {
+    padding: $banner-padding--lrg 0;
+  }
+}
+
+.o-banner--no-space {
+  padding: 0;
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 
@@ -15,43 +39,6 @@ $banner-padding-btm: calc(5vmin + 120px);
   ========================================================================== */
 
 .o-banner--contrast {
-  position: relative;
-  z-index: 0; // Create new stacking context for :before
-
-  /**
-   * Note: when using AXE or Pa11y for accessibility testing, this rule
-   * will raise contrast errors, since they do not scan psuedo-elements.
-   */
-
-  &:before {
-    background: url("../assets/images/asphalt-dark.png") $colour-6;
-    content: "";
-    z-index: -1;
-    @include cover;
-  }
-}
-
-.o-banner--contrast-asym {
-  position: relative;
-  z-index: 0; // Create new stacking context for :before
-
-  &:before {
-    background: url("../assets/images/asphalt-dark.png") $colour-6;
-    content: "";
-    z-index: -1;
-    @include cover;
-  }
-
-  @include desktop {
-
-    &:before {
-      height: 62%; // Golden ratio
-    }
-
-  }
-}
-
-.o-banner--no-pad {
-  padding-top: 0;
-  padding-bottom: 0;
+  background: url("../assets/images/asphalt-dark.png") $colour-6;
+  background-blend-mode: soft-light;
 }

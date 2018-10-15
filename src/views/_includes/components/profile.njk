@@ -1,10 +1,19 @@
-<div class="o-banner o-banner--contrast-asym">
+<div class="o-banner o-banner--contrast">
   <div class="o-wrapper o-wrapper--no-pad">
     <div class="o-layout o-layout--no-gutter o-layout--col:2@med">
       <div class="o-wrapper">
-        <img src="{{ profile.img.src }}" alt="{{ profile.img.alt }}">
+        <div class="c-profile-backdrop">
+          <div class="o-ratio u-bg-epsilon">
+            <img
+              class="o-ratio__content c-profile-image"
+              src="{{ profile.img.src }}"
+              alt="{{ profile.img.alt }}"
+            >
+          </div>
+        </div>
       </div>
-      <div class="o-wrapper u-colour-beta">
+
+      <div class="o-wrapper c-profile-copy">
         {% for paragraph in profile.paragraphs %}
           <p>{{ paragraph | safe }}</p>
         {% endfor %}

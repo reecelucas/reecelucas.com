@@ -8,6 +8,7 @@ $link-transition-easing: ease !default;
 .c-link {
   position: relative;
   transition: color $link-transition-duration $link-transition-easing;
+  z-index: 0; /* Create new stacking context for :before */
 
   &:after {
     background-color: $colour-5;

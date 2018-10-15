@@ -21,8 +21,6 @@ html {
 	line-height: $base-line-height; /* [1] */
 	min-height: 100%; /* [2] */
 	overflow-y: scroll; /* [3] */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 
 	&.fonts-loaded {
 		font-family: $font-sans;
@@ -41,6 +39,9 @@ html {
 body {
 	background-color: $colour-1;
 	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 	@include phablet {
 		padding-top: $header-height; /* [1] */
