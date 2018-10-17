@@ -1,28 +1,44 @@
 <div class="o-wrapper">
-  <h2 class="o-spacer-large">
+  <h2 class="u-spaced-large">
     {{ work.title | safe }}
   </h2>
 
-  <div class="o-layout o-layout--col:2@lrg">
-    {% for item in work.items %}
-      <div class="o-layout__item [ c-card c-card--spaced@lrg ]">
-        <div class="c-card__thumbnail">
-          <div class="o-ratio o-ratio--4:3">
-            <img
-              class="o-ratio__content"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              data-src="{{ item.img.src }}"
-              alt="{{ item.img.alt }}"
-              data-lazyload
-            >
-          </div>
-        </div>
-
-        <div>
-          <h3 class="c-card__title">{{ item.title }}</h3>
-          <p class="o-spacer-reset">{{ item.text }}</p>
+  {% for item in work.items %}
+    <div
+      class="
+        c-card c-card--horizontal c-card--contrast
+        {% if loop.index % 2 === 0 %}
+          c-card--reverse
+        {% endif %}
+        u-spaced-huge-@lrg
+      "
+      >
+      <div class="c-card__thumbnail">
+        <div class="o-ratio o-ratio--4:3">
+          <img
+            class="o-ratio__content"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            data-src="{{ item.img.src }}"
+            alt="{{ item.img.alt }}"
+            data-lazyload
+          >
         </div>
       </div>
-    {% endfor %}
-  </div>
+
+      <div class="c-card__info">
+        <h3 class="c-card__title u-colour-beta">
+          {{ item.title }}
+        </h3>
+        <p class="u-spaced-auto">{{ item.text }}</p>
+        <a
+          class="c-btn c-btn--invert-hover"
+          href="{{ item.url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Site
+        </a>
+      </div>
+    </div>
+  {% endfor %}
 </div>

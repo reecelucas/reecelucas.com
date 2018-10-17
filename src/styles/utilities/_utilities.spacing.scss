@@ -1,0 +1,171 @@
+/* ==========================================================================
+   #SPACING
+   ========================================================================== */
+
+// Use '!important' deliberately here – we always want utility classes to take.
+
+.u-spaced-tiny {
+  margin-bottom: $base-spacing-unit-tiny;
+}
+
+.u-spaced-small {
+  margin-bottom: $base-spacing-unit-small;
+}
+
+.u-spaced-default {
+  margin-bottom: $base-spacing-unit;
+}
+
+.u-spaced-large {
+  margin-bottom: $base-spacing-unit-large;
+}
+
+.u-spaced-huge {
+  margin-bottom: $base-spacing-unit-huge;
+}
+
+.u-spaced-auto {
+  margin-bottom: auto;
+}
+
+.u-spaced-none {
+  margin-bottom: 0;
+}
+
+
+/* `Small` breakpoint variants
+   ========================================================================== */
+
+.u-spaced-tiny-\@sml {
+  @include phablet {
+    margin-bottom: $base-spacing-unit-tiny;
+  }
+}
+
+.u-spaced-small-\@sml {
+  @include phablet {
+    margin-bottom: $base-spacing-unit-small;
+  }
+}
+
+.u-spaced-default-\@sml {
+  @include phablet {
+    margin-bottom: $base-spacing-unit;
+  }
+}
+
+.u-spaced-large-\@sml {
+  @include phablet {
+    margin-bottom: $base-spacing-unit-large;
+  }
+}
+
+.u-spaced-huge-\@sml {
+  @include phablet {
+    margin-bottom: $base-spacing-unit-huge;
+  }
+}
+
+.u-spaced-auto-\@sml {
+  @include phablet {
+    margin-bottom: auto;
+  }
+}
+
+.u-spaced-none-\@sml {
+  @include phablet {
+    margin-bottom: 0;
+  }
+}
+
+
+/* `Medium` breakpoint variants
+   ========================================================================== */
+
+.u-spaced-tiny-\@med {
+  @include tablet {
+    margin-bottom: $base-spacing-unit-tiny;
+  }
+}
+
+.u-spaced-small-\@med {
+  @include tablet {
+    margin-bottom: $base-spacing-unit-small;
+  }
+}
+
+.u-spaced-default-\@med {
+  @include tablet {
+    margin-bottom: $base-spacing-unit;
+  }
+}
+
+.u-spaced-large-\@med {
+  @include tablet {
+    margin-bottom: $base-spacing-unit-large;
+  }
+}
+
+.u-spaced-huge-\@med {
+  @include tablet {
+    margin-bottom: $base-spacing-unit-huge;
+  }
+}
+
+.u-spaced-auto-\@med {
+  @include tablet {
+    margin-bottom: auto;
+  }
+}
+
+.u-spaced-none-\@med {
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+
+/* `Large` breakpoint variants
+   ========================================================================== */
+
+.u-spaced-tiny-\@lrg {
+  @include desktop {
+    margin-bottom: $base-spacing-unit-tiny;
+  }
+}
+
+.u-spaced-small-\@lrg {
+  @include desktop {
+    margin-bottom: $base-spacing-unit-small;
+  }
+}
+
+.u-spaced-default-\@lrg {
+  @include desktop {
+    margin-bottom: $base-spacing-unit;
+  }
+}
+
+.u-spaced-large-\@lrg {
+  @include desktop {
+    margin-bottom: $base-spacing-unit-large;
+  }
+}
+
+.u-spaced-huge-\@lrg {
+  @include desktop {
+    margin-bottom: $base-spacing-unit-huge;
+  }
+}
+
+.u-spaced-auto-\@lrg {
+  @include desktop {
+    margin-bottom: auto;
+  }
+}
+
+.u-spaced-none-\@lrg {
+  @include desktop {
+    margin-bottom: 0;
+  }
+}

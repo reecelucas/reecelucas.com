@@ -1,7 +1,3 @@
-/**
- * TODO: call this on load
- */
-
 import debounce from '../utilities/debounce';
 import setFocus from '../utilities/set-focus';
 import ease from '../utilities/ease';

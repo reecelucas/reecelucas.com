@@ -28,6 +28,10 @@ img[height] {
   max-width: none;
 }
 
+
+/* Lazy-load defaults
+  ========================================================================== */
+
 img[data-lazyload] {
   opacity: 1;
   transition: opacity 0.3s ease;

@@ -7,22 +7,13 @@
   flex-direction: column;
   margin-bottom: $base-spacing-unit-huge;
 
-  @include phablet {
-    flex-direction: row;
-    margin-bottom: $base-spacing-unit-large;
-  }
-
   @include desktop {
-    flex-direction: column;
     margin-bottom: 0;
   }
 }
 
 .c-card__title {
-  margin-bottom: $base-spacing-unit-tiny;
-}
-
-.c-card__thumbnail {
+  margin-bottom: 0;
 
   &:after {
     background-color: $colour-5;
@@ -30,40 +21,56 @@
     content: "";
     display: block;
     height: 3px;
-    margin-top: $base-spacing-unit;
-    margin-bottom: $base-spacing-unit-small;
+    margin-top: $base-spacing-unit-small;
+    margin-bottom: $base-spacing-unit;
     width: 50px;
   }
 
-  @include phablet {
-    flex-basis: 38%;
-    flex-shrink: 0;
-    margin-right: $base-spacing-unit;
+}
 
-    &:after {
-      content: none;
-    }
-  }
+.c-card__thumbnail {
+  flex-shrink: 0;
+  margin-bottom: $base-spacing-unit;
+}
+
+.c-card__info {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding: $base-spacing-unit-large $base-spacing-unit;
 
   @include desktop {
-    flex-basis: initial;
-    margin-right: 0;
-
-    &:after {
-      content: "";
-    }
+    padding: $base-spacing-unit-large;
   }
-
 }
 
 
 /* Style variants
   ========================================================================== */
 
-.c-card--spaced\@lrg {
+.c-card--horizontal {
 
-  @include desktop {
-    margin-bottom: $base-spacing-unit-huge;
+  > .c-card__thumbnail {
+    margin-bottom: 0;
   }
 
+  @include tablet {
+    flex-direction: row;
+
+    &.c-card--reverse {
+      flex-direction: row-reverse;
+    }
+
+    > .c-card__thumbnail {
+      flex-basis: 62%;
+    }
+
+  }
+
+}
+
+.c-card--contrast {
+  background: url("../assets/images/asphalt-dark.png") $colour-6;
+  background-blend-mode: soft-light;
+  color: $colour-2;
 }

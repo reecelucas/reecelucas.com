@@ -36,7 +36,6 @@
  *  List-scrollable......An inline-list scrollable along the x-axis.
  *  Intrinsic-ratio......A container for maintaining aspect ratio of content.
  *  Banner...............Padded container with contrasting background & texture.
- *  Spacer...............Content wrapper with specified margin-bottom for vertical measure.
  *  Layout...............Generic progressive grid layout module.
  *  Wrapper..............Page constraint object.
  *
@@ -58,6 +57,7 @@
  *	Display..............Utilities for manipulating element display.
  *  Events...............Utilities for controlling common user actions.
  *	Show-hide............Utilities for hiding content across resolutions.
+ *  Spacing..............Utilities for controlling margin-bottom for vertical measure.
  *	Typography...........Utilities for controlling font size and style.
  *  Widths...............Utilities for controlling element width. Can be used in
  *                       conjunction with o-layout to create a simple responsive grid.
@@ -90,7 +90,6 @@
 @import "objects/objects.list-inline";
 @import "objects/objects.list-scrollable";
 @import "objects/objects.intrinsic-ratio";
-@import "objects/objects.spacer";
 @import "objects/objects.layout";
 @import "objects/objects.wrapper";
 
@@ -110,5 +109,6 @@
 @import "utilities/utilities.display";
 @import "utilities/utilities.events";
 @import "utilities/utilities.show-hide";
+@import "utilities/utilities.spacing";
 @import "utilities/utilities.typography";
 @import "utilities/utilities.widths";
