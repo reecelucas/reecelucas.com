@@ -140,7 +140,14 @@ gulp.task('scss', () => {
     plugins.push(
       uncss({
         htmlroot: paths.html.dest,
-        html: [paths.html.src]
+        html: [paths.html.src],
+        ignore: [
+          'user-is-tabbing',
+          /\.is-.*/,
+          /\.has-.*/,
+          /\.no-.*/,
+          /\.fonts-.*/
+        ]
       })
     );
   }
