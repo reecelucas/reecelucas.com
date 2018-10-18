@@ -3,11 +3,13 @@ import setFocus from '../utilities/set-focus';
 import ease from '../utilities/ease';
 
 const config = {
+  headerSelector: '[data-header]',
   navSelector: '[data-nav]',
   navItemSelector: '[data-nav-item]',
   activeClass: 'is-active'
 };
 
+const header = document.querySelector(config.headerSelector);
 const nav = document.querySelector(config.navSelector);
 const navItems = [...document.querySelectorAll(config.navItemSelector)];
 const navHeight = nav ? nav.getBoundingClientRect().height : 0;
@@ -40,14 +42,8 @@ const cacheElements = navigationItems => {
   });
 };
 
-/**
- * At "phablet" resolution the nav is styled to be sticky. Part of this
- * style change sets the ":before" pseudo-element to "display: block".
- * We can therefore use this change to identify when the nav is fixed without
- * needing to duplicate the responsive breakpoints in the JS.
- */
-const navIsSticky = () =>
-  getComputedStyle(nav, ':before').getPropertyValue('display') === 'block';
+const headerIsSticky = () =>
+  getComputedStyle(header).getPropertyValue('position') === 'fixed';
 
 const updateActiveNavItem = (navigationItems, activeNavItem) => {
   navigationItems.forEach(item => {
@@ -147,7 +143,7 @@ const onResize = () => {
   document.removeEventListener('scroll', onScroll);
   resetNavItems();
 
-  if (navIsSticky()) {
+  if (headerIsSticky()) {
     // Rebind event handlers and update cached sizes and dimensions
     document.addEventListener('click', onClick);
     document.addEventListener('scroll', onScroll);
@@ -158,9 +154,9 @@ const onResize = () => {
 };
 
 export default () => {
-  if (!nav || !navItems || navItems.length === 0) return;
+  if (!header || !nav || !navItems || navItems.length === 0) return;
 
-  if (navIsSticky()) {
+  if (headerIsSticky()) {
     setInitialActiveNavItem(window.location.hash, navItems);
     cacheElements(navItems);
 
