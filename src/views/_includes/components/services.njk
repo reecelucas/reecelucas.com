@@ -7,22 +7,17 @@
     <div class="o-layout o-layout--col:3@med">
       {% for item in services.items %}
         <div class="o-layout__item c-card">
-          <div class="c-card__thumbnail">
-            <div class="o-ratio o-ratio--4:3">
-              <img
-                class="o-ratio__content"
-                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                data-src="{{ item.img.src }}"
-                alt="{{ item.img.alt }}"
-                data-lazyload
-              >
-            </div>
+          <div class="[ o-ratio o-ratio--4:3 ] c-card__thumbnail">
+            <img
+              class="o-ratio__content"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              data-src="{{ item.img.src }}"
+              alt="{{ item.img.alt }}"
+              data-lazyload
+            >
           </div>
-
-          <div>
-            <h3 class="c-card__title">{{ item.title }}</h3>
-            <p class="u-spaced-none">{{ item.text }}</p>
-          </div>
+          <h3 class="c-card__title">{{ item.title }}</h3>
+          <p class="u-spaced-none">{{ item.text }}</p>
         </div>
       {% endfor %}
     </div>

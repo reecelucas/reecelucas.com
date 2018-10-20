@@ -3,34 +3,32 @@
 		Skip to content
 	</a>
 
-	<div class="o-wrapper">
-		<div class="c-header__inner">
-			<a class="c-header__logo" href="/">
-				Reece<strong class="u-font-bold">Lucas</strong>
-			</a>
+	<div class="o-wrapper c-header__inner">
+		<a class="c-header__logo" href="/">
+			Reece<strong class="u-font-bold">Lucas</strong>
+		</a>
 
-			{% if global.navigation %}
-				<nav class="c-nav" data-nav>
-					{% for item in global.navigation %}
-						<a
-							href="{{ item.href }}"
-							class="
-								{% if item.inline %}
-									c-nav__item
-								{% else %}
-									[ c-btn c-btn--ghost c-btn--small ] u-show-@sml
-								{% endif %}
-							"
-
-							{% if item.skipLink == true %}
-								data-nav-item
+		{% if global.navigation %}
+			<nav class="c-nav" data-nav>
+				{% for item in global.navigation %}
+					<a
+						href="{{ item.href }}"
+						class="
+							{% if item.inline %}
+								c-nav__item
+							{% else %}
+								[ c-btn c-btn--ghost c-btn--small ] u-show-@sml
 							{% endif %}
-						>
-							{{ item.label }}
-						</a>
-					{% endfor %}
-				</nav>
-			{% endif %}
-		</div>
+						"
+
+						{% if item.skipLink == true %}
+							data-nav-item
+						{% endif %}
+					>
+						{{ item.label }}
+					</a>
+				{% endfor %}
+			</nav>
+		{% endif %}
 	</div>
 </header>
