@@ -8,6 +8,7 @@ module.exports = {
     name: 'Reece Lucas',
     url: 'https://www.reecelucas.com',
     email: 'reecelucas@sky.com',
+    handle: '@rjilucas',
     social: [
       {
         label: 'GitHub',
