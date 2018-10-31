@@ -26,7 +26,7 @@ module.exports = {
         src: 'https://source.unsplash.com/random/600x450',
         alt: 'Random Unsplash Image'
       },
-      title: 'Meshes',
+      title: 'Hyundai Click to Buy',
       text:
         'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. Consequat irure non veniam nulla dolore sit.',
       url: '/'

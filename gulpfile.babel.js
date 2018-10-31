@@ -187,21 +187,7 @@ gulp.task('js', () =>
 );
 
 gulp.task('assets', () =>
-  gulp
-    .src(paths.assets.src)
-    .pipe(
-      gulpif(
-        isProduction,
-        imagemin([
-          imagemin.jpegtran({ progressive: true }),
-          imagemin.optipng({ optimizationLevel: 5 }),
-          imagemin.svgo({
-            plugins: [{ removeViewBox: true }]
-          })
-        ])
-      )
-    )
-    .pipe(gulp.dest(paths.assets.dest))
+  gulp.src(paths.assets.src).pipe(gulp.dest(paths.assets.dest))
 );
 
 gulp.task('copy', () =>
