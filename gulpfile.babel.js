@@ -33,7 +33,6 @@ const cleanCSS = require('gulp-clean-css');
 
 // HTML & IMAGES
 const htmlmin = require('gulp-htmlmin');
-const imagemin = require('gulp-imagemin');
 const inlinesource = require('gulp-inline-source');
 
 // SERVICE WORKER
