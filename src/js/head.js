@@ -15,7 +15,7 @@ if (fetchFromLocalStorage(loadedClass)) {
   Promise.all([
     document.fonts.load("400 1em 'Nunito'"),
     document.fonts.load("700 1em 'Nunito'"),
-    document.fonts.load("400 1em 'EB Garamond'")
+    document.fonts.load("400 1em 'Libre Baskerville'")
   ])
     .then(() => {
       addLoadedClass();
