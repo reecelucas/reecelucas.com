@@ -18,7 +18,7 @@
   cursor: pointer; /* [2] */
   display: inline-block; /* [3] */
   font-family: $font-sans;
-  font-size: $font-size-5;
+  font-size: $font-size-6;
   font-weight: 700;
   letter-spacing: $uppercase-letter-spacing;
   line-height: 1;
@@ -52,7 +52,7 @@
    ========================================================================== */
 
 .c-btn--small {
-  font-size: $font-size-6;
+  font-size: $font-size-7;
   padding: $base-spacing-unit-tiny $base-spacing-unit-small;
 }
 

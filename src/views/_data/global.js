@@ -41,9 +41,9 @@ module.exports = {
       path: '/assets/fonts/nunito-bold.woff2'
     },
     {
-      name: 'Libre Baskerville',
+      name: 'EB Garamond',
       weight: 400,
-      path: '/assets/fonts/libre-baskerville-regular.woff2'
+      path: '/assets/fonts/eb-garamond-regular.woff2'
     }
   ]
 };
