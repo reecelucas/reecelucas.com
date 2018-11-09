@@ -8,7 +8,7 @@
 
   &:before,
   &:after {
-    background-color: $colour-4;
+    background-color: rgba($colour-8, 0.25);
     content: "";
     display: block;
     height: 1px;

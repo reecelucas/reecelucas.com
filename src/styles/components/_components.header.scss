@@ -9,7 +9,7 @@
   @include phablet {
     align-items: center;
     background-color: $colour-1;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 3px 0 rgba($colour-8, 0.125);
     display: flex;
     height: $header-height;
     position: fixed;
