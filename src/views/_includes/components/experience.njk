@@ -10,7 +10,7 @@
           <h3 class="c-timeline__title u-colour-beta">
             {{ item.title }}
           </h3>
-          <p class="c-timeline__text">{{ item.text }}</p>
+          <p class="c-timeline__text">{{ item.text | preventOrphan }}</p>
         </li>
       {% endfor %}
     </ul>

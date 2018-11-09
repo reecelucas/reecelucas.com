@@ -1,4 +1,5 @@
 module.exports = {
+  year: new Date().getFullYear(),
   navigation: [
     {
       label: 'About',

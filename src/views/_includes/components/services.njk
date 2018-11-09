@@ -1,7 +1,7 @@
 <div class="o-banner">
   <div class="o-wrapper">
     <h2 class="u-spaced-large">
-      {{ services.title | safe }}
+      {{ services.title | preventOrphan | safe }}
     </h2>
 
     <div class="o-layout o-layout--col:3@med">
@@ -17,7 +17,7 @@
             >
           </div>
           <h3 class="c-card__title">{{ item.title }}</h3>
-          <p class="u-spaced-none">{{ item.text }}</p>
+          <p class="u-spaced-none">{{ item.text | preventOrphan }}</p>
         </div>
       {% endfor %}
     </div>

@@ -2,23 +2,74 @@
    #PROFILE
    ========================================================================== */
 
+$profile-image-offset: 50% !default;
+$profile-image-border: 16px solid $colour-1 !default;
+$profile-padding: calc(5vh + #{$base-spacing-unit-large}) !default;
+$profile-padding--sml: calc(2.5vh + #{$base-spacing-unit-large}) !default;
+
+.c-profile {
+  margin-top: $profile-image-offset;
+  position: relative;
+
+  @include tablet {
+    margin-top: 0;
+  }
+}
+
 .c-profile-backdrop {
   background-color: $colour-5;
+  border: $profile-image-border;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   height: 100%;
+  justify-content: flex-end;
+  margin-top: -$profile-image-offset;
 
-  img {
-    mix-blend-mode: multiply; /* Placeholder style */
+  @include tablet {
+    border-top: none;
+    border-bottom: none;
+    margin-top: 0;
+  }
+
+  @include desktop {
+    border-top: $profile-image-border;
+    border-bottom: $profile-image-border;
+    height: auto;
+    margin-top: $profile-padding--sml;
   }
 }
 
 .c-profile-copy {
   color: $colour-2;
-  padding-top: $base-spacing-unit-large;
+  padding-top: $profile-padding--sml;
+  padding-bottom: $profile-padding--sml;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+      top: 0;
+      left: 0;
+    transform: translateX(-50%);
+    width: 200vw;
+    z-index: -1;
+    @include bg-texture;
+  }
 
   @include tablet {
-    padding-top: $base-spacing-unit;
+    position: relative;
+  }
+
+  @include desktop {
+    align-self: start;
+    padding-top: $profile-padding;
+    padding-bottom: $profile-padding;
+
+    p {
+      max-width: 85%;
+    }
   }
 }
+
+

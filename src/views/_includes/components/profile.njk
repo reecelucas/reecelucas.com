@@ -1,9 +1,9 @@
-<div class="o-banner o-banner--contrast">
+<div class="c-profile">
   <div class="o-wrapper o-wrapper--no-pad">
     <div class="o-layout o-layout--no-gutter o-layout--col:2@med">
       <div class="o-wrapper">
         <div class="c-profile-backdrop">
-          <div class="o-ratio u-bg-epsilon">
+          <div class="[ o-ratio o-ratio--3:4 ] u-bg-epsilon">
             <img
               class="o-ratio__content c-profile-image"
               src="{{ profile.img.src }}"
@@ -15,7 +15,7 @@
 
       <div class="o-wrapper c-profile-copy">
         {% for paragraph in profile.paragraphs %}
-          <p>{{ paragraph | safe }}</p>
+          <p>{{ paragraph | preventOrphan | safe }}</p>
         {% endfor %}
       </div>
     </div>

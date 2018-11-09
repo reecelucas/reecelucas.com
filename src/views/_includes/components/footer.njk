@@ -3,7 +3,7 @@
     <div class="c-footer__boxed">
       <div class="o-wrapper">
         <h2 class="u-colour-beta">
-          {{ footer.title | safe }}
+          {{ footer.title | preventOrphan | safe }}
         </h2>
 
         <p class="c-footer__copy">
@@ -33,7 +33,7 @@
         {% endfor %}
       </nav>
       <span>
-        &copy; 2018, Reece Lucas
+        &copy; {{ global.year }}, Reece Lucas
       </span>
     </div>
   </div>

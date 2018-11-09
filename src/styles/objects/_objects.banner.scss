@@ -39,6 +39,5 @@ $banner-padding--lrg: calc(15vh + #{$base-spacing-unit-large});
   ========================================================================== */
 
 .o-banner--contrast {
-  background: url("../assets/images/asphalt-dark.png") $colour-6;
-  background-blend-mode: soft-light;
+  @include bg-texture;
 }
