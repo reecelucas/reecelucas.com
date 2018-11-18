@@ -7,7 +7,7 @@
         </h2>
 
         <p class="c-footer__copy">
-          {{ footer.text | safe }}
+          {{ footer.text | preventOrphan | safe }}
         </p>
 
         <a class="c-btn c-btn--invert-hover" href="mailto:reecelucas@sky.com">
