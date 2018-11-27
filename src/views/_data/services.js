@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Services <span class="u-ampersand">&amp;</span> Specialities',
+  title: 'Interests <span class="u-ampersand">&amp;</span> Specialities',
   items: [
     {
       img: {

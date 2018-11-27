@@ -4,7 +4,17 @@ module.exports = {
     alt: 'Random Unsplash Image'
   },
   paragraphs: [
-    'Est voluptate in culpa pariatur sint excepteur esse adipisicing anim in est voluptate in culpa pariatur sint excepteur esse <a href="/" class="c-link">adipisicing anim</a> in est voluptate in culpa pariatur sint excepteur esse adipisicing anim in est voluptate in culpa pariatur sin excepteur esse adipisicing anim.',
-    'Est voluptate in culpa pariatur sint excepteur esse adipisicing anim in est voluptate in culpa pariatur sint excepteur esse adipisicing anim in est voluptate in culpa pariatur sint excepteur esse adipisicing anim in est voluptate in culpa pariatur sin excepteur esse adipisicing anim.'
+    `
+      I'm Reece, and I help companies make websites that work everywhere. I enjoy working on tricky problems
+      relating to performance, accessibility and scalability; especially when I'm alongside good, thoughtful people.
+    `,
+    `
+      Like most web developers, I spend a lot of my time writing JavaScript, especially React and Vue;
+      and the teams I work with tend to embrace the latest technologies, techniques and approaches.
+    `,
+    `
+      I've been fortunate enough to work with some brilliant organisations, and I hope to keep it that way.
+      If you'd like to work together, or if you have any questions about the work I’ve done, <a href="#contact" class="c-link">get in touch</a>.
+    `
   ]
 };
