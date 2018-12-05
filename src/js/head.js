@@ -12,12 +12,29 @@ const addLoadedClass = () => {
 if (fetchFromLocalStorage(loadedClass)) {
   addLoadedClass();
 } else if ('fonts' in document) {
-  Promise.all([
-    document.fonts.load("400 1em 'Nunito'"),
-    document.fonts.load("700 1em 'Nunito'"),
-    document.fonts.load("400 1em 'EB Garamond'")
-  ])
-    .then(() => {
+  const fontRegular = new FontFace(
+    'Nunito',
+    "url(/assets/fonts/nunito-regular.woff2) format('woff2'), url(/assets/fonts/nunito-regular.woff) format('woff')"
+  );
+
+  const fontBold = new FontFace(
+    'Nunito',
+    "url(/assets/fonts/nunito-bold.woff2) format('woff2'), url(/assets/fonts/nunito-bold.woff) format('woff')",
+    { weight: '700' }
+  );
+
+  const fontHeading = new FontFace(
+    'EB Garamond',
+    "url(/assets/fonts/eb-garamond-regular.woff2) format('woff2'), url(/assets/fonts/eb-garamond-regular.woff) format('woff')"
+  );
+
+  Promise.all([fontHeading.load(), fontRegular.load(), fontBold.load()])
+    .then(loadedFonts => {
+      // Render fonts at the same time to avoid multiple repaints
+      loadedFonts.forEach(font => {
+        document.fonts.add(font);
+      });
+
       addLoadedClass();
       saveToLocalStorage({
         key: loadedClass,
