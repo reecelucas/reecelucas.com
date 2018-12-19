@@ -25,11 +25,11 @@ $skip-link-width: 200px !default;
   width: 1px;
 
   &:focus {
-    background-color: $colour-6;
+    background-color: $colour-2;
     border-bottom-right-radius: $skip-link-border-radius;
     border-bottom-left-radius: $skip-link-border-radius;
     clip: auto;
-    color: $colour-2;
+    color: $colour-1;
     height: auto;
     overflow: visible;
     position: fixed;

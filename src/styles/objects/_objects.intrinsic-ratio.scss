@@ -20,7 +20,7 @@ $ratios: (
  */
 
 .o-ratio {
-  background-color: $colour-3;
+  background-color: lighten($colour-2, 10%);
   position: relative;
   display: block;
 

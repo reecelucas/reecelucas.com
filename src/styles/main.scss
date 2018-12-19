@@ -12,7 +12,6 @@
  * 	TOOLS:
  *  Breakpoints..........Mixins for global inline media-queries.
  *  Functions............Common SASS functions used by mixins, *include before mixins*.
- *  Bg-texture...........Mixin to provide the sites' signature contrasting background and texture.
  *  Cover................Mixin to stretch an element across its parentNode using absolute positioning.
  *  Full-width...........Mixin to force an element to full viewport width.
  *  Progressive-grid.....Mixin to progressively apply grid layout, falls back to flexbox.
@@ -54,7 +53,6 @@
  *
  *
  *  UTILITIES:
- * 	Colour...............Utilities for controlling background and font colour.
  *	Display..............Utilities for manipulating element display.
  *  Events...............Utilities for controlling common user actions.
  *	Show-hide............Utilities for hiding content across resolutions.
@@ -71,7 +69,6 @@
 
 @import "tools/tools.functions";
 @import "tools/tools.breakpoints";
-@import "tools/tools.bg-texture";
 @import "tools/tools.cover";
 @import "tools/tools.full-width";
 @import "tools/tools.progressive-grid";
@@ -107,7 +104,6 @@
 @import "components/components.timeline";
 
 
-@import "utilities/utilities.colour";
 @import "utilities/utilities.display";
 @import "utilities/utilities.events";
 @import "utilities/utilities.show-hide";

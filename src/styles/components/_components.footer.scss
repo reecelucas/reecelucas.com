@@ -3,7 +3,6 @@
    ========================================================================== */
 
 .c-footer {
-  color: $colour-3;
   padding-top: $base-spacing-unit-tiny;
   padding-bottom: $base-spacing-unit-large;
 
@@ -62,7 +61,7 @@
   &:hover,
   &:focus,
   &:active {
-    color: $colour-2;
+    color: $colour-3;
   }
 
   @include phablet {

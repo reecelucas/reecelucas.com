@@ -39,5 +39,6 @@ $banner-padding--lrg: calc(15vh + #{$base-spacing-unit-large});
   ========================================================================== */
 
 .o-banner--contrast {
-  @include bg-texture;
+  background-color: $colour-2;
+  color: $colour-1;
 }

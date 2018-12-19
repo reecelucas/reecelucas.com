@@ -4,6 +4,7 @@
 
 $timeline-border-height: 3px !default;
 $timeline-marker-size: 20px !default;
+$timeline-border-colour: lighten($colour-2, 10%) !default;
 
 .c-timeline {
   display: flex;
@@ -16,7 +17,7 @@ $timeline-marker-size: 20px !default;
 }
 
 .c-timeline__item {
-  border-top: $timeline-border-height solid $colour-8;
+  border-top: $timeline-border-height solid $timeline-border-colour;
   position: relative;
   padding-right: $base-spacing-unit-large;
   padding-top: $base-spacing-unit;
@@ -27,8 +28,8 @@ $timeline-marker-size: 20px !default;
   // Circular timeline marker
 
   &:before {
-    background-color: $colour-6;
-    border: $timeline-border-height solid $colour-8;
+    background-color: $colour-2;
+    border: $timeline-border-height solid $timeline-border-colour;
     border-radius: 50%;
     content: "";
     display: inline-block;
@@ -58,8 +59,4 @@ $timeline-marker-size: 20px !default;
   .fonts-loaded & {
     font-family: $font-sans;
   }
-}
-
-.c-timeline__text {
-  color: $colour-3;
 }

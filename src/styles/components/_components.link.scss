@@ -11,7 +11,7 @@ $link-transition-easing: ease !default;
   z-index: 0; /* Create new stacking context for :before */
 
   &:after {
-    background-color: $colour-5;
+    background-color: $colour-3;
     content: "";
     height: 2px;
     position: absolute;
@@ -25,7 +25,7 @@ $link-transition-easing: ease !default;
   &:hover,
   &:active,
   &:focus {
-    color: $colour-6;
+    color: $colour-2;
 
     &:after {
       height: 100%;

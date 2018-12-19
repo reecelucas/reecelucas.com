@@ -6,7 +6,7 @@
   {% for item in work.items %}
     <div
       class="
-        c-card c-card--horizontal c-card--contrast
+        c-card c-card--horizontal
         {% if loop.index % 2 === 0 %}
           c-card--reverse
         {% endif %}
@@ -24,12 +24,12 @@
       </div>
 
       <div class="c-card__info">
-        <h3 class="c-card__title u-colour-beta">
+        <h3 class="c-card__title">
           {{ item.title | preventOrphan }}
         </h3>
         <p class="u-spaced-large">{{ item.text | preventOrphan }}</p>
         <a
-          class="[ c-btn c-btn--invert-hover ] c-card__btn"
+          class="c-btn c-card__btn"
           href="{{ item.url }}"
           target="_blank"
           rel="noopener noreferrer"

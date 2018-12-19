@@ -17,7 +17,6 @@ $profile-padding--sml: calc(2.5vh + #{$base-spacing-unit-large}) !default;
 }
 
 .c-profile-backdrop {
-  background-color: $colour-5;
   border: $profile-image-border;
   display: flex;
   flex-direction: column;
@@ -40,11 +39,12 @@ $profile-padding--sml: calc(2.5vh + #{$base-spacing-unit-large}) !default;
 }
 
 .c-profile-copy {
-  color: $colour-3;
+  color: $colour-1;
   padding-top: $profile-padding--sml;
   padding-bottom: $profile-padding--sml;
 
   &:before {
+    background-color: $colour-2;
     content: "";
     display: block;
     height: 100%;
@@ -54,7 +54,6 @@ $profile-padding--sml: calc(2.5vh + #{$base-spacing-unit-large}) !default;
     transform: translateX(-50%);
     width: 200vw;
     z-index: -1;
-    @include bg-texture;
   }
 
   @include tablet {

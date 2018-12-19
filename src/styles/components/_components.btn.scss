@@ -12,9 +12,9 @@
 
 .c-btn {
   all: initial; /* [1] */
-  background-color: $colour-5;
+  background-color: $colour-3;
   border-radius: 3px;
-  color: $colour-6;
+  color: $colour-2;
   cursor: pointer; /* [2] */
   display: inline-block; /* [3] */
   font-family: $font-sans;
@@ -36,8 +36,7 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: $colour-6;
-    color: $colour-5;
+    background-color: darken($colour-3, 10%);
     text-decoration: none; /* [4] */
   }
 
@@ -64,27 +63,15 @@
 
 .c-btn--ghost {
   background-color: transparent;
-  border: 2px solid $colour-8;
-  color: $colour-6;
+  border: 2px solid $colour-2;
+  color: $colour-2;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $colour-6;
-    border-color: $colour-6;
-    color: $colour-2;
+    background-color: $colour-2;
+    color: $colour-1;
   }
-}
-
-.c-btn--invert-hover {
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: $colour-1;
-    color: $colour-6;
-  }
-
 }
 
 /**

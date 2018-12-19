@@ -16,7 +16,7 @@
   margin-bottom: 0;
 
   &:after {
-    background-color: $colour-5;
+    background-color: $colour-3;
     border-radius: 3px;
     content: "";
     display: block;
@@ -71,9 +71,4 @@
 
   }
 
-}
-
-.c-card--contrast {
-  color: $colour-3;
-  @include bg-texture;
 }
