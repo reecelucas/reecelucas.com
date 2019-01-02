@@ -1,0 +1,34 @@
+/* ==========================================================================
+   #OVERVIEW
+   ========================================================================== */
+
+.c-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $base-spacing-unit;
+}
+
+.c-overview__item {
+  align-items: center;
+  background-color: darken($colour-1, 2%);
+  border-radius: 2px;
+  box-shadow: 0 2px 3px 0 rgba($colour-2, 0.085);
+  display: flex;
+  padding: $base-spacing-unit-large $base-spacing-unit;
+  position: relative;
+}
+
+.c-overview__item-thumbnail {
+  border: 4px solid $colour-3;
+  border-radius: 50%;
+  flex-shrink: 0;
+  flex-basis: 15%;
+  margin-right: $base-spacing-unit;
+  overflow: hidden;
+  position: relative;
+}
+
+.c-overview__item-content {
+  display: flex;
+  flex-wrap: wrap;
+}

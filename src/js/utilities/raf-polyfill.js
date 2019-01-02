@@ -1,5 +1,4 @@
 // rAF Polyfill: https://bit.ly/2PuZbh5
-
 export default (() => {
   let lastTime = 0;
   const vendors = ['webkit', 'moz'];

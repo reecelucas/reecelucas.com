@@ -1,0 +1,30 @@
+<div class="o-wrapper">
+  <h2 class="u-spaced-large">
+    {{ work.title | safe }}
+  </h2>
+
+  <div class="c-overview">
+    {% for item in work.items %}
+      <a class="c-overview__item" href="/" target="_blank" rel="noopener noreferrer">
+        <div class="o-ratio c-overview__item-thumbnail">
+          <img
+            class="o-ratio__content"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            data-src="{{ item.img.src }}"
+            alt="{{ item.img.alt }}"
+            data-lazyload
+          >
+        </div>
+
+        <div class="c-overview__item-content">
+          <div>
+            <h3 class="u-h4 u-spaced-none">
+              {{ item.title | preventOrphan }}
+            </h3>
+            <span>{{ item.text | preventOrphan }}</span>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>

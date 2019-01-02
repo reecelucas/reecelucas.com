@@ -14,7 +14,6 @@
  *  Functions............Common SASS functions used by mixins, *include before mixins*.
  *  Cover................Mixin to stretch an element across its parentNode using absolute positioning.
  *  Full-width...........Mixin to force an element to full viewport width.
- *  Progressive-grid.....Mixin to progressively apply grid layout, falls back to flexbox.
  *
  *
  * 	GENERIC:
@@ -49,6 +48,7 @@
  *  Profile..............Split image-text hero section.
  *  Skip-link............Accessible skip-to-content link.
  *  Link.................Global anchor styling.
+ *  Overview.............Project overview with separator.
  *  Timeline.............Horizontally scrolling list timeline.
  *
  *
@@ -71,7 +71,6 @@
 @import "tools/tools.breakpoints";
 @import "tools/tools.cover";
 @import "tools/tools.full-width";
-@import "tools/tools.progressive-grid";
 
 
 @import "generic/generic.normalize";
@@ -99,6 +98,7 @@
 @import "components/components.footer";
 @import "components/components.nav";
 @import "components/components.link";
+@import "components/components.overview";
 @import "components/components.profile";
 @import "components/components.skip-link";
 @import "components/components.timeline";

@@ -7,8 +7,7 @@ module.exports = {
         alt: 'Random Unsplash Image'
       },
       title: 'Collective London',
-      text:
-        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. Consequat irure non veniam nulla dolore sit.',
+      text: 'Lorem ipsum – Lorem ipsum – Lorem',
       url: '/'
     },
     {
@@ -17,8 +16,7 @@ module.exports = {
         alt: 'Random Unsplash Image'
       },
       title: 'MQA',
-      text:
-        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. Consequat irure non veniam nulla dolore sit.',
+      text: 'Lorem ipsum – Lorem ipsum – Lorem',
       url: '/'
     },
     {
@@ -27,8 +25,7 @@ module.exports = {
         alt: 'Random Unsplash Image'
       },
       title: 'Hyundai Click to Buy',
-      text:
-        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. Consequat irure non veniam nulla dolore sit.',
+      text: 'Lorem ipsum – Lorem ipsum – Lorem',
       url: '/'
     },
     {
@@ -37,8 +34,7 @@ module.exports = {
         alt: 'Random Unsplash Image'
       },
       title: 'Lazily.js',
-      text:
-        'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. Consequat irure non veniam nulla dolore sit.',
+      text: 'Lorem ipsum – Lorem ipsum – Lorem',
       url: '/'
     }
   ]

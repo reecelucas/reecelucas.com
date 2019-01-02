@@ -6,7 +6,6 @@
  * @returns {void}
  */
 export const saveToLocalStorage = ({ key, value, expirationDays }) => {
-  // Try for localStorage support...
   try {
     // Convert days to milliseconds (ms)
     const expirationMS = expirationDays * 24 * 60 * 60 * 1000;
@@ -26,7 +25,6 @@ export const saveToLocalStorage = ({ key, value, expirationDays }) => {
  * @returns {(Object|void)}
  */
 export const fetchFromLocalStorage = key => {
-  // Try for localStorage support...
   try {
     const record = JSON.parse(localStorage.getItem(key));
 
@@ -34,10 +32,7 @@ export const fetchFromLocalStorage = key => {
     if (record && new Date().getTime() < record.timestamp) {
       return JSON.parse(record.value);
     }
-
-    return undefined;
   } catch (e) {
     console.warn(e);
-    return undefined;
   }
 };
