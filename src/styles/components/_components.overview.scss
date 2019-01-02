@@ -2,33 +2,65 @@
    #OVERVIEW
    ========================================================================== */
 
-.c-overview {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $base-spacing-unit;
-}
+$overview-transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95) !default;
 
-.c-overview__item {
+.c-overview {
   align-items: center;
-  background-color: darken($colour-1, 2%);
+  background-color: darken($colour-1, 2.5%);
   border-radius: 2px;
   box-shadow: 0 2px 3px 0 rgba($colour-2, 0.085);
   display: flex;
+  margin-bottom: $base-spacing-unit;
   padding: $base-spacing-unit-large $base-spacing-unit;
   position: relative;
+
+  &:hover,
+  &:focus {
+
+    .c-overview__thumbnail {
+      transform: scale3d(0.925, 0.925, 1);
+
+      img {
+        transform: scale3d(1.2, 1.2, 1);
+      }
+
+    }
+
+  }
 }
 
-.c-overview__item-thumbnail {
-  border: 4px solid $colour-3;
+.c-overview__thumbnail {
+  backface-visibility: hidden;
   border-radius: 50%;
   flex-shrink: 0;
-  flex-basis: 15%;
+  flex-basis: 17.5%;
   margin-right: $base-spacing-unit;
   overflow: hidden;
-  position: relative;
+  transition: $overview-transition;
+
+  img {
+    backface-visibility: hidden;
+    transition: $overview-transition;
+  }
+
+  @include desktop {
+    border: 3px solid $colour-3;
+  }
 }
 
-.c-overview__item-content {
+.c-overview__content {
   display: flex;
   flex-wrap: wrap;
+}
+
+.c-overview__tags {
+  color: rgba($colour-2, 0.85);
+  font-weight: 700;
+  font-size: $font-size-8;
+  letter-spacing: $uppercase-letter-spacing;
+  text-transform: uppercase;
+
+  li:not(:last-child):after {
+    content: "\00a0 \2022 \00a0";
+  }
 }

@@ -3,10 +3,10 @@
     {{ work.title | safe }}
   </h2>
 
-  <div class="c-overview">
+  <div class="o-layout o-layout--col:2@med">
     {% for item in work.items %}
-      <a class="c-overview__item" href="/" target="_blank" rel="noopener noreferrer">
-        <div class="o-ratio c-overview__item-thumbnail">
+      <a class="o-layout__item c-overview" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+        <div class="o-ratio c-overview__thumbnail">
           <img
             class="o-ratio__content"
             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
@@ -16,12 +16,16 @@
           >
         </div>
 
-        <div class="c-overview__item-content">
+        <div class="c-overview__content">
           <div>
-            <h3 class="u-h4 u-spaced-none">
+            <h3 class="u-h4 u-spaced-tiny">
               {{ item.title | preventOrphan }}
             </h3>
-            <span>{{ item.text | preventOrphan }}</span>
+            <ul class="o-list-inline c-overview__tags">
+              {% for tag in item.tags %}
+                <li>{{ tag }}</li>
+              {% endfor %}
+            </ul>
           </div>
         </div>
       </a>

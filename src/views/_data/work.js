@@ -3,38 +3,38 @@ module.exports = {
   items: [
     {
       img: {
-        src: 'https://source.unsplash.com/random/600x450',
+        src: 'https://source.unsplash.com/random/60x60',
         alt: 'Random Unsplash Image'
       },
       title: 'Collective London',
-      text: 'Lorem ipsum – Lorem ipsum – Lorem',
+      tags: ['UX', 'Performance', 'Accessibility'],
       url: '/'
     },
     {
       img: {
-        src: 'https://source.unsplash.com/random/600x450',
+        src: 'https://source.unsplash.com/random/60x60',
         alt: 'Random Unsplash Image'
       },
       title: 'MQA',
-      text: 'Lorem ipsum – Lorem ipsum – Lorem',
+      tags: ['CMS', 'Animation', 'UX'],
       url: '/'
     },
     {
       img: {
-        src: 'https://source.unsplash.com/random/600x450',
+        src: 'https://source.unsplash.com/random/60x60',
         alt: 'Random Unsplash Image'
       },
       title: 'Hyundai Click to Buy',
-      text: 'Lorem ipsum – Lorem ipsum – Lorem',
+      tags: ['ITCSS', 'CMS', 'Performance'],
       url: '/'
     },
     {
       img: {
-        src: 'https://source.unsplash.com/random/600x450',
+        src: 'https://source.unsplash.com/random/60x60',
         alt: 'Random Unsplash Image'
       },
       title: 'Lazily.js',
-      text: 'Lorem ipsum – Lorem ipsum – Lorem',
+      tags: ['ES7', 'Intersection Observer', 'Performance'],
       url: '/'
     }
   ]
