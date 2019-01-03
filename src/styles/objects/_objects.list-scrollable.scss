@@ -3,13 +3,14 @@
    ========================================================================== */
 
 /**
- * 1. Hide scrollbars where possible (no FF support).
+ * 1. Force a new layer for painting to avoid repaint on scroll.
  * 2: Inertial scroll on iOS.
  */
 
 .o-list-scrollable {
   overflow-y: hidden;
-  overflow: scroll;
+  overflow-x: scroll;
+  transform: translateZ(0); /* [1] */
   width: 100%;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch; /* [2] */

@@ -16,7 +16,16 @@ module.exports = {
         alt: 'Random Unsplash Image'
       },
       title: 'MQA',
-      tags: ['CMS', 'Animation', 'UX'],
+      tags: ['Symfony', 'Animation', 'UX'],
+      url: '/'
+    },
+    {
+      img: {
+        src: 'https://source.unsplash.com/random/60x60',
+        alt: 'Random Unsplash Image'
+      },
+      title: 'Markie Markerson',
+      tags: ['React', 'UX', 'Speech API'],
       url: '/'
     },
     {
@@ -33,8 +42,17 @@ module.exports = {
         src: 'https://source.unsplash.com/random/60x60',
         alt: 'Random Unsplash Image'
       },
+      title: 'Gatsby Site Starter',
+      tags: ['React', 'Gatsby', 'PWA'],
+      url: '/'
+    },
+    {
+      img: {
+        src: 'https://source.unsplash.com/random/60x60',
+        alt: 'Random Unsplash Image'
+      },
       title: 'Lazily.js',
-      tags: ['ES7', 'Intersection Observer', 'Performance'],
+      tags: ['Intersection Observer', 'Performance'],
       url: '/'
     }
   ]
