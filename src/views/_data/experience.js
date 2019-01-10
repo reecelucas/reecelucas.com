@@ -4,17 +4,17 @@ module.exports = {
     {
       title: 'BBC',
       text:
-        'UI Development for the R&amp;D team. Built libraries and tools for development teams. Contributed to the modernisation of management and development workflows.'
+        'Built, documented and maintained UI tools and libraries for development teams. Worked with the latest UI technologies; including Gatsby, Graphql, Typescript and CSS-in-JS.'
     },
     {
       title: 'Deloitte',
       text:
-        'UI Development for the digital consultancy team. Contributed to multi-national projects at scale. Planned and oversaw large audit and refactor efforts.'
+        'UI Development for the digital consultancy team. Contributed to multi-national projects at scale. Planned and oversaw large audit and refactor efforts. Managed a team of remote developers.'
     },
     {
       title: 'Collective London',
       text:
-        'Led a front-end team responsible for builds that ranged from responsive microsites to large legacy projects.'
+        'Led a front-end team responsible for builds that ranged from responsive microsites to large legacy projects. Worked with product owners to implement modern workflows and testing approaches.'
     },
     {
       title: 'Meta',
