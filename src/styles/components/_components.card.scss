@@ -29,6 +29,7 @@
 }
 
 .c-card__thumbnail {
+  background-color: darken($colour-1, 2.5%);
   flex-shrink: 0;
   margin-bottom: $base-spacing-unit;
 }

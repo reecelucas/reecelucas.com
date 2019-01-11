@@ -3,7 +3,7 @@ module.exports = {
   items: [
     {
       img: {
-        src: 'https://source.unsplash.com/random/400x300',
+        src: 'assets/images/services/accessibility.png',
         alt: 'Random Unsplash Image'
       },
       title: 'Accessibility',
@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       img: {
-        src: 'https://source.unsplash.com/random/400x300',
+        src: 'assets/images/services/performance.png',
         alt: 'Random Unsplash Image'
       },
       title: 'Performance',
@@ -21,7 +21,7 @@ module.exports = {
     },
     {
       img: {
-        src: 'https://source.unsplash.com/random/400x300',
+        src: 'assets/images/services/css-architecture.png',
         alt: 'Random Unsplash Image'
       },
       title: 'CSS Architecture',
