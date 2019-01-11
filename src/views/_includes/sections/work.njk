@@ -7,13 +7,21 @@
     {% for item in work.items %}
       <a class="o-layout__item c-overview" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
         <div class="o-ratio c-overview__thumbnail">
-          <img
-            class="o-ratio__content"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            data-src="{{ item.img.src }}"
-            alt="{{ item.img.alt }}"
-            data-lazyload
-          >
+          <picture class="o-ratio__content">
+            <source
+              srcset="{{ item.img.webp }}"
+              type="image/webp"
+            >
+            <source
+              srcset="{{ item.img.fallback }}"
+              type="image/png"
+            >
+            <img
+              class="o-ratio__content"
+              src="{{ item.img.fallback }}"
+              aria-hidden="true"
+            >
+          </picture>
         </div>
 
         <div class="c-overview__content">

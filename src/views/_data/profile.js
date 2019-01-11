@@ -6,7 +6,7 @@ module.exports = {
   paragraphs: [
     `
       I'm Reece, and I help companies make websites that work everywhere. I enjoy working on tricky problems
-      relating to performance, accessibility and scalability; especially when I'm alongside good, thoughtful people.
+      relating to performance, accessibility and scalability; especially when I'm alongside good, passionate people.
     `,
     `
       Like most web developers, I spend a lot of my time writing JavaScript, especially React and Vue;

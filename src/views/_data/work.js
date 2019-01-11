@@ -3,8 +3,8 @@ module.exports = {
   items: [
     {
       img: {
-        src: 'https://source.unsplash.com/random/60x60',
-        alt: 'Random Unsplash Image'
+        fallback: 'assets/images/work/collective-thumbnail.png',
+        webp: 'assets/images/work/collective-thumbnail.webp'
       },
       title: 'Collective London',
       tags: ['UX', 'Performance', 'Accessibility'],
@@ -12,8 +12,8 @@ module.exports = {
     },
     {
       img: {
-        src: 'https://source.unsplash.com/random/60x60',
-        alt: 'Random Unsplash Image'
+        fallback: 'assets/images/work/mqa-thumbnail.png',
+        webp: 'assets/images/work/mqa-thumbnail.webp'
       },
       title: 'MQA',
       tags: ['Symfony', 'Animation', 'UX'],
@@ -21,8 +21,8 @@ module.exports = {
     },
     {
       img: {
-        src: 'https://source.unsplash.com/random/60x60',
-        alt: 'Random Unsplash Image'
+        fallback: 'assets/images/work/markie-markerson-thumbnail.png',
+        webp: 'assets/images/work/markie-markerson-thumbnail.webp'
       },
       title: 'Markie Markerson',
       tags: ['React', 'UX', 'Speech API'],
@@ -30,8 +30,8 @@ module.exports = {
     },
     {
       img: {
-        src: 'https://source.unsplash.com/random/60x60',
-        alt: 'Random Unsplash Image'
+        fallback: 'assets/images/work/hyundai-thumbnail.png',
+        webp: 'assets/images/work/hyundai-thumbnail.webp'
       },
       title: 'Hyundai Click to Buy',
       tags: ['ITCSS', 'CMS', 'Performance'],
@@ -39,8 +39,8 @@ module.exports = {
     },
     {
       img: {
-        src: 'https://source.unsplash.com/random/60x60',
-        alt: 'Random Unsplash Image'
+        fallback: 'assets/images/work/gatsby-starter-thumbnail.png',
+        webp: 'assets/images/work/gatsby-starter-thumbnail.webp'
       },
       title: 'Gatsby Site Starter',
       tags: ['React', 'Gatsby', 'PWA'],
@@ -48,8 +48,8 @@ module.exports = {
     },
     {
       img: {
-        src: 'https://source.unsplash.com/random/60x60',
-        alt: 'Random Unsplash Image'
+        fallback: 'assets/images/work/lazily-thumbnail.png',
+        webp: 'assets/images/work/lazily-thumbnail.webp'
       },
       title: 'Lazily.js',
       tags: ['Intersection Observer', 'Performance'],
