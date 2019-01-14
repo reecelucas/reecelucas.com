@@ -5,11 +5,11 @@ module.exports = {
   },
   paragraphs: [
     `
-      I'm Reece, and I help companies make websites that work everywhere. I enjoy working on tricky problems
+      I'm Reece, and I help companies make websites that work everywhere. I enjoy working on problems
       relating to performance, accessibility and scalability; especially when I'm alongside good, passionate people.
     `,
     `
-      Like most web developers, I spend a lot of my time writing JavaScript, especially React and Vue;
+      Like most front end developers, I spend a lot of my time writing JavaScript, especially React;
       and the teams I work with tend to embrace the latest technologies, techniques and approaches.
     `,
     `

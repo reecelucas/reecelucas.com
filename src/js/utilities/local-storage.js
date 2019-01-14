@@ -32,7 +32,10 @@ export const fetchFromLocalStorage = key => {
     if (record && new Date().getTime() < record.timestamp) {
       return JSON.parse(record.value);
     }
+
+    return undefined;
   } catch (e) {
     console.warn(e);
+    return undefined;
   }
 };

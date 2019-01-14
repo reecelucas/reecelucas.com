@@ -52,7 +52,7 @@ module.exports = {
         webp: 'assets/images/work/lazily-thumbnail.webp'
       },
       title: 'Lazily.js',
-      tags: ['Intersection Observer', 'Performance'],
+      tags: ['Intersection Observer API', 'Performance'],
       url: '/'
     }
   ]

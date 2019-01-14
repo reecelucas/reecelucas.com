@@ -1,4 +1,3 @@
 module.exports = {
-  title:
-    'CSS Architecture, Performance<br><span class="u-ampersand">&amp;</span> Accessibility'
+  title: `Freelance UI Developer<br> based in London`
 };

@@ -6,7 +6,7 @@ module.exports = {
         src: 'assets/images/services/accessibility.png',
         alt: 'Random Unsplash Image'
       },
-      title: 'Accessibility',
+      title: 'Inclusive Design',
       text:
         'Ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit. ex anim nostrud non ut laboris proident consequat irure non veniam nulla dolore sit.'
     },

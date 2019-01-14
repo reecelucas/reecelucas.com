@@ -9,7 +9,7 @@ module.exports = {
     {
       title: 'Deloitte',
       text:
-        'UI Development for the digital consultancy team. Contributed to multi-national projects at scale. Planned and oversaw large audit and refactor efforts. Managed a team of remote developers.'
+        'UI Development for the Deloitte Digital team. Contributed to multi-national projects at scale. Planned and oversaw large audit and refactor efforts. Managed a team of remote developers.'
     },
     {
       title: 'Collective London',
