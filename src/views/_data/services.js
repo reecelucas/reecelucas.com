@@ -4,7 +4,8 @@ module.exports = {
     {
       img: {
         src: 'assets/images/services/accessibility.png',
-        alt: 'Random Unsplash Image'
+        alt:
+          'Four tiles showing text with gradually increasing colour contrast.'
       },
       title: 'Inclusive Design',
       text:
@@ -13,7 +14,8 @@ module.exports = {
     {
       img: {
         src: 'assets/images/services/performance.png',
-        alt: 'Random Unsplash Image'
+        alt:
+          'Two user-profile components demonstrating a Facebook-like skeleton screen while loading.'
       },
       title: 'Performance',
       text:
@@ -22,7 +24,8 @@ module.exports = {
     {
       img: {
         src: 'assets/images/services/css-architecture.png',
-        alt: 'Random Unsplash Image'
+        alt:
+          'A collection of common UI components, including navigation, card, video player, button group and alert dialog.'
       },
       title: 'CSS Architecture',
       text:
