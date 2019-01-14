@@ -21,8 +21,7 @@
   },
   "dependencies": {
     "core-js": "^2.5.7",
-    "fontfaceobserver": "^2.0.13",
-    "lazily.js": "^1.1.6"
+    "fontfaceobserver": "^2.0.13"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

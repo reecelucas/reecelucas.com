@@ -3,7 +3,8 @@ module.exports = {
   items: [
     {
       img: {
-        src: 'assets/images/services/accessibility.png',
+        fallback: 'assets/images/services/accessibility.png',
+        webp: 'assets/images/services/accessibility.webp',
         alt: 'Random Unsplash Image'
       },
       title: 'Inclusive Design',
@@ -12,7 +13,8 @@ module.exports = {
     },
     {
       img: {
-        src: 'assets/images/services/performance.png',
+        fallback: 'assets/images/services/performance.png',
+        webp: 'assets/images/services/performance.webp',
         alt: 'Random Unsplash Image'
       },
       title: 'Performance',
@@ -21,7 +23,8 @@ module.exports = {
     },
     {
       img: {
-        src: 'assets/images/services/css-architecture.png',
+        fallback: 'assets/images/services/css-architecture.png',
+        webp: 'assets/images/services/css-architecture.webp',
         alt: 'Random Unsplash Image'
       },
       title: 'CSS Architecture',
