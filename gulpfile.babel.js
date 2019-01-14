@@ -261,11 +261,11 @@ gulp.task('watch', () => {
   gulp.watch(paths.assets.src, ['assets', 'reload']);
 });
 
-gulp.task('default', () => {
-  runSequence('templates', 'assets', 'scss', 'js', 'copy', 'serve', 'watch');
-});
+gulp.task('default', () =>
+  runSequence('templates', 'assets', 'scss', 'js', 'copy', 'serve', 'watch')
+);
 
-gulp.task('build', () => {
+gulp.task('build', () =>
   runSequence(
     'templates',
     'assets',
@@ -276,11 +276,15 @@ gulp.task('build', () => {
     'html',
     'generate-service-worker',
     'serve'
-  );
-});
+  )
+);
 
 gulp.task('build:server', () => {
-  runSequence(
+  const onEnd = () => {
+    process.exit();
+  };
+
+  return runSequence(
     'templates',
     'assets',
     'js',
@@ -288,6 +292,7 @@ gulp.task('build:server', () => {
     'copy',
     'inlineCritial',
     'html',
-    'generate-service-worker'
+    'generate-service-worker',
+    onEnd
   );
 });
