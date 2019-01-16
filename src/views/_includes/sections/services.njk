@@ -15,6 +15,14 @@
               alt="{{ item.img.alt }}"
               data-lazyload
             >
+
+            <noscript>
+              <img
+                class="o-ratio__content"
+                src="{{ item.img.src }}"
+                alt="{{ item.img.alt }}"
+              >
+            </noscript>
           </div>
           <h3 class="c-card__title">{{ item.title }}</h3>
           <p class="u-spaced-none">{{ item.text | preventOrphan }}</p>

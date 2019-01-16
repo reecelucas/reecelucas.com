@@ -35,6 +35,10 @@ img[height] {
 img[data-lazyload] {
   opacity: 1;
   transition: opacity 0.4s ease;
+
+  .no-js & {
+    display: none;
+  }
 }
 
 // `data-src` is removed when the image is lazy-loaded.
