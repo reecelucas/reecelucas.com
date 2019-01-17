@@ -8,7 +8,7 @@
 
     {% if global.fonts %}
       {% for font in global.fonts %}
-        <link rel="preload" href="{{ font.path }}" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="{{ font.path }}" as="font" type="font/woff2" crossorigin="anonymous">
       {% endfor %}
     {% endif %}
 

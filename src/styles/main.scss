@@ -47,6 +47,7 @@
  *  Nav..................Global primary navigation.
  *  Profile..............Split image-text hero section.
  *  Skip-link............Accessible skip-to-content link.
+ *  Strapline............Prominent copy styling.
  *  Link.................Global anchor styling.
  *  Overview.............Project overview with separator.
  *  Timeline.............Horizontally scrolling list timeline.
@@ -101,6 +102,7 @@
 @import "components/components.overview";
 @import "components/components.profile";
 @import "components/components.skip-link";
+@import "components/components.strapline";
 @import "components/components.timeline";
 
 
