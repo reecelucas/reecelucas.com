@@ -3,7 +3,8 @@
    ========================================================================== */
 
 $profile-image-offset: 50% !default;
-$profile-image-border: 16px solid $colour-1 !default;
+$profile-image-border-width: 8px !default;
+$profile-image-border-width--lrg: 16px !default;
 $profile-padding: calc(5vh + #{$base-spacing-unit-large}) !default;
 $profile-padding--sml: calc(2.5vh + #{$base-spacing-unit-large}) !default;
 
@@ -17,7 +18,7 @@ $profile-padding--sml: calc(2.5vh + #{$base-spacing-unit-large}) !default;
 }
 
 .c-profile-backdrop {
-  border: $profile-image-border;
+  border: $profile-image-border-width solid $colour-1;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -26,13 +27,15 @@ $profile-padding--sml: calc(2.5vh + #{$base-spacing-unit-large}) !default;
 
   @include tablet {
     border-top: none;
+    border-right: $profile-image-border-width--lrg solid $colour-1;
+    border-left: $profile-image-border-width--lrg solid $colour-1;
     border-bottom: none;
     margin-top: 0;
   }
 
   @include desktop {
-    border-top: $profile-image-border;
-    border-bottom: $profile-image-border;
+    border-top: $profile-image-border-width--lrg solid $colour-1;
+    border-bottom: $profile-image-border-width--lrg solid $colour-1;
     height: auto;
     margin-top: $profile-padding--sml;
   }

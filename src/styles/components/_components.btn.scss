@@ -13,7 +13,7 @@
 .c-btn {
   all: initial; /* [1] */
   background-color: $colour-3;
-  border-radius: 3px;
+  border-radius: 50px;
   color: $colour-2;
   cursor: pointer; /* [2] */
   display: inline-block; /* [3] */
@@ -24,9 +24,9 @@
   line-height: 1;
   margin: 0;
   padding-top: $base-spacing-unit-small;
-  padding-right: $base-spacing-unit;
+  padding-right: $base-spacing-unit-large;
   padding-bottom: $base-spacing-unit-small - 2px;
-  padding-left: $base-spacing-unit;
+  padding-left: $base-spacing-unit-large;
   text-align: center; /* [4] */
   text-decoration: none; /* [4] */
   text-transform: uppercase;
@@ -56,9 +56,9 @@
 .c-btn--small {
   font-size: $font-size-7;
   padding-top: $base-spacing-unit-small - 6px;
-  padding-right: $base-spacing-unit-small;
+  padding-right: $base-spacing-unit;
   padding-bottom: $base-spacing-unit-small - 8px;
-  padding-left: $base-spacing-unit-small;
+  padding-left: $base-spacing-unit;
 }
 
 .c-btn--ghost {
