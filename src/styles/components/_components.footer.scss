@@ -51,7 +51,7 @@
 
 .c-footer__nav-item {
   font-weight: 700;
-  letter-spacing: 0.025em;
+  letter-spacing: $uppercase-letter-spacing;
   text-transform: uppercase;
 
   &:not(:last-child) {
