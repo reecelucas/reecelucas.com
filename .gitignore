@@ -18,4 +18,3 @@ coverage/
 dist/
 .DS_Store
 yarn-error.log
-yarn.lock
