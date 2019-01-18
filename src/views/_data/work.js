@@ -34,7 +34,7 @@ module.exports = {
     {
       img: 'assets/images/work/lazily-thumbnail.png',
       title: 'Lazily.js',
-      tags: ['Intersection Observer API', 'Performance'],
+      tags: ['Intersection Observer', 'Performance'],
       url: '/'
     }
   ]

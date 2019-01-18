@@ -7,47 +7,36 @@
 
 @font-face {
   font-display: swap;
-  font-family: 'EB Garamond';
+  font-family: 'HKGrotesk';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/eb-garamond-regular.woff2') format('woff2'),
-       url('/assets/fonts/eb-garamond-regular.woff') format('woff');
+  src: url('/assets/fonts/HKGrotesk-Regular.woff2') format('woff2'),
+       url('/assets/fonts/HKGrotesk-Regular.woff') format('woff');
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/assets/fonts/nunito-regular.woff2') format('woff2'),
-       url('/assets/fonts/nunito-regular.woff') format('woff');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Nunito';
+  font-family: 'HKGrotesk';
   font-style: normal;
   font-weight: 700;
-  src: url('/assets/fonts/nunito-bold.woff2') format('woff2'),
-       url('/assets/fonts/nunito-bold.woff') format('woff');
+  src: url('/assets/fonts/HKGrotesk-Bold.woff2') format('woff2'),
+       url('/assets/fonts/HKGrotesk-Bold.woff') format('woff');
 }
 
 // Fallback to system font stack.
-$font-fallback-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-fallback-serif: Baskerville, serif !default;
-$font-sans: "Nunito", Helvetica, sans-serif !default;
-$font-serif: "EB Garamond", $font-fallback-serif;
+$font-fallback: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-primary: "HKGrotesk", Helvetica, sans-serif !default;
 
 
 /* Typographic scale
    ========================================================================== */
 
-// Minor third scale.
-$font-size-1: 2.488rem !default;
-$font-size-2: 2.074rem !default;
-$font-size-3: 1.728rem !default;
-$font-size-4: 1.44rem !default;
-$font-size-5: 1.2rem !default;
+// Major second scale.
+$font-size-1: 1.802rem !default;
+$font-size-2: 1.602rem !default;
+$font-size-3: 1.424rem !default;
+$font-size-4: 1.266rem !default;
+$font-size-5: 1.125rem !default;
 $font-size-6: 1rem !default;
-$font-size-7: 0.833rem !default;
-$font-size-8: 0.694rem  !default;
+$font-size-7: 0.889rem !default;
+$font-size-8: 0.79rem  !default;

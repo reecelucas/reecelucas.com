@@ -13,22 +13,18 @@ if (fetchFromLocalStorage(loadedClass)) {
   addLoadedClass();
 } else if ('fonts' in document) {
   const fontRegular = new FontFace(
-    'Nunito',
-    "url(/assets/fonts/nunito-regular.woff2) format('woff2'), url(/assets/fonts/nunito-regular.woff) format('woff')"
+    'HKGrotesk',
+    "url(/assets/fonts/HKGrotesk-Regular.woff2) format('woff2'), url(/assets/fonts/HKGrotesk-Regular.woff) format('woff')",
+    { weight: '400' }
   );
 
   const fontBold = new FontFace(
-    'Nunito',
-    "url(/assets/fonts/nunito-bold.woff2) format('woff2'), url(/assets/fonts/nunito-bold.woff) format('woff')",
+    'HKGrotesk',
+    "url(/assets/fonts/HKGrotesk-Bold.woff2) format('woff2'), url(/assets/fonts/HKGrotesk-Bold.woff) format('woff')",
     { weight: '700' }
   );
 
-  const fontHeading = new FontFace(
-    'EB Garamond',
-    "url(/assets/fonts/eb-garamond-regular.woff2) format('woff2'), url(/assets/fonts/eb-garamond-regular.woff) format('woff')"
-  );
-
-  Promise.all([fontHeading.load(), fontRegular.load(), fontBold.load()])
+  Promise.all([fontRegular.load(), fontBold.load()])
     .then(loadedFonts => {
       // Render fonts at the same time to avoid multiple repaints
       loadedFonts.forEach(font => {

@@ -32,19 +32,14 @@ module.exports = {
   ],
   fonts: [
     {
-      name: 'Nunito',
+      name: 'HKGrotesk',
       weight: 400,
-      path: '/assets/fonts/nunito-regular.woff2'
+      path: '/assets/fonts/HKGrotesk-Regular.woff2'
     },
     {
-      name: 'Nunito',
+      name: 'HKGrotesk',
       weight: 700,
-      path: '/assets/fonts/nunito-bold.woff2'
-    },
-    {
-      name: 'EB Garamond',
-      weight: 400,
-      path: '/assets/fonts/eb-garamond-regular.woff2'
+      path: '/assets/fonts/HKGrotesk-Bold.woff2'
     }
   ]
 };
