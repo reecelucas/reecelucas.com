@@ -23,10 +23,7 @@
   letter-spacing: $uppercase-letter-spacing;
   line-height: 1;
   margin: 0;
-  padding-top: $base-spacing-unit-small;
-  padding-right: $base-spacing-unit-large;
-  padding-bottom: $base-spacing-unit-small - 2px;
-  padding-left: $base-spacing-unit-large;
+  padding: $base-spacing-unit-small $base-spacing-unit-large;
   text-align: center; /* [4] */
   text-decoration: none; /* [4] */
   text-transform: uppercase;
@@ -36,7 +33,7 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: darken($colour-3, 10%);
+    background-color: $colour-1;
     text-decoration: none; /* [4] */
   }
 
@@ -55,9 +52,9 @@
 
 .c-btn--small {
   font-size: $font-size-7;
-  padding-top: $base-spacing-unit-small - 6px;
+  padding-top: $base-spacing-unit-tiny;
   padding-right: $base-spacing-unit;
-  padding-bottom: $base-spacing-unit-small - 8px;
+  padding-bottom: $base-spacing-unit-tiny - 2px;
   padding-left: $base-spacing-unit;
 }
 

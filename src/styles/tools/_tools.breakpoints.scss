@@ -4,7 +4,7 @@
 
 @import 'node_modules/sass-mq/mq';
 
-@mixin phablet {
+@mixin small {
 
   @include mq($from: phablet) {
     @content;
@@ -12,7 +12,7 @@
 
 }
 
-@mixin tablet {
+@mixin medium {
 
   @include mq($from: tablet) {
     @content;
@@ -20,7 +20,7 @@
 
 }
 
-@mixin desktop {
+@mixin large {
 
   @include mq($from: desktop) {
     @content;

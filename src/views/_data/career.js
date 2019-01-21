@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Experience',
+  title: 'Career',
   items: [
     {
       title: 'BBC',

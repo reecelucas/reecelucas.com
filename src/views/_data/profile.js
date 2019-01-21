@@ -1,6 +1,11 @@
 module.exports = {
+  title: `
+    I'm Reece, a freelance UI Developer based in London. I work with organisations
+    big and small to build cracking digital products.
+  `,
   img: {
-    src: 'https://source.unsplash.com/random/450x600',
+    wide: 'https://source.unsplash.com/random/600x450',
+    tall: 'https://source.unsplash.com/random/450x600',
     alt: 'Random Unsplash Image'
   },
   paragraphs: [

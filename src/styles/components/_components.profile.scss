@@ -2,26 +2,36 @@
    #PROFILE
    ========================================================================== */
 
-$border-offset-top: 7.5% !default;
-$border-offset-left: 10% !default;
+$profile-border-offset-top: 7.5% !default;
+$profile-border-offset-left: 10% !default;
+$profile-spacing: calc(10vmin + #{$base-spacing-unit-huge}) !default;
+$profile-spacing--lrg: calc(15vmin + #{$base-spacing-unit-huge}) !default;
 
 .c-profile-title {
   font-size: $font-size-3;
   line-height: 1.6;
   max-width: 660px;
-  margin-bottom: calc(12.5vh + #{$base-spacing-unit-huge});
+  margin-bottom: $profile-spacing;
 
-  @include desktop {
+  @include large {
     font-size: $font-size-2;
+    margin-bottom: $profile-spacing--lrg;
     max-width: 780px;
   }
 }
 
 .c-profile-image {
+  margin-bottom: $base-spacing-unit;
 
-  @include desktop {
-    margin-left: $border-offset-left;
+  @include medium {
+    margin-bottom: 0;
+  }
+
+  @include large {
+    margin-left: $profile-border-offset-left;
     position: relative;
+
+    // Gradient border
 
     &:before,
     &:after {
@@ -30,7 +40,7 @@ $border-offset-left: 10% !default;
       position: absolute;
         top: 0;
         left: 0;
-      transform: translate(-#{$border-offset-left}, #{$border-offset-top});
+      transform: translate(-#{$profile-border-offset-left}, #{$profile-border-offset-top});
       width: 100%;
       z-index: $z-index-beneath;
     }
@@ -45,7 +55,6 @@ $border-offset-left: 10% !default;
       border: 16px solid transparent;
     }
   }
-
 }
 
 .c-profile-copy {
@@ -53,7 +62,11 @@ $border-offset-left: 10% !default;
   flex-direction: column;
   justify-content: center;
 
-  @include desktop {
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @include large {
 
     p {
       max-width: 85%;
@@ -61,5 +74,3 @@ $border-offset-left: 10% !default;
 
   }
 }
-
-

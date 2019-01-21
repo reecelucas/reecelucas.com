@@ -6,7 +6,7 @@
   padding-top: $base-spacing-unit-tiny;
   padding-bottom: $base-spacing-unit-large;
 
-  @include tablet {
+  @include medium {
     padding-top: $base-spacing-unit;
     padding-bottom: $base-spacing-unit-huge;
   }
@@ -35,7 +35,7 @@
   flex-direction: column;
   font-size: $font-size-7;
 
-  @include phablet {
+  @include small {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -44,7 +44,7 @@
 .c-footer__nav {
   margin-bottom: $base-spacing-unit;
 
-  @include phablet {
+  @include small {
     margin-bottom: 0;
   }
 }
@@ -64,7 +64,7 @@
     color: $colour-3;
   }
 
-  @include phablet {
+  @include small {
 
     &:not(:last-child) {
       margin-right: $base-spacing-unit;

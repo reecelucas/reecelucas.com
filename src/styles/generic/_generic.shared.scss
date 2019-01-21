@@ -11,9 +11,9 @@
  */
 
 /* stylelint-disable */
- @include phablet {}
- @include tablet {}
- @include desktop {}
+ @include small {}
+ @include medium {}
+ @include large {}
 /* stylelint-enable */
 
 /**

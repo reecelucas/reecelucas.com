@@ -28,7 +28,7 @@
 .u-show-\@sml {
   display: none !important;
 
-  @include phablet {
+  @include small {
     display: inline-block !important;
   }
 }
@@ -36,7 +36,7 @@
 .u-show-\@med {
   display: none !important;
 
-  @include tablet {
+  @include medium {
     display: inline-block !important;
   }
 }
@@ -44,7 +44,7 @@
 .u-show-\@lrg {
   display: none !important;
 
-  @include desktop {
+  @include large {
     display: inline-block !important;
   }
 }

@@ -7,7 +7,7 @@
   flex-direction: column;
   margin-bottom: $base-spacing-unit-huge;
 
-  @include desktop {
+  @include large {
     margin-bottom: 0;
   }
 }
@@ -40,7 +40,7 @@
   flex-direction: column;
   padding: $base-spacing-unit-large $base-spacing-unit;
 
-  @include desktop {
+  @include large {
     padding: $base-spacing-unit-large;
   }
 }
@@ -59,7 +59,7 @@
     margin-bottom: 0;
   }
 
-  @include tablet {
+  @include medium {
     flex-direction: row;
 
     &.c-card--reverse {

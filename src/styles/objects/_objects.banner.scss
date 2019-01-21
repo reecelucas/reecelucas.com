@@ -2,14 +2,14 @@
    #BANNER
    ========================================================================== */
 
-$banner-padding: calc(10vh + #{$base-spacing-unit-large});
-$banner-padding--sml: calc(5vh + #{$base-spacing-unit-large});
-$banner-padding--lrg: calc(20vh + #{$base-spacing-unit-large});
+$banner-padding: calc(10vmin + #{$base-spacing-unit-large});
+$banner-padding--sml: calc(5vmin + #{$base-spacing-unit-large});
+$banner-padding--lrg: calc(20vmin + #{$base-spacing-unit-large});
 
 .o-banner {
   padding: $banner-padding--sml 0;
 
-  @include tablet {
+  @include medium {
     padding: $banner-padding 0;
   }
 }
@@ -21,7 +21,7 @@ $banner-padding--lrg: calc(20vh + #{$base-spacing-unit-large});
 .o-banner--spaced-lrg {
   padding: $banner-padding 0;
 
-  @include tablet {
+  @include medium {
     padding: $banner-padding--lrg 0;
   }
 }
@@ -29,7 +29,7 @@ $banner-padding--lrg: calc(20vh + #{$base-spacing-unit-large});
 .o-banner--no-space {
   padding: 0;
 
-  @include tablet {
+  @include medium {
     padding: 0;
   }
 }

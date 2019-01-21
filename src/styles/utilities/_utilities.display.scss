@@ -30,19 +30,19 @@
    ========================================================================== */
 
 .u-display-block-\@sml {
-  @include phablet {
+  @include small {
     display: block !important;
   }
 }
 
 .u-display-inline-\@sml {
-  @include phablet {
+  @include small {
     display: inline !important;
   }
 }
 
 .u-display-ib-\@sml {
-  @include phablet {
+  @include small {
     display: inline-block !important;
   }
 }
@@ -52,19 +52,19 @@
    ========================================================================== */
 
 .u-display-block-\@med {
-  @include tablet {
+  @include medium {
     display: block !important;
   }
 }
 
 .u-display-inline-\@med {
-  @include tablet {
+  @include medium {
     display: inline !important;
   }
 }
 
 .u-display-ib-\@med {
-  @include tablet {
+  @include medium {
     display: inline-block !important;
   }
 }
@@ -74,19 +74,19 @@
    ========================================================================== */
 
 .u-display-block-\@lrg {
-  @include desktop {
+  @include large {
     display: block !important;
   }
 }
 
 .u-display-inline-\@lrg {
-  @include desktop {
+  @include large {
     display: inline !important;
   }
 }
 
 .u-display-ib-\@lrg {
-  @include desktop {
+  @include large {
     display: inline-block !important;
   }
 }

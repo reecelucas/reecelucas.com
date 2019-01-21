@@ -68,6 +68,24 @@ $ratios: (
       padding-bottom: ($consequent/$antecedent) * 100%;
     }
 
+    .o-ratio--#{$antecedent}\:#{$consequent}-\@sml:before {
+      @include small {
+        padding-bottom: ($consequent/$antecedent) * 100%;
+      }
+    }
+
+    .o-ratio--#{$antecedent}\:#{$consequent}-\@med:before {
+      @include medium {
+        padding-bottom: ($consequent/$antecedent) * 100%;
+      }
+    }
+
+    .o-ratio--#{$antecedent}\:#{$consequent}-\@lrg:before {
+      @include large {
+        padding-bottom: ($consequent/$antecedent) * 100%;
+      }
+    }
+
   }
 
 }

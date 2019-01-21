@@ -45,7 +45,7 @@ $timeline-border-colour: lighten($colour-2, 10%) !default;
     border-color: transparent;
   }
 
-  @include tablet {
+  @include medium {
     flex-basis: 480px - $base-spacing-unit-huge;
   }
 

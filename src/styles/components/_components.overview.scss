@@ -2,6 +2,7 @@
    #OVERVIEW
    ========================================================================== */
 
+$overview-thumbnail-size: 80px !default;
 $overview-transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95) !default;
 
 .c-overview {
@@ -32,7 +33,7 @@ $overview-transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95) !defa
   backface-visibility: hidden;
   border-radius: 50%;
   flex-shrink: 0;
-  flex-basis: 17.5%;
+  flex-basis: $overview-thumbnail-size;
   margin-right: $base-spacing-unit;
   overflow: hidden;
   transition: $overview-transition;
@@ -42,14 +43,20 @@ $overview-transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95) !defa
     transition: $overview-transition;
   }
 
-  @include desktop {
-    border: 3px solid $colour-3;
+  @include large {
+    border: 4px solid $colour-3;
   }
 }
 
 .c-overview__content {
   display: flex;
   flex-wrap: wrap;
+}
+
+.c-overview__title {
+  font-size: $font-size-4;
+  line-height: 1.2;
+  margin-bottom: $base-spacing-unit-tiny;
 }
 
 .c-overview__tags {

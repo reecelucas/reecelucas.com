@@ -8,7 +8,7 @@ module.exports = {
       inline: true
     },
     {
-      label: 'Work',
+      label: 'Projects',
       href: '#work',
       skipLink: true,
       inline: true

@@ -1,10 +1,10 @@
 <div class="o-wrapper">
   <h2 class="u-spaced-large">
-    {{ work.title | safe }}
+    {{ projects.title | safe }}
   </h2>
 
   <div class="o-layout o-layout--col:2@med">
-    {% for item in work.items %}
+    {% for item in projects.items %}
       <a class="o-layout__item c-overview" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
         <div class="o-ratio c-overview__thumbnail">
           <img
@@ -26,7 +26,7 @@
 
         <div class="c-overview__content">
           <div>
-            <h3 class="u-h4 u-spaced-tiny">
+            <h3 class="c-overview__title">
               {{ item.title | preventOrphan }}
             </h3>
             <ul class="o-list-inline c-overview__tags">

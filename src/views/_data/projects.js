@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Selected Work',
+  title: 'Selected Projects',
   items: [
     {
       img: 'assets/images/work/collective-thumbnail.png',
@@ -34,7 +34,7 @@ module.exports = {
     {
       img: 'assets/images/work/lazily-thumbnail.png',
       title: 'Lazily.js',
-      tags: ['Intersection Observer API', 'Performance'],
+      tags: ['Intersection Observer', 'Performance'],
       url: 'https://github.com/reecelucas/lazily'
     }
   ]

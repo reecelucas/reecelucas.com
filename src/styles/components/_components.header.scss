@@ -5,7 +5,7 @@
 .c-header {
   padding-top: $base-spacing-unit;
 
-  @include phablet {
+  @include small {
     align-items: center;
     background-color: $colour-1;
     box-shadow: 0 1px 2px 0 rgba($colour-2, 0.1);
@@ -26,7 +26,7 @@
   display: flex; /* [1] */
   flex-direction: column;
 
-  @include phablet {
+  @include small {
     align-content: center;
     align-items: center;
     display: grid;

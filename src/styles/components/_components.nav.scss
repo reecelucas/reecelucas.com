@@ -17,7 +17,7 @@
     @include full-width;
   }
 
-  @include phablet {
+  @include small {
     align-items: center;
     display: flex;
     justify-content: flex-end;

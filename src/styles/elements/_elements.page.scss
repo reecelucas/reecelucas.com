@@ -26,7 +26,7 @@ html {
 		font-family: $font-sans;
 	}
 
-	@include tablet {
+	@include medium {
 		font-size: $base-font-size--lrg;
 	}
 }
@@ -43,7 +43,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
-	@include phablet {
+	@include small {
 		padding-top: $header-height; /* [1] */
 	}
 }
