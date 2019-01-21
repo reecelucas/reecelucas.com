@@ -19,16 +19,15 @@
   display: inline-block; /* [3] */
   font-family: $font-sans;
   font-size: $font-size-6;
-  font-weight: 700;
-  letter-spacing: $uppercase-letter-spacing;
+  font-weight: 600;
   line-height: 1;
   margin: 0;
   padding: $base-spacing-unit-small $base-spacing-unit-large;
   text-align: center; /* [4] */
   text-decoration: none; /* [4] */
-  text-transform: uppercase;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   vertical-align: middle; /* [5] */
+  @include uppercase;
 
   &:hover,
   &:active,
@@ -52,10 +51,7 @@
 
 .c-btn--small {
   font-size: $font-size-7;
-  padding-top: $base-spacing-unit-tiny;
-  padding-right: $base-spacing-unit;
-  padding-bottom: $base-spacing-unit-tiny - 2px;
-  padding-left: $base-spacing-unit;
+  padding: $base-spacing-unit-tiny $base-spacing-unit;
 }
 
 .c-btn--ghost {

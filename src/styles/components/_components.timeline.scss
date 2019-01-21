@@ -17,6 +17,7 @@ $timeline-border-colour: lighten($colour-2, 10%) !default;
 }
 
 .c-timeline__item {
+  color: rgba($colour-1, 0.9);
   border-top: $timeline-border-height solid $timeline-border-colour;
   position: relative;
   padding-right: $base-spacing-unit-large;
@@ -52,8 +53,9 @@ $timeline-border-colour: lighten($colour-2, 10%) !default;
 }
 
 .c-timeline__title {
+  color: $colour-1;
   font-size: $font-size-5;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: $base-spacing-unit-tiny;
 
   .fonts-loaded & {

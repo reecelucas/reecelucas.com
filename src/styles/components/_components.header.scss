@@ -37,13 +37,12 @@
 }
 
 .c-header__logo {
-  font-family: $font-sans;
-  font-size: $font-size-6;
-  letter-spacing: $uppercase-letter-spacing;
+  line-height: 1;
   margin-bottom: 0;
-  text-transform: uppercase;
 
-  .fonts-loaded & {
-    font-family: $font-sans;
+  svg {
+    display: block;
+    height: 30px;
+    width: 23px;
   }
 }

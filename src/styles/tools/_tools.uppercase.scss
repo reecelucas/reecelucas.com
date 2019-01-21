@@ -1,0 +1,16 @@
+/* ==========================================================================
+   #uppercase
+   ========================================================================== */
+
+/**
+ *  Mixin to apply uppercase typography styles to text.
+ *
+ *  .example {
+ *    @include uppercase;
+ *  }
+ */
+
+@mixin uppercase {
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}

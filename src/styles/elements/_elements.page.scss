@@ -16,15 +16,12 @@
 
 html {
 	color: $colour-2;
-	font-family: $font-fallback-sans;
+	font-family: $font-sans;
 	font-size: $base-font-size; /* [1] */
 	line-height: $base-line-height; /* [1] */
+	letter-spacing: 0.025em;
 	min-height: 100%; /* [2] */
 	overflow-y: scroll; /* [3] */
-
-	&.fonts-loaded {
-		font-family: $font-sans;
-	}
 
 	@include medium {
 		font-size: $base-font-size--lrg;

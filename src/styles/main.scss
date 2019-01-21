@@ -14,6 +14,7 @@
  *  Functions............Common SASS functions used by mixins, *include before mixins*.
  *  Cover................Mixin to stretch an element across its parentNode using absolute positioning.
  *  Full-width...........Mixin to force an element to full viewport width.
+ *  Uppercase............Mixin to apply uppercase styling to text.
  *
  *
  * 	GENERIC:
@@ -71,6 +72,7 @@
 @import "tools/tools.breakpoints";
 @import "tools/tools.cover";
 @import "tools/tools.full-width";
+@import "tools/tools.uppercase";
 
 
 @import "generic/generic.normalize";

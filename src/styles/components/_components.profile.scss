@@ -69,7 +69,7 @@ $profile-spacing--lrg: calc(15vmin + #{$base-spacing-unit-huge}) !default;
   @include large {
 
     p {
-      max-width: 85%;
+      max-width: 90%;
     }
 
   }
