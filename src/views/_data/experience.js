@@ -14,7 +14,7 @@ module.exports = {
     {
       title: 'Collective London',
       text:
-        'Led a front-end team responsible for builds that ranged from responsive microsites to large legacy projects. Implemented modern workflows and testing approaches.'
+        'Led a front-end team responsible for builds that ranged from responsive microsites to large legacy projects. Implemented modern development workflows and testing approaches.'
     },
     {
       title: 'Meta',

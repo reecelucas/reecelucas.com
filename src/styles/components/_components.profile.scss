@@ -2,75 +2,63 @@
    #PROFILE
    ========================================================================== */
 
-$profile-image-offset: 50% !default;
-$profile-image-border-width: 8px !default;
-$profile-image-border-width--lrg: 16px !default;
-$profile-padding: calc(5vh + #{$base-spacing-unit-large}) !default;
-$profile-padding--sml: calc(2.5vh + #{$base-spacing-unit-large}) !default;
+$border-offset-top: 7.5% !default;
+$border-offset-left: 10% !default;
 
-.c-profile {
-  margin-top: $profile-image-offset;
-  position: relative;
+.c-profile-title {
+  font-size: $font-size-3;
+  line-height: 1.6;
+  max-width: 660px;
+  margin-bottom: calc(12.5vh + #{$base-spacing-unit-huge});
 
-  @include tablet {
-    margin-top: 0;
+  @include desktop {
+    font-size: $font-size-2;
+    max-width: 780px;
   }
 }
 
-.c-profile-backdrop {
-  border: $profile-image-border-width solid $colour-1;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: flex-end;
-  margin-top: -$profile-image-offset;
-
-  @include tablet {
-    border-top: none;
-    border-right: $profile-image-border-width--lrg solid $colour-1;
-    border-left: $profile-image-border-width--lrg solid $colour-1;
-    border-bottom: none;
-    margin-top: 0;
-  }
+.c-profile-image {
 
   @include desktop {
-    border-top: $profile-image-border-width--lrg solid $colour-1;
-    border-bottom: $profile-image-border-width--lrg solid $colour-1;
-    height: auto;
-    margin-top: $profile-padding--sml;
+    margin-left: $border-offset-left;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      height: 100%;
+      position: absolute;
+        top: 0;
+        left: 0;
+      transform: translate(-#{$border-offset-left}, #{$border-offset-top});
+      width: 100%;
+      z-index: $z-index-beneath;
+    }
+
+    &:before {
+      background-image: linear-gradient(to top, #{$colour-2} 20%, #{$colour-3} 100%);
+    }
+
+    &:after {
+      background-color: $colour-1;
+      background-clip: padding-box;
+      border: 16px solid transparent;
+    }
   }
+
 }
 
 .c-profile-copy {
-  color: $colour-1;
-  padding-top: $profile-padding--sml;
-  padding-bottom: $profile-padding--sml;
-
-  &:before {
-    background-color: $colour-2;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-      top: 0;
-      left: 0;
-    transform: translateX(-50%);
-    width: 200vw;
-    z-index: -1;
-  }
-
-  @include tablet {
-    position: relative;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include desktop {
-    align-self: start;
-    padding-top: $profile-padding;
-    padding-bottom: $profile-padding;
 
     p {
       max-width: 85%;
     }
+
   }
 }
 
