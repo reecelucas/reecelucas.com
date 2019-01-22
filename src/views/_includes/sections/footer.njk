@@ -18,10 +18,10 @@
 
     <div class="c-footer__band">
       <nav class="c-footer__nav">
-        {% for item in footer.navItems %}
+        {% for item in metadata.author.social %}
           <a
             class="c-footer__nav-item"
-            href="{{ item.href }}"
+            href="{{ item.url }}"
 
             {% if item.newTab == true %}
               target="_blank"

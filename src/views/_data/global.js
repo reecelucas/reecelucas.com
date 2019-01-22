@@ -3,30 +3,30 @@ module.exports = {
   navigation: [
     {
       label: 'About',
-      href: '#about',
+      url: '#about',
       skipLink: true,
       inline: true
     },
     {
       label: 'Projects',
-      href: '#work',
+      url: '#work',
       skipLink: true,
       inline: true
     },
     {
       label: 'Contact',
-      href: '#contact',
+      url: '#contact',
       skipLink: true,
       inline: true
     },
     {
       label: 'CV',
-      href: '/assets/reece-lucas-cv.pdf',
+      url: '/assets/reece-lucas-cv.pdf',
       inline: true
     },
     {
       label: 'Hire me',
-      href: '#contact',
+      url: '#contact',
       skipLink: true
     }
   ],

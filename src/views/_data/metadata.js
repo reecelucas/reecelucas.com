@@ -9,23 +9,25 @@ module.exports = {
     name: 'Reece Lucas',
     url: 'https://www.reecelucas.com',
     email: 'reecelucas@sky.com',
-    handle: '@rjilucas',
     social: [
       {
-        label: 'GitHub',
-        url: 'https://github.com/reecelucas'
+        label: 'Github',
+        url: 'https://github.com/reecelucas',
+        newTab: true
       },
       {
-        label: 'Codepen',
-        url: 'https://codepen.io/reecelucas/'
-      },
-      {
-        label: 'Twitter',
-        url: 'https://twitter.com/rjilucas'
+        label: 'Gists',
+        url: 'https://gist.github.com/reecelucas',
+        newTab: true
       },
       {
         label: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/reecelucas/'
+        url: 'https://www.linkedin.com/in/reecelucas/',
+        newTab: true
+      },
+      {
+        label: 'Email',
+        url: 'mailto:reecelucas@sky.com'
       }
     ]
   }

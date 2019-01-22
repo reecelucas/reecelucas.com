@@ -19,12 +19,12 @@ $timeline-border-colour: lighten($colour-2, 10%) !default;
 .c-timeline__item {
   color: rgba($colour-1, 0.9);
   border-top: $timeline-border-height solid $timeline-border-colour;
+  flex-basis: 400px - $base-spacing-unit-large;
+  flex-shrink: 0;
   position: relative;
   padding-right: $base-spacing-unit-large;
   padding-top: $base-spacing-unit;
   margin-top: -($timeline-border-height);
-  flex-basis: 400px - $base-spacing-unit-large;
-  flex-shrink: 0;
 
   // Circular timeline marker
 
