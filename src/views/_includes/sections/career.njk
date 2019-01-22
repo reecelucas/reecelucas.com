@@ -10,7 +10,7 @@
           <h3 class="c-timeline__title">
             {{ item.title }}
           </h3>
-          <p>{{ item.text | preventOrphan | safe }}</p>
+          <p>{{ item.text | safe }}</p>
         </li>
       {% endfor %}
     </ul>

@@ -8,7 +8,7 @@ $timeline-border-colour: lighten($colour-2, 10%) !default;
 
 .c-timeline {
   display: flex;
-  margin-bottom: $base-spacing-unit-large;
+  margin-bottom: $base-spacing-unit-huge;
   padding-top: $timeline-marker-size / 2;
 
   .js & {

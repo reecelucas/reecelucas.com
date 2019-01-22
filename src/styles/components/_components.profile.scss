@@ -10,13 +10,11 @@ $profile-spacing--lrg: calc(15vmin + #{$base-spacing-unit-huge}) !default;
 .c-profile-title {
   font-size: $font-size-3;
   line-height: 1.6;
-  max-width: 660px;
+  max-width: 600px;
   margin-bottom: $profile-spacing;
 
   @include large {
-    font-size: $font-size-2;
     margin-bottom: $profile-spacing--lrg;
-    max-width: 780px;
   }
 }
 

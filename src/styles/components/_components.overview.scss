@@ -2,17 +2,22 @@
    #OVERVIEW
    ========================================================================== */
 
-$overview-thumbnail-size: 80px !default;
+$overview-thumbnail-size: 17.5% !default;
 $overview-transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95) !default;
 
 .c-overview {
-  align-items: center;
   background-color: darken($colour-1, 2.5%);
   border-radius: 2px;
   box-shadow: 0 2px 3px 0 rgba($colour-2, 0.085);
   display: flex;
   margin-bottom: $base-spacing-unit;
-  padding: $base-spacing-unit-large $base-spacing-unit;
+}
+
+.c-overview__inner {
+  align-items: center;
+  display: flex;
+  padding: $base-spacing-unit;
+  width: 100%;
 
   &:hover,
   &:focus {
@@ -48,15 +53,9 @@ $overview-transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95) !defa
   }
 }
 
-.c-overview__content {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .c-overview__title {
   font-size: $font-size-4;
-  line-height: 1.2;
-  margin-bottom: $base-spacing-unit-tiny;
+  margin-bottom: 0;
 }
 
 .c-overview__tags {
