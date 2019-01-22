@@ -15,10 +15,8 @@ if (fetchFromLocalStorage(loadedClass)) {
    * styling will be added before the webfont is available. This feels very "edge-casey"
    * so is probably not worth guarding against.
    */
-  console.log('fetchFromLocalStorage(loadedClass) = true');
   addLoadedClass();
 } else if ('fonts' in document) {
-  console.log('else if ("fonts" in document)');
   const fontHeading = new FontFace(
     'EB Garamond',
     "url(/assets/fonts/eb-garamond-regular.woff2) format('woff2'), url(/assets/fonts/eb-garamond-regular.woff) format('woff')"
@@ -37,7 +35,6 @@ if (fetchFromLocalStorage(loadedClass)) {
     })
     .catch(console.warn);
 } else {
-  console.log('head.js fallback');
   const script = document.createElement('script');
   script.src = '/js/font-loading-fallback.js';
   script.async = true;
