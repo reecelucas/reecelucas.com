@@ -29,7 +29,7 @@
 
           <div>
             <h3 class="c-overview__title">
-              {{ item.title }}
+              {{ item.title | safe }}
             </h3>
             <ul class="o-list-inline c-overview__tags">
               {% for tag in item.tags %}

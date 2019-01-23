@@ -21,7 +21,7 @@ module.exports = {
     },
     {
       img: 'assets/images/work/hyundai-thumbnail.png',
-      title: 'Hyundai Click to Buy',
+      title: 'Hyundai Click to&nbsp;Buy',
       tags: ['ITCSS', 'CMS', 'Performance'],
       url: 'http://clicktobuy.hyundai.co.uk/'
     },
