@@ -7,7 +7,6 @@ module.exports = {
   social_share_image_alt: 'Screenshot of reecelucas.com',
   author: {
     name: 'Reece Lucas',
-    url: 'https://www.reecelucas.com',
     email: 'reecelucas@sky.com',
     social: [
       {

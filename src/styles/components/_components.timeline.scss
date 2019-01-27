@@ -49,7 +49,6 @@ $timeline-border-colour: lighten($colour-2, 10%) !default;
   @include medium {
     flex-basis: 480px - $base-spacing-unit-huge;
   }
-
 }
 
 .c-timeline__title {
