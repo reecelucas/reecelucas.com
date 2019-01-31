@@ -12,9 +12,13 @@
       {% endfor %}
     {% endif %}
 
-    {# `data-inline` attribute used by gulp `inlineCritial` task #}
-    <link href="/css/main.css" rel="stylesheet" type="text/css" data-inline>
+    {#
+      The `data-inline` attribute is used by the gulp `inlineCritial` task.
+      The order of JS and CSS is important here; `head.js` doesn't rely on
+      the CSSOM so we load it before our styles so that it executes straight away.
+    #}
     <script src="/js/head.js" data-inline></script>
+    <link href="/css/main.css" rel="stylesheet" type="text/css" data-inline>
 
     <link rel="canonical" href="{{ metadata.url }}">
     <meta name="description" content="{{ metadata.description }}">

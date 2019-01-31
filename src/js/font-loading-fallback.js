@@ -11,7 +11,7 @@ font
     saveToLocalStorage({
       key: loadedClass,
       value: true,
-      expirationDays: 364
+      expirationDays: 7
     });
   })
   .catch(console.warn);

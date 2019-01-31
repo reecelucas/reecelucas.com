@@ -30,7 +30,7 @@ if (fetchFromLocalStorage(loadedClass)) {
       saveToLocalStorage({
         key: loadedClass,
         value: true,
-        expirationDays: 364 // Font files are cached for a year (see `_headers`)
+        expirationDays: 7
       });
     })
     .catch(console.warn);
