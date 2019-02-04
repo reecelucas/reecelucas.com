@@ -19,7 +19,7 @@ module.exports = {
     {
       title: 'Meta',
       text:
-        'Usability testing and user research for an AI startup. Designed UX &amp; UI solutions to address user "pain points" and improve retention.'
+        'Usability testing and user research for an AI startup. Designed UX &amp; UI solutions to address user &ldquo;pain points&rdquo; and improve retention.'
     }
   ]
 };
