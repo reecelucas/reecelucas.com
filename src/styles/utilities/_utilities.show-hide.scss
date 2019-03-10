@@ -25,7 +25,7 @@
   white-space: nowrap; /* [1] */
 }
 
-.u-show-\@sml {
+.u-show-\@sm {
   display: none !important;
 
   @include small {
@@ -33,7 +33,7 @@
   }
 }
 
-.u-show-\@med {
+.u-show-\@md {
   display: none !important;
 
   @include medium {
@@ -41,7 +41,7 @@
   }
 }
 
-.u-show-\@lrg {
+.u-show-\@lg {
   display: none !important;
 
   @include large {

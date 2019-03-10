@@ -4,25 +4,11 @@
 
 .c-header {
   padding-top: $base-spacing-unit;
-
-  @include small {
-    align-items: center;
-    background-color: $colour-1;
-    box-shadow: 0 1px 2px 0 rgba($colour-2, 0.1);
-    display: flex;
-    height: $header-height;
-    position: fixed;
-      top: 0;
-      left: 0;
-    padding-top: 0;
-    width: 100%;
-    z-index: $z-index-base;
-  }
 }
 
 // 1. Fallback to flexbox in browsers that don't support grid.
 
-.c-header__inner {
+.c-header__band {
   display: flex; /* [1] */
   flex-direction: column;
 

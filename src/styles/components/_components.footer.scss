@@ -3,38 +3,14 @@
    ========================================================================== */
 
 .c-footer {
-  padding-top: $base-spacing-unit-tiny;
-  padding-bottom: $base-spacing-unit-large;
-
-  @include medium {
-    padding-top: $base-spacing-unit;
-    padding-bottom: $base-spacing-unit-huge;
-  }
-}
-
-.c-footer__boxed {
-  align-items: center;
-  border: 3px solid $colour-1;
-  display: flex;
-  flex-direction: column;
-  margin: $base-spacing-unit-huge 0;
-  padding: $base-spacing-unit-huge 0;
-  text-align: center;
-}
-
-.c-footer__copy {
-  color: rgba($colour-1, 0.9);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: $base-spacing-unit-large;
-  max-width: 60ch;
+  color: rgba($colour-2, 0.85);
+  font-size: smaller;
 }
 
 .c-footer__band {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: $font-size-7;
 
   @include small {
     flex-direction: row;
@@ -51,24 +27,13 @@
 }
 
 .c-footer__nav-item {
-  font-weight: 600;
-  @include uppercase;
 
   &:not(:last-child) {
     margin-right: $base-spacing-unit-small;
-  }
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $colour-3;
-  }
-
-  @include small {
-
-    &:not(:last-child) {
+    @include small {
       margin-right: $base-spacing-unit;
     }
-
   }
+
 }

@@ -5,19 +5,19 @@
 @import 'node_modules/sass-mq/mq';
 
 @mixin small {
-  @include mq($from: phablet) {
+  @include mq($from: sm) {
     @content;
   }
 }
 
 @mixin medium {
-  @include mq($from: tablet) {
+  @include mq($from: md) {
     @content;
   }
 }
 
 @mixin large {
-  @include mq($from: desktop) {
+  @include mq($from: lg) {
     @content;
   }
 }

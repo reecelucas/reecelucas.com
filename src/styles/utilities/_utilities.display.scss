@@ -29,19 +29,19 @@
 /* `Small` breakpoint variants
    ========================================================================== */
 
-.u-display-block-\@sml {
+.u-display-block-\@sm {
   @include small {
     display: block !important;
   }
 }
 
-.u-display-inline-\@sml {
+.u-display-inline-\@sm {
   @include small {
     display: inline !important;
   }
 }
 
-.u-display-ib-\@sml {
+.u-display-ib-\@sm {
   @include small {
     display: inline-block !important;
   }
@@ -51,19 +51,19 @@
 /* `Medium` breakpoint variants
    ========================================================================== */
 
-.u-display-block-\@med {
+.u-display-block-\@md {
   @include medium {
     display: block !important;
   }
 }
 
-.u-display-inline-\@med {
+.u-display-inline-\@md {
   @include medium {
     display: inline !important;
   }
 }
 
-.u-display-ib-\@med {
+.u-display-ib-\@md {
   @include medium {
     display: inline-block !important;
   }
@@ -73,19 +73,19 @@
 /* `Large` breakpoint variants
    ========================================================================== */
 
-.u-display-block-\@lrg {
+.u-display-block-\@lg {
   @include large {
     display: block !important;
   }
 }
 
-.u-display-inline-\@lrg {
+.u-display-inline-\@lg {
   @include large {
     display: inline !important;
   }
 }
 
-.u-display-ib-\@lrg {
+.u-display-ib-\@lg {
   @include large {
     display: inline-block !important;
   }

@@ -2,62 +2,72 @@
    #TIMELINE
    ========================================================================== */
 
-$timeline-border-height: 3px !default;
-$timeline-marker-size: 20px !default;
-$timeline-border-colour: lighten($colour-2, 10%) !default;
+$timeline-marker-size: 24px !default;
+$timeline-marker-border-width: 4px !default;
 
 .c-timeline {
-  display: flex;
   margin-bottom: $base-spacing-unit-huge;
-  padding-top: $timeline-marker-size / 2;
-
-  .js & {
-    cursor: move;
-  }
+  padding-left: $timeline-marker-size / 2;
 }
 
 .c-timeline__item {
-  color: rgba($colour-1, 0.9);
-  border-top: $timeline-border-height solid $timeline-border-colour;
-  flex-basis: 400px - $base-spacing-unit-large;
-  flex-shrink: 0;
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
-  padding-right: $base-spacing-unit-large;
-  padding-top: $base-spacing-unit;
-  margin-top: -($timeline-border-height);
 
-  // Circular timeline marker
-
-  &:before {
-    background-color: $colour-2;
-    border: $timeline-border-height solid $timeline-border-colour;
-    border-radius: 50%;
-    content: "";
-    display: inline-block;
-    height: $timeline-marker-size;
-    position: absolute;
-      top: 0;
-      left: 0;
-    transform: translateY(-50%);
-    width: $timeline-marker-size;
+  > * {
+    flex-shrink: 0;
   }
 
-  &:last-child {
-    border-color: transparent;
-  }
+  &:not(:last-child) {
+    padding-bottom: $base-spacing-unit-large;
 
-  @include medium {
-    flex-basis: 480px - $base-spacing-unit-huge;
+    &:before {
+      border-left: 2px solid $colour-4;
+      content: "";
+      height: 100%;
+      position: absolute;
+        top: $timeline-marker-border-width;
+        left: 0;
+      transform: translateX(-50%);
+    }
   }
 }
 
 .c-timeline__title {
-  color: $colour-1;
-  font-size: $font-size-5;
-  font-weight: 600;
+  line-height: 1;
   margin-bottom: $base-spacing-unit-tiny;
+  margin-right:  $base-spacing-unit-tiny;
+  padding-left: $base-spacing-unit-large;
+  position: relative;
 
-  .fonts-loaded & {
-    font-family: $font-sans;
+  &:before {
+    align-self: center;
+    background-color: $colour-1;
+    border: $timeline-marker-border-width solid $colour-5;
+    border-radius: 50%;
+    content: "";
+    display: inline-flex;
+    height: $timeline-marker-size;
+    position: absolute;
+      top: 50%;
+      left: 0;
+    transform: translate(-50%, -50%);
+    width: $timeline-marker-size;
   }
+}
+
+.c-timeline__meta {
+  color: $colour-3;
+  font-style: italic;
+  font-size: smaller;
+}
+
+.c-timeline__detail {
+  color: rgba($colour-2, 0.85);
+  flex-basis: 100%;
+  margin-bottom: 0;
+  max-width: $base-site-max-width--narrow;
+  padding-left: $base-spacing-unit-large;
 }

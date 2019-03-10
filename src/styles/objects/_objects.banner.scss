@@ -3,11 +3,11 @@
    ========================================================================== */
 
 $banner-padding: calc(10vmin + #{$base-spacing-unit-large});
-$banner-padding--sml: calc(5vmin + #{$base-spacing-unit-large});
-$banner-padding--lrg: calc(20vmin + #{$base-spacing-unit-large});
+$banner-padding--sm: calc(5vmin + #{$base-spacing-unit-large});
+$banner-padding--lg: calc(15vmin + #{$base-spacing-unit-large});
 
 .o-banner {
-  padding: $banner-padding--sml 0;
+  padding: $banner-padding--sm 0;
 
   @include medium {
     padding: $banner-padding 0;
@@ -18,14 +18,6 @@ $banner-padding--lrg: calc(20vmin + #{$base-spacing-unit-large});
 /* Size variants
   ========================================================================== */
 
-.o-banner--spaced-lrg {
-  padding: $banner-padding 0;
-
-  @include medium {
-    padding: $banner-padding--lrg 0;
-  }
-}
-
 .o-banner--no-space {
   padding: 0;
 
@@ -34,11 +26,54 @@ $banner-padding--lrg: calc(20vmin + #{$base-spacing-unit-large});
   }
 }
 
+.o-banner--sm {
+  padding: $banner-padding--sm 0;
+
+  @include medium {
+    padding: $banner-padding--sm 0;
+  }
+}
+
+.o-banner--lg {
+  padding: $banner-padding 0;
+
+  @include medium {
+    padding: $banner-padding--lg 0;
+  }
+}
+
 
 /* Style variants
   ========================================================================== */
 
-.o-banner--contrast {
-  background-color: $colour-2;
-  color: $colour-1;
+.o-banner--with-delimeter {
+  position: relative;
+
+  &:after {
+    border-bottom: 1px solid $colour-4;
+    content: "";
+    position: absolute;
+      bottom: 0;
+      left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+  }
+}
+
+.o-banner--asym {
+  background-color: $colour-5;
+  color: rgba($colour-1, 0.85);
+  position: relative;
+  z-index: $z-index-base;
+
+  &:before {
+    background-color: inherit;
+    content: "";
+    height: 100%;
+    position: absolute;
+      top: 0;
+      left: -5%;
+    width: 200vw;
+    z-index: $z-index-beneath;
+  }
 }

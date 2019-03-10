@@ -11,33 +11,36 @@
  */
 
 $mq-breakpoints: (
-  phablet: 640px,
-  tablet: 768px,
-  desktop: 1024px
+  sm: 640px,
+  md: 768px,
+  lg: 1024px
 ) !default;
 
 
 /* Colour palette
    ========================================================================== */
 
-$colour-1: #FFFFFF !default; // White
-$colour-2: #272b3b !default; // Dark Blue
-$colour-3: #DEC38B !default; // Gold
-
-
-/* High-level base settings
-   ========================================================================== */
-
-$base-font-size: 18px !default;
-$base-font-size--lrg: 20px !default;
-$base-line-height: 1.6 !default;
+$colour-1: #ffffff !default; // White
+$colour-2: #191919 !default; // Near Black
+$colour-3: #767676 !default; // Light Gray
+$colour-4: #e6e6e6 !default; // Lighter Gray
+$colour-5: #272b3b !default; // Dark Blue
+$colour-6: #dec38b !default; // Gold
 
 
 /* Widths & Heights
    ========================================================================== */
 
 $base-site-max-width: 1200px !default;
-$header-height: 60px !default;
+$base-site-max-width--narrow: 740px !default;
+
+
+/* High-level base settings
+   ========================================================================== */
+
+$base-font-min-width: 320px !default;
+$base-font-max-width: $base-site-max-width !default;
+$base-line-height: 1.6 !default;
 
 
 /* Spacing
@@ -60,5 +63,4 @@ $base-spacing-unit-huge: 64px !default;
 
 $z-index-beneath: -1 !default;
 $z-index-base: 1 !default;
-$z-index-modal: 2 !default;
-$z-index-skip-link: 3 !default;
+$z-index-skip-link: 2 !default;

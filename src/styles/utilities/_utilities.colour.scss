@@ -19,6 +19,18 @@
   color: $colour-3 !important;
 }
 
+.u-colour-delta {
+  color: $colour-4 !important;
+}
+
+.u-colour-epsilon {
+  color: $colour-5 !important;
+}
+
+.u-colour-zeta {
+  color: $colour-6 !important;
+}
+
 
 /* Background colours
    ========================================================================== */
@@ -33,4 +45,16 @@
 
 .u-bg-gamma {
   background-color: $colour-3 !important;
+}
+
+.u-bg-delta {
+  background-color: $colour-4 !important;
+}
+
+.u-bg-epsilon {
+  background-color: $colour-5 !important;
+}
+
+.u-bg-zeta {
+  background-color: $colour-6 !important;
 }

@@ -17,21 +17,12 @@
 html {
 	color: $colour-2;
 	font-family: $font-sans;
-	font-size: $base-font-size; /* [1] */
 	line-height: $base-line-height; /* [1] */
 	letter-spacing: 0.025em;
 	min-height: 100%; /* [2] */
 	overflow-y: scroll; /* [3] */
-
-	@include medium {
-		font-size: $base-font-size--lrg;
-	}
+	@include fluid-type($base-font-min-width, $base-font-max-width, $font-size-6, $font-size-5); /* [1] */
 }
-
-/**
- * 1. At tablet and above the header is fixed, so we offset the
- *    body content by the header's height to ensure it doesn't overlap.
- */
 
 body {
 	background-color: $colour-1;
@@ -39,8 +30,4 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
-	@include small {
-		padding-top: $header-height; /* [1] */
-	}
 }

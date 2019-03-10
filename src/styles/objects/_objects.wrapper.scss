@@ -4,11 +4,9 @@
 
 .o-wrapper {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   max-width: $base-site-max-width;
-  padding-right: $base-spacing-unit;
-  padding-left: $base-spacing-unit;
+  padding: 0 $base-spacing-unit;
   width: 100%;
 }
 
@@ -18,6 +16,10 @@
 
 .o-wrapper--fw {
 	max-width: none;
+}
+
+.o-wrapper--narrow {
+	max-width: $base-site-max-width--narrow;
 }
 
 .o-wrapper--no-pad {

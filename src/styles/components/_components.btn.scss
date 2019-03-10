@@ -12,13 +12,12 @@
 
 .c-btn {
   all: initial; /* [1] */
-  background-color: $colour-3;
+  background-color: $colour-6;
   border-radius: 50px;
   color: $colour-2;
   cursor: pointer; /* [2] */
   display: inline-block; /* [3] */
-  font-family: $font-sans;
-  font-size: $font-size-6;
+  font-family: inherit;
   font-weight: 600;
   line-height: 1;
   margin: 0;
@@ -27,12 +26,13 @@
   text-decoration: none; /* [4] */
   transition: all 0.25s ease;
   vertical-align: middle; /* [5] */
+  @include fluid-type($base-font-min-width, $base-font-max-width, $font-size-7, $font-size-6);
   @include uppercase;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $colour-1;
+    background-color: darken($colour-6, 10%);
     text-decoration: none; /* [4] */
   }
 
@@ -43,39 +43,4 @@
     opacity: 0.5;
     pointer-events: none; /* [1] */
   }
-}
-
-
-/* Style variants
-   ========================================================================== */
-
-.c-btn--small {
-  font-size: $font-size-7;
-  padding: $base-spacing-unit-tiny $base-spacing-unit;
-}
-
-.c-btn--ghost {
-  background-color: transparent;
-  border: 2px solid $colour-2;
-  color: $colour-2;
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: $colour-2;
-    color: $colour-1;
-  }
-}
-
-/**
- * Create buttons that will fill the entire width of the container they’re
- * placed inside.
- *
- * 1. Remove horizontal padding so widths and paddings do not compound.
- */
-
-.c-btn--full {
-  padding-right: 0; /* [1] */
-  padding-left:  0; /* [1] */
-  width: 100%;
 }

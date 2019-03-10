@@ -3,12 +3,12 @@
    ========================================================================== */
 
 .c-nav {
-  font-size: $font-size-7;
+  font-size: $font-size-6;
   font-weight: 600;
 
   &:before,
   &:after {
-    background-color: rgba($colour-2, 0.25);
+    background-color: rgba($colour-3, 0.15);
     content: "";
     display: block;
     height: 1px;
@@ -18,7 +18,6 @@
   }
 
   @include small {
-    align-items: center;
     display: flex;
     justify-content: flex-end;
 
@@ -30,25 +29,9 @@
 }
 
 .c-nav__item {
-  line-height: 1.4;
-  @include uppercase;
+  line-height: 1;
 
   &:not(:last-child) {
     margin-right: $base-spacing-unit;
-  }
-
-  &.is-active {
-    position: relative;
-
-    &:after {
-      background-color: $colour-3;
-      content: "";
-      display: inline-block;
-      height: 3px;
-      position: absolute;
-        bottom: 0;
-        left: 0;
-      width: 100%;
-    }
   }
 }

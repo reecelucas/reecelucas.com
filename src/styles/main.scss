@@ -14,6 +14,7 @@
  *  Functions............Common SASS functions used by mixins, *include before mixins*.
  *  Cover................Mixin to stretch an element across its parentNode using absolute positioning.
  *  Full-width...........Mixin to force an element to full viewport width.
+ *  Fluid-type...........Mixin to create fluid typography.
  *  Uppercase............Mixin to apply uppercase styling to text.
  *
  *
@@ -26,15 +27,13 @@
  *
  *
  * 	ELEMENTS:
+ *  Forms................Global form element reset and baseline styling.
  * 	Headings.............Font-size baselines for headings 1 through 6.
  *  Images...............Default responsive image styles.
  *	Page.................Set up our document’s default `font-size` and `line-height`.
  *
  *
  *	OBJECTS:
- *  List-inline..........A list whose items all site in a line.
- *  List-scrollable......An inline-list scrollable along the x-axis.
- *  Intrinsic-ratio......A container for maintaining aspect ratio of content.
  *  Banner...............Padded container with contrasting background & texture.
  *  Layout...............Generic progressive grid layout module.
  *  Wrapper..............Page constraint object.
@@ -42,14 +41,12 @@
  *
  *  COMPONENTS:
  *  Btn..................Element-agnostic button styles.
- *  Card.................Generic card.
  *  Header...............Global header.
+ *  Hero.................Primary heading block.
  *  Footer...............Global footer.
  *  Nav..................Global primary navigation.
- *  Profile..............Split image-text hero section.
  *  Skip-link............Accessible skip-to-content link.
  *  Link.................Global anchor styling.
- *  Overview.............Project overview with separator.
  *  Timeline.............Horizontally scrolling list timeline.
  *
  *
@@ -72,6 +69,7 @@
 @import "tools/tools.breakpoints";
 @import "tools/tools.cover";
 @import "tools/tools.full-width";
+@import "tools/tools.fluid-type";
 @import "tools/tools.uppercase";
 
 
@@ -81,27 +79,23 @@
 @import "generic/generic.shared";
 
 
+@import "elements/elements.forms";
 @import "elements/elements.headings";
 @import "elements/elements.images";
 @import "elements/elements.page";
 
 
 @import "objects/objects.banner";
-@import "objects/objects.list-inline";
-@import "objects/objects.list-scrollable";
-@import "objects/objects.intrinsic-ratio";
 @import "objects/objects.layout";
 @import "objects/objects.wrapper";
 
 
 @import "components/components.btn";
-@import "components/components.card";
 @import "components/components.header";
+@import "components/components.hero";
 @import "components/components.footer";
 @import "components/components.nav";
 @import "components/components.link";
-@import "components/components.overview";
-@import "components/components.profile";
 @import "components/components.skip-link";
 @import "components/components.timeline";
 

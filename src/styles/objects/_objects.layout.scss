@@ -93,7 +93,7 @@ $layout-column-number: 12;
     }
   }
 
-  .o-layout--col\:#{$i}\@sml {
+  .o-layout--col\:#{$i}\@sm {
 
     @include small {
       grid-template-columns: repeat(#{$i}, 1fr);
@@ -105,7 +105,7 @@ $layout-column-number: 12;
 
   }
 
-  .o-layout--col\:#{$i}\@med {
+  .o-layout--col\:#{$i}\@md {
 
     @include medium {
       grid-template-columns: repeat(#{$i}, 1fr);
@@ -117,7 +117,7 @@ $layout-column-number: 12;
 
   }
 
-  .o-layout--col\:#{$i}\@lrg {
+  .o-layout--col\:#{$i}\@lg {
 
     @include large {
       grid-template-columns: repeat(#{$i}, 1fr);

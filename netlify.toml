@@ -1,7 +1,3 @@
-# Global settings applied to the whole site.
-# “public” is the directory to publish (relative to root of the repo).
-# “command” is the build command.
-
 [build]
   publish = "dist"
-  command = "npm run build:server"
+  command = "yarn build:server"
