@@ -1,7 +1,2 @@
-# Redirect domain aliases to primary domain
-
-https://reecelucas.com/* https://www.reecelucas.com/:splat 301!
-https://www.reecelucas.com/* https://www.reecelucas.com/:splat 301!
-
-# Optional: Redirect default Netlify subdomain to primary domain
+# Redirect default Netlify subdomain to primary domain
 https://reecelucas.netlify.com/* https://www.reecelucas.com/:splat 301!
