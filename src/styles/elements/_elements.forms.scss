@@ -22,6 +22,8 @@ $fh-focus-bg-color: rgba($colour-4, 0.5) !default;
 
 // Errors
 $fh-error-color: #ed2939 !default;
+$fh-success-color: #3c763d !default;
+
 
 label {
   display: block;
@@ -59,7 +61,9 @@ textarea {
   resize: none;
 }
 
-/* States ------------------ */
+
+/* States
+  ========================================================================== */
 
 input[disabled],
 textarea[disabled] {
@@ -83,8 +87,23 @@ textarea[aria-invalid] {
   background-position: calc(100% - #{$base-spacing-unit-small}) calc(0% + #{$base-spacing-unit-small});
 }
 
-.has-error {
-  color: $fh-error-color;
-  display: inline-block;
-  font-size: smaller;
+
+/* Messaging
+  ========================================================================== */
+
+form {
+
+  .form-message {
+    display: block;
+    font-size: smaller;
+  }
+
+  .form-message--error {
+    color: $fh-error-color;
+  }
+
+  .form-message--success {
+    color: $fh-success-color;
+  }
+
 }

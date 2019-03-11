@@ -1,69 +1,66 @@
+import afterDelay from '../../helpers/afterDelay';
+import { isFormInput, insertMessage, removeElement } from './helpers';
+
 const form = document.querySelector('form');
-const btn = document.querySelector('[data-form-submit]') as HTMLButtonElement;
+const submitButton = document.querySelector('[data-form-submit]') as HTMLButtonElement; // prettier-ignore
 const config = {
-  btnText: (btn && btn.innerText) || 'send',
+  btnText: (submitButton && submitButton.innerText) || 'send',
   errorAttribute: 'aria-invalid',
-  errorClass: 'has-error',
+  errorClass: 'form-message--error',
+  successClass: 'form-message--success u-spaced-small',
   formEndpoint: 'https://usebasin.com/f/74b4e1029fb9.json'
-};
-let timerId;
-
-// Helpers
-const isFormInput = (target: HTMLFormElement): boolean => {
-  const { nodeName } = target;
-
-  return (
-    target &&
-    (nodeName === 'INPUT' || nodeName === 'TEXTAREA' || nodeName === 'SELECT')
-  );
 };
 
 const hasError = (field: HTMLFormElement): boolean => {
   const { nextElementSibling } = field;
-  const hasErrorAttribute = field.hasAttribute(config.errorAttribute);
-  const hasErrorMessage =
+  const hasErrorAttr = field.hasAttribute(config.errorAttribute);
+  const hasErrorMsg =
     nextElementSibling &&
-    nextElementSibling.classList &&
     nextElementSibling.classList.contains(config.errorClass);
 
-  return hasErrorAttribute && hasErrorMessage;
+  return hasErrorAttr && hasErrorMsg;
 };
 
-const setError = (field: HTMLFormElement) => {
+const addFieldError = (field: HTMLFormElement) => {
   if (hasError(field)) {
     return;
   }
 
   field.setAttribute(config.errorAttribute, 'true');
-  field.insertAdjacentHTML(
-    'afterend',
-    `<span class=${config.errorClass} role="alert" aria-live="assertive">
-      ${field.validationMessage}
-    </span>`
-  );
+  insertMessage({
+    element: field,
+    classList: config.errorClass,
+    message: field.validationMessage
+  });
 };
 
-const removeError = (field: HTMLFormElement) => {
+const removeFieldError = (field: HTMLFormElement) => {
   if (!hasError(field)) {
     return;
   }
 
   field.removeAttribute(config.errorAttribute);
-  field.nextElementSibling.remove();
+  removeElement(field.nextElementSibling);
 };
 
 const addLoadingIndicator = () => {
-  btn.innerText = 'Submitting...';
-  btn.disabled = true;
+  submitButton.innerText = 'Submitting...';
+  submitButton.disabled = true;
 };
 
 const removeLoadingIndicator = () => {
-  btn.innerText = config.btnText;
-  btn.disabled = false;
+  submitButton.innerText = config.btnText;
+  submitButton.disabled = false;
 };
 
 const handleSubmitError = (error: Error) => {
-  // TODO: show user-friendly error message here...
+  insertMessage({
+    element: submitButton,
+    classList: `${config.errorClass} u-spaced-small`,
+    message: error.message,
+    position: 'beforebegin'
+  });
+
   console.error(error);
 };
 
@@ -72,11 +69,21 @@ const handleSubmitSuccess = (response: Response) => {
     throw new Error('Response was not ok.');
   }
 
-  // TODO: set success message & remove user-friendly error message here...
-  form.reset();
+  insertMessage({
+    element: submitButton,
+    classList: config.successClass,
+    message: 'Your message was sent successfully.',
+    position: 'beforebegin'
+  });
+
+  afterDelay(() => {
+    removeElement(submitButton.previousElementSibling);
+    form.reset();
+  }, 2000);
 };
 
 const handleSubmit = () => {
+  let timerId;
   const formData = new FormData(form);
   const requestOptions = {
     method: 'POST',
@@ -99,12 +106,12 @@ const handleSubmit = () => {
 
 // Event handlers
 const onBlur = (field: HTMLFormElement) => {
-  removeError(field);
+  removeFieldError(field);
   field.checkValidity();
 };
 
 const onInvalid = (field: HTMLFormElement) => {
-  setError(field);
+  addFieldError(field);
 };
 
 const onSubmit = (event: Event) => {
@@ -128,7 +135,7 @@ const onSubmit = (event: Event) => {
 };
 
 export default () => {
-  if (!form) {
+  if (!form || !submitButton) {
     return;
   }
 
