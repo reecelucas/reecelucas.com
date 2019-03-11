@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations().then(registrations => {
+  navigator.serviceWorker.getRegistrations().then(function(registrations) {
     for (const registration of registrations) {
       registration.unregister();
     }
