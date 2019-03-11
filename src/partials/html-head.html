@@ -4,6 +4,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <script>
+    if ('serviceWorker' in navigator) {
+      window.navigator.serviceWorker.getRegistrations().then(registrations => {
+        registrations.forEach(r => r.unregister())
+      })
+    };
+
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, 'js');
   </script>
 
