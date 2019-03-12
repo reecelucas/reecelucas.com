@@ -27,6 +27,7 @@ $fh-success-color: #3c763d !default;
 
 label {
   display: block;
+  color: rgba($colour-2, 0.85);
   font-size: $font-size-7;
   font-weight: 600;
   line-height: 1;

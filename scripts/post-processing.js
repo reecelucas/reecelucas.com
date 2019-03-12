@@ -7,7 +7,13 @@ const writeFile = util.promisify(fs.writeFile);
 
 const ROOT = `${__dirname}/../dist/`;
 const HTML_PATH = path.resolve(`${ROOT}index.html`);
-const SELECTOR_WHITELIST = ['user-is-tabbing', '*is-*', '*has-*', '*no-*'];
+const SELECTOR_WHITELIST = [
+  'user-is-tabbing',
+  '*is-*',
+  '*has-*',
+  '*no-*',
+  '*form-message*'
+];
 
 const purifyCSS = async (source, context) => {
   try {
