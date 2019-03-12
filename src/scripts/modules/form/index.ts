@@ -2,6 +2,7 @@ import afterDelay from '../../helpers/afterDelay';
 import { isFormInput, insertMessage, removeElement } from './helpers';
 
 const form = document.querySelector('form');
+const honeypot = document.querySelector('[data-honey-pot]') as HTMLInputElement; // prettier-ignore
 const submitButton = document.querySelector('[data-form-submit]') as HTMLButtonElement; // prettier-ignore
 const config = {
   btnText: (submitButton && submitButton.innerText) || 'send',
@@ -122,7 +123,8 @@ const onSubmit = (event: Event) => {
     return;
   }
 
-  if (target.checkValidity()) {
+  const honeypotValue = honeypot.value;
+  if (!honeypotValue && target.checkValidity()) {
     handleSubmit();
     return;
   }
@@ -135,7 +137,7 @@ const onSubmit = (event: Event) => {
 };
 
 export default () => {
-  if (!form || !submitButton) {
+  if (!form || !honeypot || !submitButton) {
     return;
   }
 
