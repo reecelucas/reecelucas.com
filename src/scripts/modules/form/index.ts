@@ -8,8 +8,7 @@ const config = {
   btnText: (submitButton && submitButton.innerText) || 'send',
   errorAttribute: 'aria-invalid',
   errorClass: 'form-message--error',
-  successClass: 'form-message--success u-spaced-small',
-  formEndpoint: 'https://usebasin.com/f/74b4e1029fb9.json'
+  successClass: 'form-message--success u-spaced-small'
 };
 
 const hasError = (field: HTMLFormElement): boolean => {
@@ -85,6 +84,7 @@ const handleSubmitSuccess = (response: Response) => {
 
 const handleSubmit = () => {
   let timerId;
+  const formEndpoint = form.getAttribute('action');
   const formData = new FormData(form);
   const requestOptions = {
     method: 'POST',
@@ -96,7 +96,7 @@ const handleSubmit = () => {
 
   timerId = setTimeout(addLoadingIndicator, 250);
 
-  fetch(config.formEndpoint, requestOptions)
+  fetch(formEndpoint, requestOptions)
     .then(handleSubmitSuccess)
     .catch(handleSubmitError)
     .finally(() => {
