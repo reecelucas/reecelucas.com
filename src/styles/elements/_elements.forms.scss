@@ -25,6 +25,12 @@ $fh-error-color: #ed2939 !default;
 $fh-success-color: #3c763d !default;
 
 
+// Prevent spam submissions
+
+.no-js form {
+  display: none;
+}
+
 label {
   display: block;
   color: rgba($colour-2, 0.85);
