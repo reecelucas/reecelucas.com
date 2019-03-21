@@ -8,32 +8,7 @@ const config = {
   btnText: (submitButton && submitButton.innerText) || 'send',
   errorAttribute: 'aria-invalid',
   errorClass: 'form-message--error',
-  successClass: 'form-message--success u-spaced-small',
-  submissionTimerTimeout: 60000, // 1 min
-  submissionMinThreshold: 3000 // 3 secs
-};
-
-let submissionTimer = null;
-let submissionTime = 0;
-
-const startSubmissionTimer = () => {
-  if (!submissionTimer) {
-    submissionTimer = setInterval(() => {
-      submissionTime += 100;
-
-      if (submissionTime >= config.submissionTimerTimeout) {
-        stopSubmissionTimer();
-      }
-    }, 100);
-  }
-};
-
-const stopSubmissionTimer = () => {
-  if (submissionTimer) {
-    clearInterval(submissionTimer);
-    submissionTimer = null;
-    submissionTime = 0;
-  }
+  successClass: 'form-message--success u-spaced-small'
 };
 
 const hasError = (field: HTMLFormElement): boolean => {
@@ -94,7 +69,6 @@ const handleSubmitSuccess = (response: Response) => {
     throw new Error('Response was not ok.');
   }
 
-  stopSubmissionTimer();
   insertMessage({
     element: submitButton,
     classList: config.successClass,
@@ -149,11 +123,8 @@ const onSubmit = (event: Event) => {
     return;
   }
 
-  if (
-    !honeypot.value &&
-    target.checkValidity() &&
-    submissionTime >= config.submissionMinThreshold
-  ) {
+  const honeypotValue = honeypot.value;
+  if (!honeypotValue && target.checkValidity()) {
     handleSubmit();
     return;
   }
@@ -171,18 +142,6 @@ export default () => {
   }
 
   form.noValidate = true;
-
-  form.addEventListener(
-    'focus',
-    ({ target }) => {
-      const element = target as HTMLFormElement;
-
-      if (isFormInput(element)) {
-        startSubmissionTimer();
-      }
-    },
-    true
-  );
 
   form.addEventListener(
     'blur',
