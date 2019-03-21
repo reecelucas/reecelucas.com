@@ -111,12 +111,13 @@ const handleSubmitSuccess = (response: Response) => {
 const handleSubmit = () => {
   let timerId;
   const formEndpoint = form.getAttribute('action');
+  const formData = new FormData(form);
   const requestOptions = {
     method: 'POST',
     headers: {
       Accept: 'application/json'
     },
-    body: new FormData(form)
+    body: formData
   };
 
   timerId = setTimeout(addLoadingIndicator, 250);
