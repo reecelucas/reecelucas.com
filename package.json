@@ -16,7 +16,8 @@
     "build": "yarn clean && parcel build src/index.html && yarn assets:postprocess && serve dist",
     "build:server": "yarn clean && parcel build src/index.html && yarn assets:postprocess",
     "lint": "tslint 'src/scripts/**/*.ts' & stylelint 'src/styles/**/*.scss'",
-    "format": "prettier --write 'src/scripts/**/*.ts'"
+    "format": "prettier --write 'src/scripts/**/*.ts'",
+    "precommit": "prettier --check 'src/scripts/**/*.ts' && yarn run lint"
   },
   "dependencies": {
     "prettier": "^1.16.4",
@@ -43,7 +44,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && npm run lint"
+      "pre-commit": "yarn run precommit"
     }
   }
 }
