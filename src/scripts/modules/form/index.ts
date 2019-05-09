@@ -1,8 +1,12 @@
 import afterDelay from '../../helpers/afterDelay';
-import { isFormInput, insertMessage, removeElement } from './helpers';
+import {
+  isFormInput,
+  insertMessage,
+  removeElement,
+  getFormData
+} from './helpers';
 
 const form = document.querySelector('form');
-const honeypot = document.querySelector('[data-honey-pot]') as HTMLInputElement; // prettier-ignore
 const submitButton = document.querySelector('[data-form-submit]') as HTMLButtonElement; // prettier-ignore
 const config = {
   btnText: (submitButton && submitButton.innerText) || 'send',
@@ -85,18 +89,18 @@ const handleSubmitSuccess = (response: Response) => {
 const handleSubmit = () => {
   let timerId;
   const formEndpoint = form.getAttribute('action');
-  const formData = new FormData(form);
-  const requestOptions = {
+  const requestOptions: any = {
     method: 'POST',
     headers: {
       Accept: 'application/json'
     },
-    body: formData
+    mode: 'cors',
+    body: getFormData(form)
   };
 
   timerId = setTimeout(addLoadingIndicator, 250);
 
-  fetch(formEndpoint, requestOptions)
+  fetch(process.env.CONTACT_FORM_URL, requestOptions)
     .then(handleSubmitSuccess)
     .catch(handleSubmitError)
     .finally(() => {
@@ -123,8 +127,7 @@ const onSubmit = (event: Event) => {
     return;
   }
 
-  const honeypotValue = honeypot.value;
-  if (!honeypotValue && target.checkValidity()) {
+  if (target.checkValidity()) {
     handleSubmit();
     return;
   }
@@ -137,7 +140,7 @@ const onSubmit = (event: Event) => {
 };
 
 export default () => {
-  if (!form || !honeypot || !submitButton) {
+  if (!form || !submitButton) {
     return;
   }
 

@@ -31,3 +31,17 @@ export const insertMessage = ({
 export const removeElement = elem => {
   elem.remove();
 };
+
+export const getFormData = (form: HTMLFormElement) => {
+  const formData = Array.from(new FormData(form));
+
+  return JSON.stringify(
+    formData.reduce(
+      (acc, [key, value]) => ({
+        ...acc,
+        [key]: value
+      }),
+      {}
+    )
+  );
+};

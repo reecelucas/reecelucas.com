@@ -47,7 +47,6 @@ textarea {
   max-width: $fh-input-max-width;
   outline: none;
   padding: $base-spacing-unit-tiny;
-  vertical-align: top;
   width: $fh-input-width;
   -webkit-appearance: none;
 }
@@ -62,9 +61,6 @@ textarea {
   resize: none;
 }
 
-input[data-honey-pot] {
-  display: none;
-}
 
 /* States
   ========================================================================== */
