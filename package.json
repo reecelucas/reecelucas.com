@@ -12,9 +12,9 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "assets:postprocess": "node scripts/post-processing.js",
-    "start": "parcel src/index.html",
-    "build": "yarn clean && parcel build src/index.html && yarn assets:postprocess && serve dist",
-    "build:server": "yarn clean && parcel build src/index.html && yarn assets:postprocess",
+    "start": "NODE_ENV=development parcel src/index.html",
+    "build": "NODE_ENV=development yarn clean && parcel build src/index.html && yarn assets:postprocess && serve dist",
+    "build:server": "NODE_ENV=development yarn clean && parcel build src/index.html && yarn assets:postprocess",
     "lint": "tslint 'src/scripts/**/*.ts' & stylelint 'src/styles/**/*.scss'",
     "format": "prettier --write 'src/scripts/**/*.ts'",
     "precommit": "prettier --check 'src/scripts/**/*.ts' && yarn run lint"
