@@ -17,7 +17,8 @@
     "build:server": "yarn clean && parcel build src/index.html && yarn assets:postprocess",
     "lint": "tslint 'src/scripts/**/*.ts' & stylelint 'src/styles/**/*.scss'",
     "format": "prettier --write 'src/scripts/**/*.ts'",
-    "precommit": "prettier --check 'src/scripts/**/*.ts' && yarn run lint"
+    "precommit": "prettier --check 'src/scripts/**/*.ts' && yarn run lint",
+    "snyk:test": "snyk test"
   },
   "dependencies": {
     "prettier": "^1.16.4",
@@ -41,6 +42,7 @@
     "sass": "^1.17.2",
     "sass-mq": "^5.0.0",
     "serve": "^11.0.0",
+    "snyk": "^1.167.2",
     "uncss": "^0.16.2"
   },
   "husky": {
