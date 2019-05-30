@@ -88,7 +88,6 @@ const handleSubmitSuccess = (response: Response) => {
 
 const handleSubmit = () => {
   let timerId;
-  const formEndpoint = form.getAttribute('action');
   const requestOptions: any = {
     method: 'POST',
     headers: {
