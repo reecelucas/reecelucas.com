@@ -1,23 +1,19 @@
 <div class="o-wrapper o-wrapper--narrow">
-  <h1>
+  <h2 class="u-h1">
     Get in touch
-  </h1>
+  </h2>
 
   <p class="u-spaced-huge">
     If you have a project that you'd like some help with, please don't hesitate to get in touch.
-    If forms aren't your thing, you can email me at <a class="c-link" href="mailto:reecelucas@sky.com">reecelucas@sky.com</a>.
+    If forms aren't your thing, you can email me at <a class="c-link"
+      href="mailto:reecelucas@sky.com">reecelucas@sky.com</a>.
     I'm available from April 2019 onwards.
   </p>
 
   <form>
     <label class="u-a11y-only" for="captcha">
       Leave this field blank
-      <input
-        name="captcha"
-        id="captcha"
-        type="checkbox"
-        tabindex="-1"
-      >
+      <input name="captcha" id="captcha" type="checkbox" tabindex="-1">
     </label>
 
     <div class="o-layout o-layout--col:2@md">
@@ -25,7 +21,7 @@
         <label for="name">
           Name*
         </label>
-        <input type="text" name="name" id="name" required>
+        <input type="text" name="name" id="name" aria-required="true" required>
       </div>
 
       <div class="o-layout__item u-spaced-large">
@@ -40,14 +36,14 @@
       <label for="email">
         Email Address*
       </label>
-      <input type="email" name="email" id="email" required>
+      <input type="email" name="email" id="email" aria-required="true" required>
     </div>
 
     <div class="u-spaced-large">
       <label for="message">
         Message*
       </label>
-      <textarea name="message" id="message" required></textarea>
+      <textarea name="message" id="message" aria-required="true" required></textarea>
     </div>
 
     <button class="c-btn" type="submit" data-form-submit>
