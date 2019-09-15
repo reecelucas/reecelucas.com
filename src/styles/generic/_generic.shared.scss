@@ -35,6 +35,15 @@ pre {
  * navigating using a mouse.
  */
 
- body:not(.user-is-tabbing) *:focus {
-   outline: none;
- }
+body:not(.user-is-tabbing) *:focus {
+  outline: none;
+}
+
+/**
+ * Hide focus style for non-interactive elements that are
+ * programmatically focussed.
+ */
+
+[tabIndex="-1"] {
+  outline: none;
+}
