@@ -4,4 +4,4 @@
 
 [context.production.environment]
   CONTACT_FORM_URL='https://u0vp4pzt37.execute-api.eu-west-1.amazonaws.com/production/email/send'
-  NODE_VERSION=12
+  NODE_VERSION='12'
