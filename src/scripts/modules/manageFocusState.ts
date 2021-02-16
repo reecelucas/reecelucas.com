@@ -4,13 +4,13 @@
  * using the keyboard to navigate, so we preserve the default
  * focus outline styling.
  */
-const onFirstTabPress = (event: KeyboardEvent) => {
+const onFirstTabPress = (event: KeyboardEvent): void => {
   if (event.key === 'Tab') {
     document.body.classList.add('user-is-tabbing');
     window.removeEventListener('keydown', onFirstTabPress);
   }
 };
 
-export default () => {
+export default (): void => {
   window.addEventListener('keydown', onFirstTabPress);
 };

@@ -1,18 +1,12 @@
-interface InsertMessageParams {
+type InsertMessageParams = {
   element: Element;
   message: string;
   classList: string;
   position?: 'beforebegin' | 'afterbegin' | 'beforeend' | 'afterend';
-}
-
-export const afterDelay = (fn: () => void, ms: number) => {
-  let id;
-
-  id = setTimeout(() => {
-    clearTimeout(id);
-    fn();
-  }, ms);
 };
+
+export const sleep = (ms: number): Promise<void> =>
+  new Promise((resolve) => setTimeout(resolve, ms));
 
 export const isFormInput = (target: HTMLElement): boolean => {
   const { nodeName } = target;
@@ -28,7 +22,7 @@ export const insertMessage = ({
   message,
   classList,
   position = 'afterend'
-}: InsertMessageParams) => {
+}: InsertMessageParams): void => {
   element.insertAdjacentHTML(
     position,
     `<span class="form-message ${classList}" role="alert" aria-live="assertive">
@@ -37,11 +31,11 @@ export const insertMessage = ({
   );
 };
 
-export const removeElement = elem => {
+export const removeElement = (elem: Element): void => {
   elem.remove();
 };
 
-export const getFormData = (form: HTMLFormElement) => {
+export const getFormData = (form: HTMLFormElement): string => {
   const formData = Array.from(new FormData(form));
 
   return JSON.stringify(

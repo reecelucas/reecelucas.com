@@ -1,5 +1,5 @@
 import {
-  afterDelay,
+  sleep,
   isFormInput,
   insertMessage,
   removeElement,
@@ -25,7 +25,7 @@ const hasError = (field: HTMLFormElement): boolean => {
   return hasErrorAttr && hasErrorMsg;
 };
 
-const addFieldError = (field: HTMLFormElement) => {
+const addFieldError = (field: HTMLFormElement): void => {
   if (hasError(field)) {
     return;
   }
@@ -38,7 +38,7 @@ const addFieldError = (field: HTMLFormElement) => {
   });
 };
 
-const removeFieldError = (field: HTMLFormElement) => {
+const removeFieldError = (field: HTMLFormElement): void => {
   if (!hasError(field)) {
     return;
   }
@@ -47,17 +47,17 @@ const removeFieldError = (field: HTMLFormElement) => {
   removeElement(field.nextElementSibling);
 };
 
-const addLoadingIndicator = () => {
+const addLoadingIndicator = (): void => {
   submitButton.innerText = 'Submitting...';
   submitButton.disabled = true;
 };
 
-const removeLoadingIndicator = () => {
+const removeLoadingIndicator = (): void => {
   submitButton.innerText = config.btnText;
   submitButton.disabled = false;
 };
 
-const handleSubmitError = (error: Error) => {
+const handleSubmitError = (error: Error): void => {
   insertMessage({
     element: submitButton,
     classList: `${config.errorClass} u-spaced-small`,
@@ -68,7 +68,7 @@ const handleSubmitError = (error: Error) => {
   console.error(error);
 };
 
-const handleSubmitSuccess = (response: Response) => {
+const handleSubmitSuccess = async (response: Response): Promise<void> => {
   if (!response.ok) {
     throw new Error('Response was not ok.');
   }
@@ -80,45 +80,43 @@ const handleSubmitSuccess = (response: Response) => {
     position: 'beforebegin'
   });
 
-  afterDelay(() => {
-    removeElement(submitButton.previousElementSibling);
-    form.reset();
-  }, 2000);
+  await sleep(2000);
+
+  removeElement(submitButton.previousElementSibling);
+  form.reset();
 };
 
-const handleSubmit = () => {
-  let timerId;
-  const requestOptions: any = {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json'
-    },
-    mode: 'cors',
-    body: getFormData(form)
-  };
+const handleSubmit = async (): Promise<void> => {
+  const timerId = setTimeout(addLoadingIndicator, 250);
 
-  timerId = setTimeout(addLoadingIndicator, 250);
-
-  fetch(process.env.CONTACT_FORM_URL, requestOptions)
-    .then(handleSubmitSuccess)
-    .catch(handleSubmitError)
-    .finally(() => {
-      clearTimeout(timerId);
-      removeLoadingIndicator();
+  try {
+    const response = await fetch(process.env.CONTACT_FORM_URL, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      mode: 'cors',
+      body: getFormData(form)
     });
+
+    await handleSubmitSuccess(response);
+  } catch (error) {
+    handleSubmitError(error);
+  } finally {
+    clearTimeout(timerId);
+    removeLoadingIndicator();
+  }
 };
 
 // Event handlers
-const onBlur = (field: HTMLFormElement) => {
+const onBlur = (field: HTMLFormElement): void => {
   removeFieldError(field);
   field.checkValidity();
 };
 
-const onInvalid = (field: HTMLFormElement) => {
+const onInvalid = (field: HTMLFormElement): void => {
   addFieldError(field);
 };
 
-const onSubmit = (event: Event) => {
+const onSubmit = async (event: Event): Promise<void> => {
   event.preventDefault();
   const { target } = event;
 
@@ -127,7 +125,7 @@ const onSubmit = (event: Event) => {
   }
 
   if (target.checkValidity()) {
-    handleSubmit();
+    await handleSubmit();
     return;
   }
 
@@ -138,7 +136,7 @@ const onSubmit = (event: Event) => {
   }
 };
 
-export default () => {
+export default (): void => {
   if (!form || !submitButton) {
     return;
   }
