@@ -5,6 +5,15 @@ interface InsertMessageParams {
   position?: 'beforebegin' | 'afterbegin' | 'beforeend' | 'afterend';
 }
 
+export const afterDelay = (fn: () => void, ms: number) => {
+  let id;
+
+  id = setTimeout(() => {
+    clearTimeout(id);
+    fn();
+  }, ms);
+};
+
 export const isFormInput = (target: HTMLElement): boolean => {
   const { nodeName } = target;
 

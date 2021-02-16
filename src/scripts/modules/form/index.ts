@@ -1,5 +1,5 @@
-import afterDelay from '../../helpers/afterDelay';
 import {
+  afterDelay,
   isFormInput,
   insertMessage,
   removeElement,
