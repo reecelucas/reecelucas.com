@@ -35,7 +35,7 @@ pre {
  * navigating using a mouse.
  */
 
-body:not(.user-is-tabbing) *:focus {
+.js body:not(.user-is-tabbing) *:focus {
   outline: none;
 }
 
