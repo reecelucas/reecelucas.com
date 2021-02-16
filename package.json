@@ -5,6 +5,9 @@
   "main": "n/a",
   "author": "Reece Lucas <reecelucas@sky.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=12"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/reecelucas/reecelucas.com.git"
