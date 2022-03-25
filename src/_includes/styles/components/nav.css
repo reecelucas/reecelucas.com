@@ -1,0 +1,43 @@
+.c-nav {
+  font-size: var(--font-size-6);
+  font-weight: 600;
+}
+
+.c-nav:before,
+.c-nav:after {
+  background-color: rgba(118, 118, 118, 0.15);
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  margin-top: var(--base-spacing-unit-small);
+  margin-bottom: var(--base-spacing-unit-small);
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+.c-nav__item {
+  color: rgba(25, 25, 25, 0.85);
+  line-height: 1;
+}
+
+.c-nav__item:not(:last-child) {
+  margin-right: var(--base-spacing-unit);
+}
+
+/* Media variants */
+
+@media (--sm-viewport) {
+  .c-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .c-nav:before,
+  .c-nav:after {
+    content: none;
+  }
+}

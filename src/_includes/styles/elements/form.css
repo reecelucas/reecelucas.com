@@ -1,0 +1,60 @@
+label {
+  display: block;
+  color: rgba(25, 25, 25, 0.85);
+  font-size: var(--font-size-7);
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+label span {
+  color: var(--colour-3);
+}
+
+input,
+textarea {
+  background-color: rgba(230, 230, 230, 0.25);
+  border: 1px solid rgba(230, 230, 230, 0.5);
+  border-radius: 3px;
+  color: var(--colour-2);
+  display: block;
+  font-family: inherit;
+  font-size: var(--font-size-6);
+  margin-top: var(--base-spacing-unit-tiny);
+  max-width: none;
+  outline: none;
+  padding: var(--base-spacing-unit-tiny);
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+input {
+  height: 44px;
+}
+
+textarea {
+  min-height: 200px;
+  overflow: auto;
+  resize: vertical;
+}
+
+/* States */
+
+input[disabled],
+textarea[disabled] {
+  cursor: not-allowed;
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgba(230, 230, 230, 0.5);
+  border-color: var(--colour-4);
+}
+
+input[aria-describedby],
+textarea[aria-describedby] {
+  border-color: var(--colour-7);
+  box-shadow: 0 0 1px var(--colour-7);
+  margin-bottom: var(--base-spacing-unit-tiny);
+}

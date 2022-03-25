@@ -1,0 +1,25 @@
+.c-header {
+  padding-top: var(--base-spacing-unit);
+}
+
+.c-header__logo {
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.c-header__logo svg {
+  display: block;
+  height: 30px;
+  width: 23px;
+}
+
+/* Media variants */
+
+@media (--sm-viewport) {
+  .c-header__band {
+    align-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+}

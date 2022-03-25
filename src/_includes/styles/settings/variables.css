@@ -1,0 +1,46 @@
+@custom-media --sm-viewport (min-width: 640px);
+@custom-media --md-viewport (min-width: 768px);
+
+:root {
+  /* COLOURS */
+  --colour-1: #ffffff; /* White */
+  --colour-2: #191919; /* Near Black */
+  --colour-3: #767676; /* Light Gray */
+  --colour-4: #e6e6e6; /* Lighter Gray */
+  --colour-5: #272b3b; /* Dark Blue */
+  --colour-6: #dec38b; /* Gold */
+  --colour-7: #a8000b; /* Scarlet */
+
+  /* WIDTHS */
+  --base-site-max-width: 1200px;
+  --base-site-max-width--narrow: 740px;
+
+  /* BASE SETTINGS */
+  --base-line-height: 1.6;
+
+  /* SPACING */
+  --base-spacing-unit: 24px;
+  --base-spacing-unit-tiny: 8px;
+  --base-spacing-unit-small: 16px;
+  --base-spacing-unit-large: 48px;
+  --base-spacing-unit-huge: 64px;
+
+  /* Z-INDEXES */
+  --z-index-beneath: -1;
+  --z-index-base: 1;
+  --z-index-skip-link: 2;
+
+  /* FONTS */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* TYPOGRAPHIC SCALE (Minor third-ish) */
+  --font-size-1: 44px;
+  --font-size-2: 38px;
+  --font-size-3: 32px;
+  --font-size-4: 26px;
+  --font-size-5: 22px;
+  --font-size-6: 18px;
+  --font-size-7: 15px;
+  --font-size-8: 12px;
+}

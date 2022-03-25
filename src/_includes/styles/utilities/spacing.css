@@ -1,0 +1,27 @@
+.u-spaced-tiny {
+  margin-bottom: var(--base-spacing-unit-tiny);
+}
+
+.u-spaced-small {
+  margin-bottom: var(--base-spacing-unit-small);
+}
+
+.u-spaced-base {
+  margin-bottom: var(--base-spacing-unit);
+}
+
+.u-spaced-large {
+  margin-bottom: var(--base-spacing-unit-large);
+}
+
+.u-spaced-huge {
+  margin-bottom: var(--base-spacing-unit-huge);
+}
+
+.u-spaced-auto {
+  margin-bottom: auto;
+}
+
+.u-spaced-none {
+  margin-bottom: 0;
+}

@@ -1,4 +1,3 @@
-/dist
-/services
-/scripts
-/src/**/*.html
+dist
+public
+src/_data

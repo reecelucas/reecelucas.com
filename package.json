@@ -2,51 +2,36 @@
   "name": "reecelucas.com",
   "version": "1.0.0",
   "description": "The website of @reecelucas",
-  "main": "n/a",
-  "author": "Reece Lucas <reecelucas@sky.com>",
+  "author": "Reece Lucas <rjilucas@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/reecelucas/reecelucas.com.git"
   },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "clean": "rimraf dist/*",
-    "assets:postprocess": "node scripts/post-processing.js",
-    "start": "parcel src/index.html",
-    "build": "yarn clean && parcel build src/index.html && yarn assets:postprocess && serve dist",
-    "build:server": "yarn clean && parcel build src/index.html && yarn assets:postprocess",
-    "lint": "eslint 'src/scripts/**/*.ts' & stylelint 'src/styles/**/*.scss'",
-    "format": "prettier --write 'src/scripts/**/*.ts'",
-    "precommit": "prettier --check 'src/scripts/**/*.ts' && yarn run lint"
+    "start": "yarn clean && eleventy --serve --port=3000 --quiet",
+    "build": "yarn clean && ELEVENTY_ENV=production eleventy",
+    "lint": "eslint 'src/scripts/**/*.ts'",
+    "format": "prettier --write 'src/scripts/**/*.ts'"
   },
   "devDependencies": {
-    "@types/node": "^14.14.28",
-    "@typescript-eslint/eslint-plugin": "^4.15.1",
-    "@typescript-eslint/parser": "^4.15.1",
-    "cssnano": "^4.1.10",
-    "eslint": "^7.20.0",
-    "eslint-config-prettier": "^7.2.0",
-    "husky": "4",
-    "inline-source": "^7.2.0",
-    "parcel": "^1.12.4",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-static-files-copy": "^2.5.1",
-    "posthtml": "^0.15.1",
-    "posthtml-modules": "^0.7.3",
-    "prettier": "^2.2.1",
-    "purify-css": "^1.2.5",
+    "@11ty/eleventy": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "csso": "^5.0.3",
+    "esbuild": "^0.14.27",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.8",
+    "postcss-custom-media": "^8.0.0",
+    "postcss-import": "^14.0.2",
+    "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.32.7",
-    "sass-mq": "^5.0.1",
-    "serve": "^11.3.2",
-    "stylelint": "^13.10.0",
-    "stylelint-scss": "^3.19.0",
-    "typescript": "^4.1.5",
-    "uncss": "^0.17.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run precommit"
-    }
+    "typescript": "^4.6.2"
   }
 }

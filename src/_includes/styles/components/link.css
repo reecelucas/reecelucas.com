@@ -1,0 +1,14 @@
+.c-link {
+  border-bottom: 1px solid var(--colour-6);
+  box-shadow: inset 0 -2px 0 0 var(--colour-6);
+  display: inline-block;
+  line-height: 1.4;
+  transition: all 0.1s ease;
+}
+
+.c-link:hover,
+.c-link:active,
+.c-link:focus {
+  background-color: var(--colour-6);
+  color: var(--colour-2);
+}

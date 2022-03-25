@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "partials/header.njk" %}
+
+<main id="content" tabindex="-1">
+  <section id="about">
+    {% include "partials/intro.njk" %}
+    {% include "partials/bio.njk" %}
+    {% include "partials/timeline.njk" %}
+  </section>
+
+  <section id="contact" class="o-banner" tabindex="-1">
+    {% include "partials/contact.njk" %}
+  </section>
+</main>
+
+{% include "partials/footer.njk" %}
