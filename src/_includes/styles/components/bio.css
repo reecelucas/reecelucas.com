@@ -1,0 +1,9 @@
+.c-bio {
+  max-width: 60ch;
+}
+
+@media (--lg-viewport) {
+  .c-bio {
+    max-width: 60%;
+  }
+}

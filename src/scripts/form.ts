@@ -22,6 +22,13 @@ const FIELD_ERRORS = {
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
+const errorIcon = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 473.9 473.9" focusable="false">
+    <circle cx="237" cy="237" r="237" fill="currentcolor"/>
+    <path fill="#fff" d="m214.4 252.4-6.7-100.2a740.5 740.5 0 0 1-1.9-42c0-11.6 3-20.6 9.1-27 6-6.6 14-9.8 24-9.8 12 0 20 4.1 24 12.4s6 20.3 6 35.9c0 9.2-.4 18.6-1.4 28l-9 103.1c-1 12.3-3 21.7-6.3 28.2a16.4 16.4 0 0 1-15.8 9.9c-7.6 0-12.8-3.2-15.7-9.6-3-6.3-5-16-6.3-29zM237.6 390c-8.5 0-16-2.8-22.3-8.3a29 29 0 0 1-9.5-23c0-8.7 3-16 9.1-22.1 6-6.1 13.5-9.1 22.3-9.1a31 31 0 0 1 22.5 9c6.2 6.1 9.3 13.5 9.3 22.1 0 9.8-3.2 17.4-9.4 23a32 32 0 0 1-22 8.4z"/>
+  </svg>
+`;
+
 const addErrorSummary = (invalidFields: Element[]) => {
   const listItems = invalidFields.map(
     ({ id }) => `<li><a href="#${id}">${FIELD_ERRORS[id]}</a></li>`
@@ -54,6 +61,7 @@ const setInlineErrorMessage = (invalidField: Element) => {
   invalidField.insertAdjacentHTML(
     "afterend",
     `<p class="c-form__error" id="${ERROR_ID}" data-inline-error="true">
+      ${errorIcon}
       <span class="u-a11y-only">Error:</span> ${FIELD_ERRORS[invalidField.id]}
     </p>`
   );
@@ -187,7 +195,7 @@ const onSubmit = async (event: Event) => {
   }
 };
 
-export default () => {
+export default (): void => {
   if (!form || !submitButton) return;
   form.noValidate = true;
   form.addEventListener("submit", onSubmit);

@@ -12,6 +12,7 @@
 @import "objects/banner.css";
 @import "objects/wrapper.css";
 
+@import "components/bio";
 @import "components/btn";
 @import "components/form";
 @import "components/footer";

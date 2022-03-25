@@ -15,11 +15,17 @@
 
 .c-form__error {
   color: var(--colour-7);
+  display: flex;
   font-weight: 400;
   font-size: var(--font-size-6);
   letter-spacing: initial;
   margin-bottom: 0;
   text-transform: initial;
+}
+
+.c-form__error svg {
+  height: 1em;
+  margin-right: var(--base-spacing-unit-tiny);
 }
 
 .c-form__alert {
